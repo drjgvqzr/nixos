@@ -1,0 +1,8 @@
+nixos-switch.log
+conflicts
+secrets.nix
+*.sync-conflict
+.config
+nixos-switch.log
+violentmonkey
+.logseq
