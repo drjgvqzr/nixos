@@ -87,6 +87,8 @@
             ncore.pro * 3p-script noop
             ebay.de * 3p-frame noop
             ebay.de * 3p-script noop
+            amazon.de * 3p-frame noop
+            amazon.de * 3p-script noop
             steampowered.com * 3p-frame noop
             steampowered.com * 3p-script noop
             www.gsmarena.com * 3p-frame noop
