@@ -282,8 +282,8 @@
               echo "NixOS Rebuilding..."
               doas nice -n 19 nixos-rebuild switch &> $nixos_dir/misc/nixos-switch.log && {
                 generation=$(git -C $nixos_dir diff -U20 HEAD | aichat summarize what changed in my nixos config in one short sentence)
-                git -C $nixos_dir commit -am $generation
-                git -C $nixos_dir push -u origin main
+                git -C $nixos_dir commit -q -am $generation
+                git -C $nixos_dir push -q -u origin main
                 echo "$generation"
                 notify-send -e -t 5000 "Generation $generation rebuilt"
               } || {
@@ -302,7 +302,7 @@
                 git -C $nixos_dir commit -q -am $generation
                 git -C $nixos_dir push -q -u origin main
                 echo "$generation"
-                notify-send -e -t 5000 "Generation $generation rebuilt"
+                notify-send -e -t 5000 "Rebuild successful"
               } || {
                 cat $nixos_dir/misc/nixos-switch.log | grep --color error | tail -n 1
                 notify-send -e -t 5000 "Rebuild Failed"
