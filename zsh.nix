@@ -329,6 +329,7 @@
             abbrev-alias nb="newsboat"
             abbrev-alias nsp="nix-shell -p"
             abbrev-alias nt="ping google.com"
+            abbrev-alias nr="doas systemctl restart iwd.service wg-quick-wg0.service"
             abbrev-alias y="pipe-viewer"
             abbrev-alias yd="yt-dlp"
             abbrev-alias mkexec="chmod +x"
