@@ -283,6 +283,7 @@
               doas nice -n 19 nixos-rebuild switch &> $nixos_dir/misc/nixos-switch.log && {
                 generation=$(nixos-rebuild list-generations | grep True | cut -d' ' -f1)
                 git -C $nixos_dir commit -am $generation
+                git -C $nixos_dir push -u origin main
                 notify-send -e -t 5000 "Generation $generation rebuilt"
               } || {
                 cat $nixos_dir/misc/nixos-switch.log | grep -i --color error | tail -n 1
@@ -298,6 +299,7 @@
               doas nice -n 19 nixos-rebuild switch &> $nixos_dir/misc/nixos-switch.log && {
                 generation=$(nixos-rebuild list-generations | grep True | cut -d' ' -f1)
                 git -C $nixos_dir commit -am $generation
+                git -C $nixos_dir push -u origin main
                 notify-send -e -t 5000 "Generation $generation rebuilt"
               } || {
                 cat $nixos_dir/misc/nixos-switch.log | grep --color error | tail -n 1
