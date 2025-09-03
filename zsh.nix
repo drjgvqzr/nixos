@@ -293,20 +293,20 @@
                 }
             }
             rebuildu () {
-              nixos_dir=~/dx/nixos
-              alejandra --experimental-config /home/soma/dx/nixos/misc/alejandra.toml --quiet $nixos_dir
-              git -C $nixos_dir diff -U0 '*.nix'
-              echo "NixOS Rebuilding..."
-              doas nice -n 19 nixos-rebuild switch &> $nixos_dir/misc/nixos-switch.log && {
-                generation=$(git -C $nixos_dir diff -U20 HEAD | aichat summarize what changed in my nixos config in one short sentence)
-                git -C $nixos_dir commit -q -am $generation
-                git -C $nixos_dir push -q -u origin main
-                echo "\n$generation"
-                notify-send -e -t 5000 "Rebuild successful"
-              } || {
-                cat $nixos_dir/misc/nixos-switch.log | grep --color error | tail -n 1
-                notify-send -e -t 5000 "Rebuild Failed"
-                return 1
+                nixos_dir=~/dx/nixos
+                alejandra --experimental-config /home/soma/dx/nixos/misc/alejandra.toml --quiet $nixos_dir
+                git -C $nixos_dir diff -U0 '*.nix'
+                echo "NixOS Rebuilding..."
+                doas nice -n 19 nixos-rebuild switch &> $nixos_dir/misc/nixos-switch.log && {
+                    generation=$(git -C $nixos_dir diff -U20 HEAD | aichat summarize what changed in my nixos config in one short sentence)
+                    git -C $nixos_dir commit -q -am $generation
+                    git -C $nixos_dir push -q -u origin main
+                    echo "\n$generation"
+                    notify-send -e -t 5000 "Rebuild successful"
+                } || {
+                    cat $nixos_dir/misc/nixos-switch.log | grep --color error | tail -n 1
+                    notify-send -e -t 5000 "Rebuild Failed"
+                    return 1
                 }
             }
             tra ()  {

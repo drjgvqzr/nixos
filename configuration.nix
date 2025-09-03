@@ -295,7 +295,7 @@
             enable = true;
             settings = {
                 charger = {
-                    governor = "performance";
+                    governor = "powersave";
                     energy_performance_preference = "balance_performance";
                     energy_perf_bias = "balance_performance";
                 };
