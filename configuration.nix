@@ -145,6 +145,10 @@
             XDG_TEMPLATES_DIR = "$HOME/dn";
             XDG_PICTURES_DIR = "$HOME/px";
             XDG_VIDEOS_DIR = "$HOME/vs";
+            XDG_CONFIG_HOME = "$HOME/.config";
+            XDG_CACHE_HOME = "$HOME/.cache";
+            XDG_DATA_HOME = "$HOME/.local/share";
+            XDG_STATE_HOME = "$HOME/.local/state";
             NIXPKGS_ALLOW_UNFREE = 1;
         };
     };
@@ -167,8 +171,6 @@
             powerOnBoot = false;
         };
         cpu.intel.updateMicrocode = true;
-        enableAllFirmware = true;
-        enableAllHardware = true;
         graphics.enable = true;
         #sane.enable = true;
     };
