@@ -401,7 +401,6 @@
                 "ctrl+y" = "kitten hints --hints-offset=0 --alphabet=farst --program @";
                 "ctrl+o" = "kitten hints --hints-offset=0 --alphabet=farst --type hyperlink --program default";
                 "ctrl+g" = "show_last_command_output";
-                #"ctrl+t" = "launch --cwd=/home --type=overlay ls";
             };
             font = {
                 name = "Roboto Mono";
