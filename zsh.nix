@@ -281,9 +281,10 @@
               git -C $nixos_dir diff -U0 '*.nix'
               echo "NixOS Rebuilding..."
               doas nice -n 19 nixos-rebuild switch &> $nixos_dir/misc/nixos-switch.log && {
-                generation=$(nixos-rebuild list-generations | grep True | cut -d' ' -f1)
+                generation=$(git diff -U20 HEAD | aichat summarize what changed in my nixos config in one short sentence)
                 git -C $nixos_dir commit -am $generation
                 git -C $nixos_dir push -u origin main
+                echo "$generation"
                 notify-send -e -t 5000 "Generation $generation rebuilt"
               } || {
                 cat $nixos_dir/misc/nixos-switch.log | grep -i --color error | tail -n 1
@@ -297,9 +298,10 @@
               git -C $nixos_dir diff -U0 '*.nix'
               echo "NixOS Rebuilding..."
               doas nice -n 19 nixos-rebuild switch &> $nixos_dir/misc/nixos-switch.log && {
-                generation=$(nixos-rebuild list-generations | grep True | cut -d' ' -f1)
+                generation=$(git diff -U20 HEAD | aichat summarize what changed in my nixos config in one short sentence)
                 git -C $nixos_dir commit -am $generation
                 git -C $nixos_dir push -u origin main
+                echo "$generation"
                 notify-send -e -t 5000 "Generation $generation rebuilt"
               } || {
                 cat $nixos_dir/misc/nixos-switch.log | grep --color error | tail -n 1
