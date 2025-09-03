@@ -57,7 +57,6 @@
         woeusb
         ocrmypdf
         qrrs
-        pdftk
         alejandra
         links2
         xdg-utils
