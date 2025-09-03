@@ -479,7 +479,6 @@
             scripts = with pkgs.mpvScripts; [
                 webtorrent-mpv-hook
                 sponsorblock-minimal
-                #thumbnail
             ];
             bindings = {
                 "a" = "add video-pan-x  +0.1";
