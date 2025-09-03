@@ -284,8 +284,8 @@
                 generation=$(git -C $nixos_dir diff -U20 HEAD | aichat summarize what changed in my nixos config in one short sentence)
                 git -C $nixos_dir commit -q -am $generation
                 git -C $nixos_dir push -q -u origin main
-                echo "$generation"
-                notify-send -e -t 5000 "Generation $generation rebuilt"
+                echo "\n$generation"
+                notify-send -e -t 5000 "Rebuild successful"
               } || {
                 cat $nixos_dir/misc/nixos-switch.log | grep -i --color error | tail -n 1
                 notify-send -e -t 5000 "Rebuild Failed"
@@ -301,7 +301,7 @@
                 generation=$(git -C $nixos_dir diff -U20 HEAD | aichat summarize what changed in my nixos config in one short sentence)
                 git -C $nixos_dir commit -q -am $generation
                 git -C $nixos_dir push -q -u origin main
-                echo "$generation"
+                echo "\n$generation"
                 notify-send -e -t 5000 "Rebuild successful"
               } || {
                 cat $nixos_dir/misc/nixos-switch.log | grep --color error | tail -n 1
