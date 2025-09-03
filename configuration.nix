@@ -290,9 +290,6 @@
         };
     };
     services = {
-        ollama.enable = true;
-        ollama.loadModels = ["qwen2.5:3b"];
-        gnome.gnome-keyring.enable = true;
         auto-cpufreq = {
             enable = true;
             settings = {
@@ -326,7 +323,7 @@
             ];
             greetingLine = "";
         };
-        gpm.enable = true;
+        gnome.gnome-keyring.enable = true;
         logind.settings.Login = {
             HandleLidSwitch = "suspend-then-hibernate";
             HandleLidSwitchExternalPower = "ignore";
@@ -414,7 +411,6 @@
                 enable_audio_bell = false;
                 confirm_os_window_close = 0;
                 mouse_hide_wait = -1;
-                copy_on_select = "clipboard";
                 clear_selection_on_clipboard_loss = "yes";
                 strip_trailing_spaces = "smart";
                 scrollback_pager = "nvim -R +AnsiEsc +INPUT_LINE_NUMBER";
