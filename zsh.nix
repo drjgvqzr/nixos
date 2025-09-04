@@ -332,6 +332,7 @@
             abbrev-alias nr="doas systemctl restart iwd.service wg-quick-wg0.service"
             abbrev-alias y="pipe-viewer"
             abbrev-alias yd="yt-dlp"
+            abbrev-alias pm="pulsemixer"
             abbrev-alias mkexec="chmod +x"
             abbrev-alias nrs="rebuild"
             abbrev-alias nrst="tail -f ~/dx/nixos/misc/nixos-switch.log"

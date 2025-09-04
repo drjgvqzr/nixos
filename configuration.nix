@@ -31,7 +31,6 @@
         wev
         wmenu
         wl-clipboard-rs
-        wl-clipboard-x11
         hyprpicker
         autotiling-rs
         swaylock
@@ -106,7 +105,7 @@
         ungoogled-chromium
         onlyoffice-bin
         lutris
-        starsector # TEITW-HP9ON-A7HMK-WA6YA
+        #starsector # TEITW-HP9ON-A7HMK-WA6YA
     ];
     boot = {
         kernelParams =
@@ -358,9 +357,11 @@
         };
     };
 
-    home-manager.useUserPackages = true;
-    home-manager.useGlobalPkgs = true;
-    home-manager.backupFileExtension = "backup";
+    home-manager = {
+        useUserPackages = true;
+        useGlobalPkgs = true;
+        backupFileExtension = "backup";
+    };
     home-manager.users.soma = {
         programs.aichat = {
             enable = true;
@@ -738,7 +739,6 @@
                 "p" = "snap_to_page";
                 "x" = "adjust_window best-fit";
                 "c" = "adjust_window width";
-                "z" = "rotate";
                 "N" = "search backward";
                 "M" = "search forward";
                 "D" = "toggle_page_mode";
