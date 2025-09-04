@@ -86,6 +86,7 @@
 
             rehash
             clear
+            setfont -d &> /dev/null
 
             ZSH_AUTOSUGGEST_BUFFER_MAX_SIZE=20
             ZSH_AUTOSUGGEST_HISTORY_IGNORE="cd *","mpv *"
