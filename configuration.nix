@@ -657,6 +657,10 @@
                     name = "Zathura";
                     exec = "${pkgs.zathura}/bin/zathura";
                 };
+                transmission = {
+                    name = "Transmission";
+                    exec = "sh -c \"doas systemctl stop wg-quick-wg0.service ; transmission-cli -er -w /home/soma/ar/torrents \\$f ; doas systemctl start wg-quick-wg0.service\"";
+                };
             };
             mimeApps = {
                 enable = true;
@@ -694,6 +698,7 @@
                     "application/vnd.openxmlformats-officedocument.wordprocessingml.document" = "onlyoffice-desktopeditors.desktop";
                     "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet" = "onlyoffice-desktopeditors.desktop";
                     "application/vnd.openxmlformats-officedocument.presentationml.presentation" = "onlyoffice-desktopeditors.desktop";
+                    "application/x-bittorrent" = "transmission.desktop";
                 };
             };
             portal = {
