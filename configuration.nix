@@ -698,8 +698,8 @@
             };
             portal = {
                 enable = true;
-                extraPortals = [pkgs.xdg-desktop-portal-gtk];
-                config.common.default = ["gtk"];
+                extraPortals = [pkgs.xdg-desktop-portal-xapp];
+                config.common.default = ["xapp"];
                 xdgOpenUsePortal = false;
             };
             userDirs = {
