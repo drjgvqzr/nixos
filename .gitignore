@@ -1,5 +1,6 @@
 nixos-switch.log
 conflicts
+secrets
 secrets.nix
 *.sync-conflict
 .config
