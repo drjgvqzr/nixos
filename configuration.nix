@@ -312,7 +312,6 @@
                 "* * * * 1 soma gtrash prune --size 20GB --day 90"
             ];
         };
-        geoclue2.enable = true;
         getty = {
             autologinUser = "soma";
             autologinOnce = true;
@@ -326,7 +325,7 @@
         gnome.gnome-keyring.enable = true;
         logind.settings.Login = {
             HandleLidSwitch = "suspend-then-hibernate";
-            HandleLidSwitchExternalPower = "ignore";
+            HandleLidSwitchExternalPower = "suspend-then-hibernate";
             HandlePowerKey = "suspend-then-hibernate";
             HandlePowerKeyLongPress = "suspend-then-hibernate";
         };
