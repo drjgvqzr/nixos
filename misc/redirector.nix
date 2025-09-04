@@ -13,7 +13,7 @@
             }
             {
                 includePattern = "https://*reddit.com/*";
-                excludePattern = "https://old.reddit.com*";
+                excludePattern = "https://old.reddit.com*|*preview.redd.it*";
                 redirectUrl = "https://old.reddit.com/$2";
                 appliesTo = ["main_frame"];
             }
