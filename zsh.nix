@@ -408,7 +408,7 @@
             fd = "fd --hyperlink";
             trash = "gtrash restore";
             trashinfo = "gtrash summary";
-            newsboat = "newsboat -u /home/soma/dx/nixos/misc/newsboat";
+            newsboat = "newsboat -q -u /home/soma/dx/nixos/misc/newsboat";
             grep = "grep --color";
             mkdir = "mkdir -pv";
             mw = "mpv $(wl-paste)";
