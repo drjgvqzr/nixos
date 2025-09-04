@@ -275,10 +275,10 @@
             }
             rebuild () {
               nixos_dir=~/dx/nixos
+              alejandra --experimental-config /home/soma/dx/nixos/misc/alejandra.toml --quiet $nixos_dir
               git -C $nixos_dir diff --quiet '*.nix' &&
                   echo "No changes detected, exiting." &&
                   return 1
-              alejandra --experimental-config /home/soma/dx/nixos/misc/alejandra.toml --quiet $nixos_dir
               git -C $nixos_dir diff -U0 '*.nix'
               echo "NixOS Rebuilding..."
               doas nice -n 19 nixos-rebuild switch &> $nixos_dir/misc/nixos-switch.log && {
