@@ -183,8 +183,6 @@
             else "Mini";
         networkmanager.enable = false;
         nftables.enable = true;
-        stevenblack.enable = true;
-        stevenblack.block = ["fakenews" "gambling"];
         useDHCP = false;
         wg-quick.interfaces.wg0.configFile = "/home/soma/dx/nixos/misc/secrets/${config.networking.hostName}_wg.conf";
         wireless.iwd = {
