@@ -457,6 +457,7 @@
                 audio-display = "no";
                 msg-level = "vo/gpu=no,vo/ffmpeg=no,ffmpeg/demuxer=no";
                 term-osd-bar = "yes";
+                really-quiet = "yes";
                 slang = "en,de";
                 #ytdl-raw-options = "sub-langs=\"en,en-orig,de,hu\"";
                 sid = "no";
