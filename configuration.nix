@@ -452,6 +452,7 @@
                 volume = "50";
                 term-osd-bar-chars = "[/|\\]";
                 gapless-audio = "yes";
+                gpu-context = "wayland";
                 image-display-duration = "inf";
                 audio-display = "no";
                 msg-level = "vo/gpu=no,vo/ffmpeg=no,ffmpeg/demuxer=no";
