@@ -168,7 +168,6 @@
             #}
             nformat () {
               [ "$(pwd)" = "/mnt" ] && cd ~
-              [[ "$1" != "a" ]] && {
                   ls /mnt 2>/dev/null || doas mkdir -p /mnt
                   doas umount /mnt 2>/dev/null;
                   doas cryptsetup close sd"$\{1:-b}"1 2>/dev/null;
@@ -180,11 +179,9 @@
                   doas mount /dev/mapper/sd"$\{1:-b}"1 /mnt/;
                   doas chown -R "$USER":users /mnt/;
                   cd /mnt;
-              }
             }
             format () {
               [ "$(pwd)" = "/mnt" ] && cd ~
-              [[ "$1" != "a" ]] && {
                   ls /mnt 2>/dev/null || doas mkdir -p /mnt
                   doas umount /mnt 2>/dev/null;
                   doas cryptsetup close sd"$\{1:-b}"1 2>/dev/null;
@@ -194,7 +191,6 @@
                   doas mount /dev/sd"$\{1:-b}"1 /mnt/;
                   doas chown -R "$USER":users /mnt/;
                   cd /mnt;
-             }
             }
             wformat () {
               [ "$(pwd)" = "/mnt" ] && cd ~
