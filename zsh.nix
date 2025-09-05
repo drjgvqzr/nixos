@@ -170,7 +170,7 @@
               [ "$(pwd)" = "/mnt" ] && cd ~
                   ls /mnt 2>/dev/null || doas mkdir -p /mnt
                   doas umount /mnt 2>/dev/null;
-                  doas cryptsetup close sd$1"1 2>/dev/null;
+                  doas cryptsetup close sd"$1"1 2>/dev/null;
                   doas parted -s /dev/sd"$1" mklabel msdos;
                   doas parted -s /dev/sd"$1" mkpart primary 0% 100%;
                   doas cryptsetup luksFormat -q /dev/sd"$1"1;
