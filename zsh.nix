@@ -170,13 +170,13 @@
               [ "$(pwd)" = "/mnt" ] && cd ~
                   ls /mnt 2>/dev/null || doas mkdir -p /mnt
                   doas umount /mnt 2>/dev/null;
-                  doas cryptsetup close sd"$\{1:-b}"1 2>/dev/null;
-                  doas parted -s /dev/sd"$\{1:-b}" mklabel msdos;
-                  doas parted -s /dev/sd"$\{1:-b}" mkpart primary 0% 100%;
-                  doas cryptsetup luksFormat -q /dev/sd"$\{1:-b}"1;
-                  doas cryptsetup open /dev/sd"$\{1:-b}"1 sd"$\{1:-b}"1;
-                  doas mkfs.ext4 -q /dev/mapper/sd"$\{1:-b}"1;
-                  doas mount /dev/mapper/sd"$\{1:-b}"1 /mnt/;
+                  doas cryptsetup close sd$1"1 2>/dev/null;
+                  doas parted -s /dev/sd"$1" mklabel msdos;
+                  doas parted -s /dev/sd"$1" mkpart primary 0% 100%;
+                  doas cryptsetup luksFormat -q /dev/sd"$1"1;
+                  doas cryptsetup open /dev/sd"$1"1 sd"$1"1;
+                  doas mkfs.ext4 -q /dev/mapper/sd"$1"1;
+                  doas mount /dev/mapper/sd"$1"1 /mnt/;
                   doas chown -R "$USER":users /mnt/;
                   cd /mnt;
             }
@@ -184,11 +184,11 @@
               [ "$(pwd)" = "/mnt" ] && cd ~
                   ls /mnt 2>/dev/null || doas mkdir -p /mnt
                   doas umount /mnt 2>/dev/null;
-                  doas cryptsetup close sd"$\{1:-b}"1 2>/dev/null;
-                  doas parted -s /dev/sd"$\{1:-b}" mklabel msdos;
-                  doas parted -s /dev/sd"$\{1:-b}" mkpart primary 0% 100%;
-                  doas mkfs.ext4 -q /dev/sd"$\{1:-b}"1 &>/dev/null;
-                  doas mount /dev/sd"$\{1:-b}"1 /mnt/;
+                  doas cryptsetup close sd"$1"1 2>/dev/null;
+                  doas parted -s /dev/sd"$1" mklabel msdos;
+                  doas parted -s /dev/sd"$1" mkpart primary 0% 100%;
+                  doas mkfs.ext4 -q /dev/sd"$1"1 &>/dev/null;
+                  doas mount /dev/sd"$1"1 /mnt/;
                   doas chown -R "$USER":users /mnt/;
                   cd /mnt;
             }
@@ -232,8 +232,8 @@
               [ "$(pwd)" = "/mnt" ] && cd ~
                   ls /mnt 2>/dev/null || doas mkdir -p /mnt
                   doas umount /mnt 2>/dev/null;
-                  doas cryptsetup close sd"$\{1:-b}"1 2>/dev/null;
-                  doas cryptsetup open /dev/sd"$\{1:-b}"1 sd"$\{1:-b}"1 2>/dev/null;
+                  doas cryptsetup close sd"$1"1 2>/dev/null;
+                  doas cryptsetup open /dev/sd"$1"1 sd"$1"1 2>/dev/null;
                   doas mount /dev/mapper/sd"$1"1 /mnt/ 2>/dev/null || doas mount /dev/sd"$1"1 /mnt/;
                   doas chown -R "$USER":users /mnt/;
                   cd /mnt;
