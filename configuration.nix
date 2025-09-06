@@ -472,7 +472,7 @@
                     key_page_0 = "2";
                 };
                 webtorrent = {
-                    path = "/home/soma/ar/torrents";
+                    path = "/home/soma/tr/";
                     utp = "yes";
                     dht = "yes";
                 };
@@ -660,7 +660,7 @@
                 };
                 transmission = {
                     name = "Transmission";
-                    exec = "transmission-cli -er -w /home/soma/ar/torrents \\$f";
+                    exec = "transmission-cli -er -w /home/soma/tr \\$f";
                 };
             };
             mimeApps = {

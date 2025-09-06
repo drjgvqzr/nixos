@@ -308,7 +308,7 @@
             }
             tra ()  {
             doas systemctl stop wg-quick-wg0.service ;
-            \transmission-cli -er -w /home/soma/ar/torrents $1 ;
+            \transmission-cli -er -w /home/soma/tr/ $1 ;
             doas systemctl start wg-quick-wg0.service
             }
             #       _     _

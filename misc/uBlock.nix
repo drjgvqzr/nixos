@@ -85,6 +85,8 @@
             mynixos.com * 3p-script noop
             ncore.pro * 3p-frame noop
             ncore.pro * 3p-script noop
+            ingatlan.com * 3p-frame noop
+            ingatlan.com * 3p-script noop
             ebay.de * 3p-frame noop
             ebay.de * 3p-script noop
             amazon.de * 3p-frame noop
