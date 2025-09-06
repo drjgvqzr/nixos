@@ -123,7 +123,6 @@
             efi.canTouchEfiVariables = true;
             timeout = 1;
         };
-        supportedFilesystems = ["ntfs"];
     };
     console.useXkbConfig = true;
     environment = {
