@@ -93,6 +93,7 @@
         #GUI
         obsidian
         logseq
+        firefox
         xfce.thunar
         tor-browser
         webcord
