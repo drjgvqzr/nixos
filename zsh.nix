@@ -394,7 +394,6 @@
             hibernate = "systemctl hibernate";
             zathura = "zathura";
             fastfetch = "fastfetch --logo nixos_old";
-            less = "nvim -R +AnsiEsc";
             unrar = "unrar-free";
             qalc = "qalc -c -s 'upxrates 1'";
             ls = "ls -hpNF --color --hyperlink=auto";
