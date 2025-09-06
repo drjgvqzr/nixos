@@ -278,7 +278,7 @@
               git -C $nixos_dir diff -U0 '*.nix'
               echo "NixOS Rebuilding..."
               doas nice -n 19 nixos-rebuild switch &> $nixos_dir/misc/nixos-switch.log && {
-                generation=$(git -C $nixos_dir diff -U20 HEAD | aichat summarize what changed in my nixos config in one short sentence)
+                generation=$(git -C $nixos_dir diff -U20 HEAD | aichat summarize what changed in my nixos config in one short sentence | sed 's/.$//' )
                 git -C $nixos_dir commit -q -am $generation
                 git -C $nixos_dir push -q -u origin main
                 echo "\n$generation"
@@ -295,7 +295,7 @@
                 git -C $nixos_dir diff -U0 '*.nix'
                 echo "NixOS Rebuilding..."
                 doas nice -n 19 nixos-rebuild switch &> $nixos_dir/misc/nixos-switch.log && {
-                    generation=$(git -C $nixos_dir diff -U20 HEAD | aichat summarize what changed in my nixos config in one short sentence)
+                    generation=$(git -C $nixos_dir diff -U20 HEAD | aichat summarize what changed in my nixos config in one short sentence | sed 's/.$//' )
                     git -C $nixos_dir commit -q -am $generation
                     git -C $nixos_dir push -q -u origin main
                     echo "\n$generation"
