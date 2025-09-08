@@ -160,7 +160,7 @@
             snx() {
                 watch -c -n 1 "iwctl station wlan0 scan ; iwctl station wlan0 get-networks"
                 ssid=$(iwctl station wlan0 get-networks | fzf --ansi |sed -e 's/ \{10,\}.*//' -e 's/^[[:space:]]*//')
-                read -p "Password: " password
+                ask -p "Password: " password
                 iwctl --passphrase=$password station wlan0 connect $ssid
             }
             cn () {iwctl --passphrase=$2 station wlan0 connect $1}
