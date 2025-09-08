@@ -157,14 +157,17 @@
                 bluetoothctl devices Paired | grep Device | sort | fzf | cut -d' ' -f2 | xargs -I {} bluetoothctl remove {}
             }
             sn () {iwctl station wlan0 scan;iwctl station wlan0 get-networks}
-            snx() {
+            cn() {
                 watch -c -n 1 "iwctl station wlan0 scan ; iwctl station wlan0 get-networks"
                 ssid=$(iwctl station wlan0 get-networks | fzf --ansi |sed -e 's/ \{10,\}.*//' -e 's/^[[:space:]]*//')
                 read -r "?Password: " password
                 iwctl --passphrase="$password" station wlan0 connect "$ssid"
             }
-            cn () {iwctl --passphrase=$2 station wlan0 connect $1}
-            cnf() {iwctl known-networks $1 forget}
+            cnf() {
+                ssid=$(iwctl known-networks list | fzf --ansi |sed -e 's/ \{10,\}.*//' -e 's/^[[:space:]]*//')
+                iwctl known-networks $ssid forget
+            }
+            #cnf() {iwctl known-networks $1 forget}
             #vi () {
             # if [ $(stat -c %U $1) = 'root' ]; then
             #  doas /etc/profiles/per-user/soma/bin/nvim "$@"
