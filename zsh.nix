@@ -157,6 +157,10 @@
                 bluetoothctl devices Paired | grep Device | sort | fzf | cut -d' ' -f2 | xargs -I {} bluetoothctl remove {}
             }
             sn () {iwctl station wlan0 scan;iwctl station wlan0 get-networks}
+            snx() {
+                watch -c -n 1 "iwctl station wlan0 scan ; iwctl station wlan0 get-networks"
+                iwctl station wlan0 get-networks | fzf --ansi | cut -d' ' -f1
+            }
             cn () {iwctl --passphrase=$2 station wlan0 connect $1}
             cnf() {iwctl known-networks $1 forget}
             #vi () {
