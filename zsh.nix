@@ -381,6 +381,7 @@
             abbrev-alias ax="aichat explain"
             abbrev-alias ae="aichat give an example for"
             abbrev-alias ad="aichat what is the difference between"
+            abbrev-alias aw="aichat what is the meaning of the word"
         '';
 
         #       _ _
