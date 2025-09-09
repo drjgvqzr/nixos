@@ -382,6 +382,7 @@
             abbrev-alias t="trans"
             abbrev-alias td="trans :de"
             abbrev-alias tm="trans :hu"
+            abbrev-alias tr="trans :ru"
             abbrev-alias a="aichat"
             abbrev-alias as="aichat -s"
             abbrev-alias wa="wl-paste | aichat"
