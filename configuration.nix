@@ -896,6 +896,12 @@
                                         "pptx"
                                     ]
                                 },
+                                "application/rtf": {
+                                    "action": 4,
+                                    "extensions": [
+                                        "rtf"
+                                    ]
+                                },
                                 "image/webp": {
                                     "action": 3,
                                     "extensions": [

@@ -167,7 +167,6 @@
                 ssid=$(iwctl known-networks list | fzf --ansi |sed -e 's/ \{10,\}.*//' -e 's/^[[:space:]]*//')
                 iwctl known-networks $ssid forget
             }
-            #cnf() {iwctl known-networks $1 forget}
             #vi () {
             # if [ $(stat -c %U $1) = 'root' ]; then
             #  doas /etc/profiles/per-user/soma/bin/nvim "$@"
