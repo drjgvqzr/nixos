@@ -98,6 +98,7 @@
         tor-browser
         webcord
         mullvad-browser
+        element-desktop
         fluffychat
         bluejay
         browsh
