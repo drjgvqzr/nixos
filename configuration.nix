@@ -661,7 +661,7 @@
                 };
                 transmission = {
                     name = "Transmission";
-                    exec = "transmission-cli -er -w /home/soma/tr \\$F";
+                    exec = "transmission-cli -er -w /home/soma/tr %f";
                 };
             };
             mimeApps = {
