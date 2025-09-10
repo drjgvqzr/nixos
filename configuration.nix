@@ -653,11 +653,11 @@
             desktopEntries = {
                 librewolf = {
                     name = "LibreWolf";
-                    exec = "${pkgs.librewolf}/bin/librewolf";
+                    exec = "librewolf";
                 };
                 zathura = {
                     name = "Zathura";
-                    exec = "${pkgs.zathura}/bin/zathura";
+                    exec = "zathura";
                 };
                 transmission = {
                     name = "Transmission";
