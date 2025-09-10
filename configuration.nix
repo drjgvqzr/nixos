@@ -663,10 +663,6 @@
                     name = "Transmission";
                     exec = "transmission-cli -er -w /home/soma/tr %f";
                 };
-                lf = {
-                    name = "lf";
-                    exec = "lf";
-                };
             };
             mimeApps = {
                 enable = true;
@@ -706,7 +702,6 @@
                     "application/vnd.openxmlformats-officedocument.presentationml.presentation" = "onlyoffice-desktopeditors.desktop";
                     "application/rft" = "onlyoffice-desktopeditors.desktop";
                     "application/x-bittorrent" = "transmission.desktop";
-                    "inode/directory" = "lf.desktop";
                 };
             };
             portal = {
