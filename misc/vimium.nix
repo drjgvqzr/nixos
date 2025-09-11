@@ -116,7 +116,8 @@
             4: https://boards.4chan.org/%s/
             sh: javascript:location='https://sci-hub.st/https://'%20+%20escape(location.hostname%20+%20location.pathname)%20+%20'%20%S'%20;%20void%200
             4pol: https://archive.4plebs.org/pol/search/type/op/text/%s
-            4g: https://desuarchive.org/g/search/type/op/text/%s/'';
+            4g: https://desuarchive.org/g/search/type/op/text/%s/
+            r34: https://rule34.xxx/index.php?page=post&s=list&tags=%s'';
         linkHintCharacters = "arstf";
         preferBrowserSearch = true;
         newTabUrl_f = "about:newtab";
@@ -273,6 +274,11 @@
                 name = "/g/ Archive";
                 urls = [{template = "https://desuarchive.org/g/search/type/op/text/{searchTerms}";}];
                 definedAliases = ["4g"];
+            };
+            r34 = {
+                name = "Rule 34";
+                urls = [{template = "https://rule34.xxx/index.php?page=post&s=list&tags=meme";}];
+                definedAliases = ["r34"];
             };
             bing.metaData.hidden = true;
             google.metaData.hidden = true;
