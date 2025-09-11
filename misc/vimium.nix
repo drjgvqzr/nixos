@@ -94,7 +94,7 @@
             ns: https://search.nixos.org/packages?channel=unstable&from=0&size=999&sort=relevance&type=packages&query=%s NixOS Packages
             nw: https://wiki.nixos.org/wiki/%s NixOS Wiki
             gm: https://www.google.com/maps?q=%s Google Maps
-            gmn: https://www.google.com/maps/dir/$1/$2/ Google Maps Navigation
+            gmn: https://www.google.com/maps/dir/$s{$1/$2} Google Maps Navigation
             g: https://www.google.com/search?q=%s Google
             az: https://www.amazon.de/s/?field-keywords=%s Amazon
             i: https://duckduckgo.com/?&q=%s&ia=images&iax=images Images
