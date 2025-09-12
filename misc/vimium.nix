@@ -108,6 +108,7 @@
             sr: https://www.reddit.com/r/%s/top?t=all Subreddit
             fa: https://addons.mozilla.org/en-US/firefox/search/?q=%s Firefox Addons
             lib: https://annas-archive.org/search?q=%s
+            elib: https://opac.elte.hu/Search/Results?lookfor=%s&type=AllFields
             aw: https://wiki.archlinux.org/title/%s
             gw: https://wiki.gentoo.org/wiki/%s
             jf: https://www.jofogas.hu/magyarorszag?q=%s
@@ -230,6 +231,11 @@
                 name = "Library";
                 urls = [{template = "https://annas-archive.org/search?q={searchTerms}";}];
                 definedAliases = ["lib"];
+            };
+            eltelibrary = {
+                name = "Elte Könyvtár";
+                urls = [{template = "https://opac.elte.hu/Search/Results?lookfor={searchTerms}&type=AllFields";}];
+                definedAliases = ["elib"];
             };
             arch = {
                 name = "Arch Wiki";
