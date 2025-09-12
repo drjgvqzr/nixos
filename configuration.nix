@@ -121,7 +121,10 @@
         };
         kernelPackages = pkgs.linuxPackages_latest;
         loader = {
-            systemd-boot.enable = true;
+            systemd-boot = {
+                enable = true;
+                configurationLimit = 10;
+            };
             efi.canTouchEfiVariables = true;
             timeout = 1;
         };
@@ -661,7 +664,7 @@
                 };
                 transmission = {
                     name = "Transmission";
-                    exec = "transmission-cli -er -w /home/soma/tr %f";
+                    exec = " sh -c \"doas systemctl stop wg-quick-wg0.service && transmission-cli -er -w /home/soma/tr %f && doas systemctl start wg-quick-wg0.service\"";
                 };
             };
             mimeApps = {
