@@ -84,6 +84,17 @@
             extensions.settings."extraneous@sysrqmagician.github.io".settings = {
                 config = {
                     watched.enabled = false;
+                    hideSlop = {
+                        enabled = true;
+                        badTitleRegex = "^.*#short.*$";
+                        minDuration = "00:10:00";
+                    };
+                    deArrow = {
+                        enabled = true;
+                        trustedOnly = true;
+                        highlightReplacedTitles = true;
+                    };
+                    additionalLinks.cobaltTools = false;
                 };
             };
             userChrome = ''                /* Source file https://github.com/MrOtherGuy/firefox-csshacks/tree/master/chrome/autohide_toolbox.css made available under Mozilla Public License v. 2.0
