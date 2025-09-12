@@ -19,6 +19,10 @@
                 install_url = "https://addons.mozilla.org/firefox/downloads/latest/vimium-c/latest.xpi";
                 installation_mode = "force_installed";
             };
+            "newtab-adapter@gdh1995.cn" = {
+                install_url = "https://addons.mozilla.org/firefox/downloads/latest/newtab-adapter/latest.xpi";
+                installation_mode = "force_installed";
+            };
             "contact@example.com" = {
                 install_url = "https://addons.mozilla.org/firefox/downloads/latest/smartreader/latest.xpi";
                 installation_mode = "force_installed";

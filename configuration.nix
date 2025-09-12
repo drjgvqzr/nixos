@@ -123,7 +123,7 @@
         loader = {
             systemd-boot = {
                 enable = true;
-                configurationLimit = 300;
+                #configurationLimit = 300;
             };
             efi.canTouchEfiVariables = true;
             timeout = 1;
