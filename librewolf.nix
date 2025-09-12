@@ -81,6 +81,11 @@
                 enableForProtectedPages = true;
                 disabledFor = ["boards.4chan.org"];
             };
+            extensions.settings."extraneous@sysrqmagician.github.io".settings = {
+                config = {
+                    watched.enabled = false;
+                };
+            };
             userChrome = ''                /* Source file https://github.com/MrOtherGuy/firefox-csshacks/tree/master/chrome/autohide_toolbox.css made available under Mozilla Public License v. 2.0
                 See the above repository for updates as well as full license text. */
 
