@@ -340,7 +340,7 @@
             abbrev-alias pm="pulsemixer"
             abbrev-alias mkexec="chmod +x"
             abbrev-alias nrs="rebuild"
-            abbrev-alias nrst="tail -f ~/dx/nixos/misc/nixos-switch.log"
+            abbrev-alias nrst="tail -c +0 -f ~/dx/nixos/misc/nixos-switch.log"
             abbrev-alias nrsv="vi ~/dx/nixos/misc/nixos-switch.log"
             abbrev-alias nrsu="rebuildu"
             abbrev-alias nconf="vi ~/dx/nixos/configuration.nix"
@@ -402,7 +402,7 @@
         shellAliases = {
             "0" = "cd ~;clear";
             hibernate = "systemctl hibernate";
-            zathura = "zathura";
+            zathura = "swallow zathura";
             fastfetch = "fastfetch --logo nixos_old";
             unrar = "unrar-free";
             qalc = "qalc -c -s 'upxrates 1'";
@@ -419,7 +419,6 @@
             mkdir = "mkdir -pv";
             mw = "mpv $(wl-paste)";
             head = "head -v";
-            tail = "tail -v";
             cp = "cp -rvp";
             cal = "cal -mw";
             wget = "wget --hsts-file=~/.cache/wget-hsts";
