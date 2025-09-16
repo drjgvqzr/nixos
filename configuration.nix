@@ -751,8 +751,8 @@
                 "p" = "snap_to_page";
                 "x" = "adjust_window best-fit";
                 "c" = "adjust_window width";
-                "N" = "search backward";
-                "M" = "search forward";
+                "E" = "search backward";
+                "N" = "search forward";
                 "D" = "toggle_page_mode";
                 "u" = "navigate previous";
                 "l" = "navigate next";
