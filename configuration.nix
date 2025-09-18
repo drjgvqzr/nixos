@@ -661,7 +661,7 @@
                 };
                 zathura = {
                     name = "Zathura";
-                    exec = "swallow zathura";
+                    exec = "zathura";
                 };
                 transmission = {
                     name = "Transmission";
