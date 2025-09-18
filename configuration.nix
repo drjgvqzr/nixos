@@ -159,14 +159,14 @@
     };
     fonts = {
         fontDir.enable = true;
-        packages = with pkgs; [roboto-mono openmoji-color];
+        packages = with pkgs; [roboto-mono noto-fonts-color-emoji];
         fontconfig = {
             enable = true;
             defaultFonts = {
                 monospace = ["Roboto Mono"];
                 serif = ["Roboto Mono"];
                 sansSerif = ["Roboto Mono"];
-                emoji = ["OpenMoji Color"];
+                #emoji = ["OpenMoji Color"];
             };
         };
     };
