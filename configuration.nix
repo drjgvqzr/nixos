@@ -166,7 +166,7 @@
                 monospace = ["Roboto Mono"];
                 serif = ["Roboto Mono"];
                 sansSerif = ["Roboto Mono"];
-                #emoji = ["OpenMoji Color"];
+                emoji = ["Noto Color Emoji"];
             };
         };
     };
