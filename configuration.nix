@@ -977,7 +977,7 @@
                         #zathura swallow only from kitty
                         protocol file
                         mime application/pdf
-                        action launch --type=overlay swallow zathura
+                        action launch --type=overlay swallow zathura %u
 
                         #xdg-open
                         protocol file
