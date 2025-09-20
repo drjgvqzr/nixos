@@ -469,7 +469,7 @@
                 #ytdl-raw-options = "sub-langs=\"en,en-orig,de,hu\"";
                 sid = "no";
                 volume-max = "100";
-                script-opts = "sponsorblock_minimal-categories=[\"sponsor\",\"selfpromo\",\"interaction\",\"intro\",\"outro\",\"preview\",\"music_offtopic\",\"filler\"]";
+                #script-opts = "sponsorblock_minimal-categories=[\"sponsor\",\"selfpromo\",\"interaction\",\"intro\",\"outro\",\"preview\",\"music_offtopic\",\"filler\"]";
                 osd-font = "Roboto Mono";
                 sub-font = "Roboto Mono";
             };
@@ -482,6 +482,7 @@
                     utp = "yes";
                     dht = "yes";
                 };
+                sponsorblock_minimal.categories = "selfpromo;interaction;intro;outro;preview;hook;filler";
             };
             scripts = with pkgs.mpvScripts; [
                 webtorrent-mpv-hook
