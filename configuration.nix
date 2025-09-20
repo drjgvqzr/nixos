@@ -20,7 +20,7 @@
         ./misc/vimium.nix
         ./misc/uBlock.nix
         ./misc/redirector.nix
-        ./misc/printing.nix
+        #./misc/printing.nix
     ];
     environment.systemPackages = with pkgs; [
         #Wayland
