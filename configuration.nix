@@ -482,7 +482,7 @@
                     utp = "yes";
                     dht = "yes";
                 };
-                sponsorblock_minimal.categories = "selfpromo;interaction;intro;outro;preview;hook;filler";
+                sponsorblock_minimal.categories = "sponsor;selfpromo;interaction;intro;outro;preview;hook;music_offtopic;filler";
             };
             scripts = with pkgs.mpvScripts; [
                 webtorrent-mpv-hook
