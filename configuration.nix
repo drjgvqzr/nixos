@@ -473,14 +473,8 @@
                 sub-font = "Roboto Mono";
             };
             scriptOpts = {
-                stats = {
-                    key_page_0 = "2";
-                };
-                webtorrent = {
-                    path = "/home/soma/tr/";
-                    utp = "yes";
-                    dht = "yes";
-                };
+                stats.key_page_0 = "2";
+                webtorrent.path = "/home/soma/tr/";
                 sponsorblock_minimal.categories = "sponsor;selfpromo;interaction;intro;outro;preview;hook;music_offtopic;filler";
             };
             scripts = with pkgs.mpvScripts; [
