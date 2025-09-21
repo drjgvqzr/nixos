@@ -53,15 +53,15 @@
                 ];
             };
             focus.followMouse = "always";
-            colors = {
-                focused = {
-                    background = "#005577";
-                    border = "#005577";
-                    childBorder = "#005577";
-                    indicator = "#005577";
-                    text = "#005577";
-                };
-            };
+            #colors = {
+            #    focused = {
+            #        background = "#005577";
+            #        border = "#005577";
+            #        childBorder = "#005577";
+            #        indicator = "#005577";
+            #        text = "#005577";
+            #    };
+            #};
             input = {
                 "type:keyboard" = {
                     xkb_layout = "us,hu";
