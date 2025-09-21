@@ -390,7 +390,7 @@
             abbrev-alias ax="aichat explain"
             abbrev-alias ae="aichat give an example for"
             abbrev-alias ad="aichat what is the difference between"
-            abbrev-alias aw="aichat provide the etymology, pronounciation without using phonetic symbols, meaning, and usage examples, all on new lines, of the word"
+            abbrev-alias aw="aichat provide the etymology, pronounciation without using phonetic symbols, meaning, and usage examples, all on new lines with markdown formatting, of the word"
         '';
 
         #       _ _
