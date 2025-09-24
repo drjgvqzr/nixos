@@ -67,6 +67,7 @@
         gtrash
         translate-shell
         fd
+        ffmpeg
         pipe-viewer
         nix-search
         nix-search-tv
