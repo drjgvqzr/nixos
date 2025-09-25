@@ -105,6 +105,8 @@
             www.reddit.com redditstatic.com * noop
             rsf.org * 3p-frame noop
             rsf.org * 3p-script noop
+            openrouter.ai * 3p-frame noop
+            openrouter.ai * 3p-script noop
             www.rt.com * 3p-frame noop
             www.rt.com * 3p-script noop
             booru.soyjak.st * 3p-frame noop
