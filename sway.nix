@@ -16,6 +16,9 @@
     bindsym XF86AudioLowerVolume exec swayosd-client --output-volume lower --max-volume 100
     bindsym XF86MonBrightnessDown exec brightnessctl set 5%-
     bindsym XF86MonBrightnessUp exec brightnessctl set 5%+
+    bindsym Pause exec playerctl --player mpv play-pause || playerctl play-pause
+    bindsym XF86AudioNext exec playerctl --player mpv next || playerctl next
+    bindsym XF86AudioPrev exec playerctl --player mpv previous || playerctl previous
     bindsym --release Super_L exec wmenu-run";
         wrapperFeatures.gtk = true;
         config = {
