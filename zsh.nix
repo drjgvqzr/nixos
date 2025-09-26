@@ -319,6 +319,8 @@
             \transmission-cli -er -w /home/soma/tr/ $1 ;
             doas systemctl start wg-quick-wg0.service
             }
+            pdfr () {
+                pdftk $1 cat 1-end"$2" output $\{1%.*}-$2.pdf
             #       _     _
             #  __ _| |__ | |__  _ __
             # / _` | '_ \| '_ \| '__|
