@@ -65,6 +65,7 @@
         unzip
         lf
         gtrash
+        pdftk
         translate-shell
         fd
         ffmpeg
