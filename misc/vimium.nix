@@ -284,7 +284,7 @@
             };
             r34 = {
                 name = "Rule 34";
-                urls = [{template = "https://rule34.xxx/index.php?page=post&s=list&tags=meme";}];
+                urls = [{template = "https://rule34.xxx/index.php?page=post&s=list&tags={searchTerms}";}];
                 definedAliases = ["r34"];
             };
             bing.metaData.hidden = true;
