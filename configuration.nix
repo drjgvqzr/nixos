@@ -66,7 +66,6 @@
         lf
         gtrash
         translate-shell
-        playerctl
         fd
         ffmpeg
         pipe-viewer
@@ -340,6 +339,7 @@
             alsa.support32Bit = true;
             pulse.enable = true;
         };
+        playerctld.enable = true;
         resolved = {
             enable = true;
             llmnr = "false";
