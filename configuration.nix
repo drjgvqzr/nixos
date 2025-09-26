@@ -178,6 +178,7 @@
             powerOnBoot = false;
         };
         cpu.intel.updateMicrocode = true;
+        enableAllFirmware = true;
         graphics.enable = true;
     };
     i18n.defaultLocale = "en_US.UTF-8";
