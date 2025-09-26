@@ -66,6 +66,7 @@
         lf
         gtrash
         translate-shell
+        playerctl
         fd
         ffmpeg
         pipe-viewer
