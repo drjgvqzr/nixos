@@ -847,6 +847,7 @@
                 embed-chapters = true;
                 #embed-metadata = true;
                 sponsorblock-remove = "all";
+                extractor-args = "player-client=default,-tv_simply";
             };
         };
         home = {
