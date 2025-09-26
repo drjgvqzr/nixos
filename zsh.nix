@@ -320,7 +320,7 @@
             doas systemctl start wg-quick-wg0.service
             }
             pdfr () {
-                pdftk $1 cat 1-end"$2" output $\{1%.*}-$2.pdf
+                pdftk $1 cat 1-end"$2" output $(echo "$1" | sed 's/\.[^.]*$//')-"$2".pdf
             #       _     _
             #  __ _| |__ | |__  _ __
             # / _` | '_ \| '_ \| '__|
