@@ -27,12 +27,12 @@
                 redirectUrl = "https://breezewiki.com/$1/wiki/$2";
                 appliesTo = ["main_frame"];
             }
-            {
-                includePattern = "https://github.com/*/*";
-                excludePattern = "*/issues*|*/raw*|*/wiki*|*/releases*|*/discussions*|*/pull*|*/topics*";
-                redirectUrl = "https://gothub.lunar.icu/$1/$2";
-                appliesTo = ["main_frame"];
-            }
+            #{
+            #    includePattern = "https://github.com/*/*";
+            #    excludePattern = "*/issues*|*/raw*|*/wiki*|*/releases*|*/discussions*|*/pull*|*/topics*";
+            #    redirectUrl = "https://gothub.lunar.icu/$1/$2";
+            #    appliesTo = ["main_frame"];
+            #}
             {
                 includePattern = "https://en.wikipedia.org/wiki/*";
                 excludePattern = "*?useskin=minerva#bodyContent|*#*";
