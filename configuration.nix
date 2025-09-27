@@ -65,6 +65,7 @@
         unzip
         lf
         gtrash
+        yazi
         pdftk
         translate-shell
         fd
