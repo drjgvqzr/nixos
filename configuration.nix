@@ -65,6 +65,7 @@
         unzip
         lf
         gtrash
+        ghc
         yazi
         vscodium
         pdftk
