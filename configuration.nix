@@ -572,8 +572,8 @@
                 \ 'active': {
                 \   'right': [ [ 'lineinfo' ],
                 \              [ 'percent' ]]},}
-                cabbrev wq silent wq
-                cabbrev w silent w
+                "cabbrev wq silent wq
+                "cabbrev w silent w
                 syntax on
                 colorscheme vim
                 filetype plugin on
