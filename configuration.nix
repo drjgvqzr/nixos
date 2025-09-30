@@ -442,6 +442,9 @@
             };
             shellIntegration.mode = "no-cursor";
         };
+        programs.yazi = {
+            enable = true;
+        };
         programs.radio-cli = {
             enable = true;
             settings = {
