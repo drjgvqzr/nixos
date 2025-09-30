@@ -455,8 +455,20 @@
                         run = "arrow -1";
                     }
                     {
-                        on = ["i"];
-                        run = "enter";
+                        on = ["C-["];
+                        run = "escape";
+                    }
+                    {
+                        on = ["q"];
+                        run = "quit";
+                    }
+                    {
+                        on = ["C-c"];
+                        run = "close";
+                    }
+                    {
+                        on = ["C-z"];
+                        run = "suspend";
                     }
                 ];
             };
