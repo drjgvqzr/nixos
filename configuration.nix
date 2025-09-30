@@ -350,6 +350,7 @@
             enable = true;
             llmnr = "false";
             dnsovertls = "opportunistic";
+            dnssec = "true";
             domains = ["dns.mullvad.net"];
         };
         xserver = {
