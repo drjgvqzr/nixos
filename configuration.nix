@@ -440,6 +440,26 @@
         programs.yazi = {
             enable = true;
             enableZshIntegration = true;
+            keymap = {
+                mgr.prepend_keymap = [
+                    {
+                        on = ["m"];
+                        run = "arrow-left";
+                    }
+                    {
+                        on = ["n"];
+                        run = "arrow-down";
+                    }
+                    {
+                        on = ["e"];
+                        run = "arrow-up";
+                    }
+                    {
+                        on = ["i"];
+                        run = "arrow-right";
+                    }
+                ];
+            };
         };
         programs.radio-cli = {
             enable = true;
