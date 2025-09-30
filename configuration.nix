@@ -349,8 +349,8 @@
         resolved = {
             enable = true;
             llmnr = "false";
-            dnsovertls = "opportunistic";
-            domains = ["dns.mullvad.net"];
+            dnsovertls = "true";
+            domains = ["194.242.2.2:853"];
         };
         xserver = {
             xkb.layout = "us";
@@ -573,8 +573,8 @@
                 \ 'active': {
                 \   'right': [ [ 'lineinfo' ],
                 \              [ 'percent' ]]},}
-                "cabbrev wq silent wq
-                "cabbrev w silent w
+                cabbrev wq silent wq
+                cabbrev w silent w
                 syntax on
                 colorscheme vim
                 filetype plugin on
