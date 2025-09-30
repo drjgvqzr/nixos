@@ -444,19 +444,19 @@
                 mgr.prepend_keymap = [
                     {
                         on = ["m"];
-                        run = "arrow-left";
+                        run = "arrow prev";
                     }
                     {
                         on = ["n"];
-                        run = "arrow-down";
+                        run = "arrow 1";
                     }
                     {
                         on = ["e"];
-                        run = "arrow-up";
+                        run = "arrow -1";
                     }
                     {
                         on = ["i"];
-                        run = "arrow-right";
+                        run = "arrow next";
                     }
                 ];
             };
