@@ -99,6 +99,7 @@
 
         #GUI
         obsidian
+        audacity
         logseq
         firefox
         xfce.thunar
