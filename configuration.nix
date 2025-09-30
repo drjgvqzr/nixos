@@ -348,9 +348,9 @@
         playerctld.enable = true;
         resolved = {
             enable = true;
-            llmnr = "false";
-            #dnsovertls = "true";
-            dnssec = "true";
+            #llmnr = "false";
+            dnsovertls = "true";
+            #dnssec = "true";
             domains = ["dns.mullvad.net"];
         };
         xserver = {
