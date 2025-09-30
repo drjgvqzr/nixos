@@ -347,7 +347,7 @@
         };
         playerctld.enable = true;
         resolved = {
-            enable = true;
+            enable = false;
             #llmnr = "false";
             #dnsovertls = "true";
             #dnssec = "true";
