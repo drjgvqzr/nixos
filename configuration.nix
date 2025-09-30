@@ -66,7 +66,6 @@
         lf
         gtrash
         ghc
-        yazi
         vscodium
         pdftk
         translate-shell
