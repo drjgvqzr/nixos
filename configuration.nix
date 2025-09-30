@@ -315,6 +315,10 @@
                 };
             };
         };
+        clamav = {
+            daemon.enable = true;
+            updater.enable = true;
+        };
         cron = {
             enable = true;
             systemCronJobs = [
