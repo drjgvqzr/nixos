@@ -347,10 +347,9 @@
         };
         playerctld.enable = true;
         resolved = {
-            enable = false;
-            #llmnr = "false";
-            #dnsovertls = "true";
-            #dnssec = "true";
+            enable = true;
+            llmnr = "false";
+            dnsovertls = "opportunistic";
             domains = ["dns.mullvad.net"];
         };
         xserver = {
@@ -574,8 +573,8 @@
                 \ 'active': {
                 \   'right': [ [ 'lineinfo' ],
                 \              [ 'percent' ]]},}
-                "cabbrev wq silent wq
-                "cabbrev w silent w
+                cabbrev wq silent wq
+                cabbrev w silent w
                 syntax on
                 colorscheme vim
                 filetype plugin on
