@@ -349,7 +349,7 @@
         resolved = {
             enable = true;
             llmnr = "false";
-            dnsovertls = "opportunistic";
+            dnsovertls = "true";
             domains = ["dns.mullvad.net"];
         };
         xserver = {
