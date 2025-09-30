@@ -100,6 +100,7 @@
         #GUI
         obsidian
         audacity
+        iwgtk
         logseq
         firefox
         xfce.thunar
@@ -314,11 +315,6 @@
                     energy_perf_bias = "power";
                 };
             };
-        };
-        clamav = {
-            daemon.enable = true;
-            updater.enable = true;
-            scanner.enable = true;
         };
         cron = {
             enable = true;
