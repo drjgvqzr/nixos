@@ -444,7 +444,7 @@
                 mgr.prepend_keymap = [
                     {
                         on = ["m"];
-                        run = "arrow prev";
+                        run = "leave";
                     }
                     {
                         on = ["n"];
@@ -456,7 +456,7 @@
                     }
                     {
                         on = ["i"];
-                        run = "arrow next";
+                        run = "enter";
                     }
                 ];
             };
