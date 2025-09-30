@@ -455,6 +455,10 @@
                         run = "arrow -1";
                     }
                     {
+                        on = ["i"];
+                        run = "enter";
+                    }
+                    {
                         on = ["C-["];
                         run = "escape";
                     }
