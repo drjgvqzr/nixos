@@ -349,7 +349,7 @@
         resolved = {
             enable = true;
             #llmnr = "false";
-            dnsovertls = "true";
+            #dnsovertls = "true";
             #dnssec = "true";
             domains = ["dns.mullvad.net"];
         };
