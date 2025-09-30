@@ -318,6 +318,7 @@
         clamav = {
             daemon.enable = true;
             updater.enable = true;
+            scanner.enable = true;
         };
         cron = {
             enable = true;
