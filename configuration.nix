@@ -189,6 +189,8 @@
     networking = {
         enableIPv6 = false;
         dhcpcd.enable = false;
+        firewall.allowedTCPPorts = [6881];
+        firewall.allowedUDPPorts = [6881];
         hostName =
             if builtins.pathExists /sys/kernel/btf/thinkpad_acpi
             then "W520"
