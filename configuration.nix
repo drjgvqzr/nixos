@@ -658,10 +658,8 @@
                 noremap i l
                 noremap N n
                 noremap E N
-                noremap o i
-                noremap O I
-                noremap ' o
-                noremap " O
+                noremap ' i
+                noremap " I
                 inoremap ne <Esc>
                 inoremap en <Esc>
                 nmap <A-F1> <Nop>
