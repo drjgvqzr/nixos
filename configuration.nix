@@ -66,6 +66,7 @@
         lf
         gtrash
         ghc
+        p7zip
         vscodium
         pdftk
         translate-shell
