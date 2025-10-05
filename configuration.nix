@@ -544,6 +544,7 @@
                 "s" = "add video-pan-x  -0.1";
                 "w" = "add video-pan-y  +0.1";
                 "r" = "add video-pan-y  -0.1";
+                "R" = "cycle_values video-rotate 90 180 270 0";
                 "t" = "add video-zoom   +0.1";
                 "d" = "add video-zoom   -0.1";
                 "c" = "set video-zoom 0 ; set video-pan-x 0 ; set video-pan-y 0";
