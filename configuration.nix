@@ -466,6 +466,18 @@
                         run = "open";
                     }
                     {
+                        on = ["O"];
+                        run = "open --interactive";
+                    }
+                    {
+                        on = ["N"];
+                        run = "find_arrow";
+                    }
+                    {
+                        on = ["E"];
+                        run = "find_arrow --previous";
+                    }
+                    {
                         on = ["C-["];
                         run = "escape";
                     }
