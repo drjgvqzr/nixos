@@ -477,11 +477,11 @@
                         run = "find_arrow --previous";
                     }
                     {
-                        on = ["<A-n>"];
+                        on = ["]"];
                         run = "seek 5";
                     }
                     {
-                        on = ["<A-e>"];
+                        on = ["["];
                         run = "seek -5";
                     }
                     {
