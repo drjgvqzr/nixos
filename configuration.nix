@@ -443,21 +443,6 @@
         programs.yazi = {
             enable = true;
             enableZshIntegration = true;
-            settings = {
-                opener = {
-                    open = [
-                        {run = "xdg-open \"$@\"";}
-                    ];
-                };
-                open = {
-                    prepend_rules = [
-                        {
-                            name = "*";
-                            use = "open";
-                        }
-                    ];
-                };
-            };
             keymap = {
                 mgr.prepend_keymap = [
                     {
