@@ -443,6 +443,16 @@
         programs.yazi = {
             enable = true;
             keymap = {
+                confirm.prepend_keymap = [
+                    {
+                        on = ["i"];
+                        run = "close --submit";
+                    }
+                    {
+                        on = ["m"];
+                        run = "close";
+                    }
+                ];
                 mgr.prepend_keymap = [
                     {
                         on = ["m"];
