@@ -40,7 +40,6 @@
         i3-swallow
         hunspell
         hunspellDicts.en_US-large
-        squeekboard
         hunspellDicts.hu_HU
 
         #CLI
