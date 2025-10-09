@@ -444,6 +444,16 @@
             enable = true;
             enableZshIntegration = true;
             keymap = {
+                cmp.prepend_keymap = [
+                    {
+                        on = ["<A-e>"];
+                        run = "arrow prev";
+                    }
+                    {
+                        on = ["<A-n>"];
+                        run = "arrow next";
+                    }
+                ];
                 mgr.prepend_keymap = [
                     {
                         on = ["m"];
