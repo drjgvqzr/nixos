@@ -443,10 +443,12 @@
         programs.yazi = {
             enable = true;
             settings = {
-                manager = {
+                mgr = {
                     sort_by = "natural";
                     sort_sensitive = false;
                     sort_dir_first = true;
+                    sort_translit = true;
+                    show_symlink = true;
                 };
             };
             initLua = ''                require("full-border"):setup()
