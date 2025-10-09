@@ -462,6 +462,10 @@
                         run = "enter";
                     }
                     {
+                        on = ["o"];
+                        run = "open";
+                    }
+                    {
                         on = ["C-["];
                         run = "escape";
                     }
