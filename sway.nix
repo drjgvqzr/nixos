@@ -19,10 +19,7 @@
     bindsym Pause exec playerctl --player mpv play-pause || playerctl play-pause
     bindsym XF86AudioNext exec playerctl --player mpv next || playerctl next
     bindsym XF86AudioPrev exec playerctl --player mpv previous || playerctl previous
-    bindsym --release Super_L exec wmenu-run
-    bindgesture swipe:right workspace prev
-    bindgesture swipe workspace prev
-    bindgesture hold workspace prev";
+    bindsym --release Super_L exec wmenu-run";
         wrapperFeatures.gtk = true;
         config = {
             output = {
