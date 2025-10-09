@@ -451,7 +451,7 @@
                     show_symlink = true;
                 };
             };
-            initLua = ''require("full-border"):setup()'';
+            initLua = "require(\"full-border\"):setup()\nrequire(\"no-status\"):setup()";
             keymap = {
                 confirm.prepend_keymap = [
                     {
