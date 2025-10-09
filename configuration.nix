@@ -451,8 +451,7 @@
                     show_symlink = true;
                 };
             };
-            initLua = ''                require("full-border"):setup()
-                require("no-status"):setup()'';
+            initLua = ''require("full-border"):setup()'';
             keymap = {
                 confirm.prepend_keymap = [
                     {
