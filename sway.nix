@@ -20,7 +20,7 @@
     bindsym XF86AudioNext exec playerctl --player mpv next || playerctl next
     bindsym XF86AudioPrev exec playerctl --player mpv previous || playerctl previous
     bindsym --release Super_L exec wmenu-run
-    bindgesture swipe:3:up workspace prev";
+    bindgesture swipe:4:up input type:keyboard events toggle";
         wrapperFeatures.gtk = true;
         config = {
             output = {
@@ -122,7 +122,7 @@
                 "mod1+Shift+4" = "move container to workspace number 4";
                 "mod1+Shift+5" = "move container to workspace number 5";
                 "mod1+Shift+6" = "move container to workspace number 6";
-                "mod1+Shift+q" = "swaymsg exit";
+                "mod1+Shift+q" = "exit";
 
                 "mod1+f1" = "exec doas ${pkgs.kbd}/bin/chvt 1";
                 "mod1+f2" = "exec doas ${pkgs.kbd}/bin/chvt 2";
