@@ -442,7 +442,6 @@
         };
         programs.yazi = {
             enable = true;
-            enableZshIntegration = true;
             keymap = {
                 mgr.prepend_keymap = [
                     {
@@ -476,6 +475,14 @@
                     {
                         on = ["E"];
                         run = "find_arrow --previous";
+                    }
+                    {
+                        on = ["<A-n>"];
+                        run = "seek 5";
+                    }
+                    {
+                        on = ["<A-e>"];
+                        run = "seek -5";
                     }
                     {
                         on = ["C-["];
