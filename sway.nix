@@ -111,6 +111,8 @@
                 "mod1+4" = "workspace number 4";
                 "mod1+5" = "workspace number 5";
                 "mod1+6" = "workspace number 6";
+                "mod1+Left" = "workspace prev";
+                "mod1+Right" = "workspace next";
                 "mod1+Tab" = "workspace back_and_forth";
 
                 "mod1+Shift+1" = "move container to workspace number 1";
