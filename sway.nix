@@ -21,7 +21,8 @@
     bindsym XF86AudioPrev exec playerctl --player mpv previous || playerctl previous
     bindsym --release Super_L exec wmenu-run
     bindgesture swipe:right workspace prev
-    bindgesture hold exec workspace prev";
+    bindgesture swipe workspace prev
+    bindgesture hold workspace prev";
         wrapperFeatures.gtk = true;
         config = {
             output = {
