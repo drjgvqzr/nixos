@@ -443,6 +443,58 @@
         programs.yazi = {
             enable = true;
             enableZshIntegration = true;
+            keymap = {
+                mgr.prepend_keymap = [
+                    {
+                        on = ["m"];
+                        run = "leave";
+                    }
+                    {
+                        on = ["n"];
+                        run = "arrow 1";
+                    }
+                    {
+                        on = ["e"];
+                        run = "arrow -1";
+                    }
+                    {
+                        on = ["i"];
+                        run = "enter";
+                    }
+                    {
+                        on = ["o"];
+                        run = "open";
+                    }
+                    {
+                        on = ["O"];
+                        run = "open --interactive";
+                    }
+                    {
+                        on = ["N"];
+                        run = "find_arrow";
+                    }
+                    {
+                        on = ["E"];
+                        run = "find_arrow --previous";
+                    }
+                    {
+                        on = ["C-["];
+                        run = "escape";
+                    }
+                    {
+                        on = ["q"];
+                        run = "quit";
+                    }
+                    {
+                        on = ["C-c"];
+                        run = "close";
+                    }
+                    {
+                        on = ["C-z"];
+                        run = "suspend";
+                    }
+                ];
+            };
         };
         programs.radio-cli = {
             enable = true;
