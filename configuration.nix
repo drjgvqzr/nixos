@@ -468,15 +468,7 @@
                     }
                     {
                         on = ["i"];
-                        run = "enter";
-                    }
-                    {
-                        on = ["o"];
-                        run = "open";
-                    }
-                    {
-                        on = ["O"];
-                        run = "open --interactive";
+                        run = "plugin smart-enter";
                     }
                     {
                         on = ["N"];
