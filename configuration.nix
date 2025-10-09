@@ -815,7 +815,7 @@
                 adjust-open = "best-fit";
                 inputbar-bg = "#000000";
                 inputbar-fg = "#FFFFFF";
-                recolor = "true";
+                #recolor = "true";
                 selection-clipboard = "clipboard";
             };
         };
