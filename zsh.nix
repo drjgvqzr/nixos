@@ -88,6 +88,8 @@
             clear
             setfont -d &> /dev/null
             ya pkg add yazi-rs/plugins:smart-enter &> /dev/null
+            ya pkg add yazi-rs/plugins:full-border &> /dev/null
+            ya pkg add yazi-rs/plugins:no-status &> /dev/null
 
             ZSH_AUTOSUGGEST_BUFFER_MAX_SIZE=20
             ZSH_AUTOSUGGEST_HISTORY_IGNORE="cd *","mpv *"

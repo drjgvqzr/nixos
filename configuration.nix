@@ -442,7 +442,8 @@
         };
         programs.yazi = {
             enable = true;
-            initLua = ''require("full-border"):setup()'';
+            initLua = ''                require("full-border"):setup()
+                            require("no-status"):setup()'';
             keymap = {
                 confirm.prepend_keymap = [
                     {
