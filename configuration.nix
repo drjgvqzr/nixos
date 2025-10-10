@@ -291,17 +291,6 @@
         };
         sleep.extraConfig = "HibernateDelaySec=30m";
     };
-    time.timeZone = "Europe/Budapest";
-    users = {
-        defaultUserShell = pkgs.zsh;
-        users.soma = {
-            isNormalUser = true;
-            extraGroups = [
-                "wheel"
-                "adbusers"
-            ];
-        };
-    };
     services = {
         auto-cpufreq = {
             enable = true;
@@ -363,6 +352,19 @@
             exportConfiguration = true;
         };
     };
+    time.timeZone = "Europe/Budapest";
+    users = {
+        extraGroups.vboxusers.members = ["soma"];
+        defaultUserShell = pkgs.zsh;
+        users.soma = {
+            isNormalUser = true;
+            extraGroups = [
+                "wheel"
+                "adbusers"
+            ];
+        };
+    };
+    virtualisation.virtualbox.host.enable = true;
 
     home-manager = {
         useUserPackages = true;
