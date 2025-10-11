@@ -327,7 +327,7 @@
         gnome.gnome-keyring.enable = true;
         logind.settings.Login = {
             HandleLidSwitch = "suspend-then-hibernate";
-            HandleLidSwitchExternalPower = "suspend-then-hibernate";
+            HandleLidSwitchExternalPower = "ignore";
             HandlePowerKey = "suspend-then-hibernate";
             HandlePowerKeyLongPress = "suspend-then-hibernate";
         };
@@ -354,7 +354,6 @@
     };
     time.timeZone = "Europe/Budapest";
     users = {
-        extraGroups.vboxusers.members = ["soma"];
         defaultUserShell = pkgs.zsh;
         users.soma = {
             isNormalUser = true;
@@ -364,7 +363,6 @@
             ];
         };
     };
-    virtualisation.virtualbox.host.enable = true;
 
     home-manager = {
         useUserPackages = true;
