@@ -62,12 +62,12 @@
         links2
         xdg-utils
         fzf
-        unzip
         lf
         gtrash
         ghc
-        p7zip
         vscodium
+        ouch
+        glow
         pdftk
         translate-shell
         fd
@@ -132,7 +132,7 @@
         loader = {
             systemd-boot = {
                 enable = true;
-                configurationLimit = 300;
+                configurationLimit = 500;
             };
             efi.canTouchEfiVariables = true;
             timeout = 1;
@@ -327,7 +327,7 @@
         gnome.gnome-keyring.enable = true;
         logind.settings.Login = {
             HandleLidSwitch = "suspend-then-hibernate";
-            HandleLidSwitchExternalPower = "ignore";
+            HandleLidSwitchExternalPower = "suspend-then-hibernate";
             HandlePowerKey = "suspend-then-hibernate";
             HandlePowerKeyLongPress = "suspend-then-hibernate";
         };
