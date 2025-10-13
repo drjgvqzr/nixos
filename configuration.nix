@@ -99,6 +99,7 @@
 
         #GUI
         obsidian
+        zotero
         audacity
         iwgtk
         logseq
