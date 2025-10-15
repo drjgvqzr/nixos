@@ -65,6 +65,7 @@
         lf
         gtrash
         ghc
+        tldr
         vscodium
         ouch
         glow
