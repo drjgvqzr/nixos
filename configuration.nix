@@ -100,6 +100,7 @@
 
         #GUI
         obsidian
+        qdirstat
         zotero
         audacity
         iwgtk
