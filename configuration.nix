@@ -65,6 +65,7 @@
         lf
         gtrash
         ghc
+        smartmontools
         tldr
         vscodium
         ouch
