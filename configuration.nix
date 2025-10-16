@@ -118,6 +118,7 @@
         gfn-electron
         unigine-heaven
         pavucontrol
+        protonmail-desktop
         ungoogled-chromium
         onlyoffice-bin
         lutris
@@ -350,6 +351,7 @@
             dnssec = "true";
             domains = ["dns.mullvad.net"];
         };
+        thermald.enable = true;
         xserver = {
             xkb.layout = "us";
             xkb.variant = "colemak_dh";

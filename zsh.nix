@@ -336,6 +336,7 @@
             abbrev-alias d="doas"
             abbrev-alias q="qalc"
             abbrev-alias f="yazi"
+            abbrev-alias qr="qrrs"
             abbrev-alias z="zathura"
             abbrev-alias lo="libreoffice"
             abbrev-alias nb="newsboat"
