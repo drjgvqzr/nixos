@@ -116,6 +116,7 @@
         bluejay
         browsh
         gfn-electron
+        unigine-heaven
         pavucontrol
         ungoogled-chromium
         onlyoffice-bin
