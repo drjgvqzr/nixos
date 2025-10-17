@@ -55,9 +55,10 @@
 
             map ' enterInsertMode
 
-            map v enterVisualMode
+            #map v enterVisualMode
             map V enterVisualLineMode
             map gv LinkHints.activateSelect use caret
+            map v LinkHints.activateSelect use visual
             mapkey <m:v> h
             mapkey <n:v> j
             mapkey <e:v> k
