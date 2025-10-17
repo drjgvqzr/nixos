@@ -65,6 +65,8 @@
         lf
         gtrash
         ghc
+        iomelt
+        hyperfine
         smartmontools
         tldr
         vscodium
