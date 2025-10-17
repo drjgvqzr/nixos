@@ -115,7 +115,7 @@
             w () {links "https://en.wikipedia.org/wiki/$*#bodyContent"}
             we () {links "https://en.wiktionary.org/wiki/$*#English"}
             ay () {
-             yt-dlp --write-auto-sub -q --no-warnings --skip-download -o /tmp/sub $(wl-paste);
+             yt-dlp --write-auto-sub -q --no-warnings --skip-download -o /tmp/sub $(wl-paste | sed 's|inv.nadeko.net|youtube.com|');
              cat /tmp/sub.en.vtt|
              sed -e '/^[0-9]\{2\}:[0-9]\{2\}:[0-9]\{2\}\.[0-9]\{3\} -->/d' -e '/^[0-9]\{2\}:[0-9]\{2\}:[0-9]\{2\}\.[0-9]\{3\}/d' -e 's/<[^>]*>//g'|
              awk 'NF'|
