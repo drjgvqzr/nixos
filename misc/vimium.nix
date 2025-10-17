@@ -20,7 +20,7 @@
             map x removeTab
             map X restoreTab
 
-            map gi scrollToTop $then="focusInput"
+            map gi focusInput
             map gI LinkHints.activateEdit
 
             map f LinkHints.activate

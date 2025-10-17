@@ -65,6 +65,7 @@
         lf
         gtrash
         ghc
+        mailsy
         iomelt
         hyperfine
         smartmontools
