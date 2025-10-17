@@ -55,9 +55,9 @@
 
             map ' enterInsertMode
 
-            #map v enterVisualMode
+            ##map v enterVisualMode
             map V enterVisualLineMode
-            map gv LinkHints.activateSelect use caret
+            map c LinkHints.activateSelect use caret
             map v LinkHints.activateSelect use visual
             mapkey <m:v> h
             mapkey <n:v> j
@@ -84,7 +84,7 @@
             map << moveTabLeft
             map >> moveTabRight
 
-            map c zoomReset
+            ##map c zoomReset
             map ? showHelp
             map w reset
 
