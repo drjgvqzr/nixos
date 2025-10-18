@@ -8,9 +8,9 @@ nmcli device wifi connect "$ssid" password "$password"
 sudo nix-channel --add https://nixos.org/channels/nixos-unstable nixos
 mkdir -p /home/soma/dx/
 mkdir -p /home/soma/.config
-cp -r /mnt/nixos /home/soma/dx/
+mv /mnt/nixos /home/soma/dx/
 sudo rm /etc/nixos/configuration.nix
-sudo ln -s ~/dx/nixos/configuration.nix configuration.nix
+sudo ln -s ~/dx/nixos/configuration.nix /etc/nixos/configuration.nix
 ln -s /home/soma/dx/nixos/misc/.logseq /home/soma/.logseq
 sudo sed -r 's/"luks[^"]+"/"luks"/g' -i /etc/nixos/hardware-configuration.nix
 sudo nixos-rebuild switch --upgrade

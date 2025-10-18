@@ -124,6 +124,7 @@
         protonmail-desktop
         ungoogled-chromium
         onlyoffice-bin
+        kdiskmark
         lutris
         #starsector # TEITW-HP9ON-A7HMK-WA6YA
     ];
