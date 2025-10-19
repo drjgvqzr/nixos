@@ -177,13 +177,13 @@
     };
     fonts = {
         fontDir.enable = true;
-        packages = with pkgs; [roboto-mono noto-fonts-color-emoji borg-sans-mono];
+        packages = with pkgs; [roboto-mono noto-fonts-color-emoji];
         fontconfig = {
             enable = true;
             defaultFonts = {
-                monospace = ["Borg Sans Mono"];
-                serif = ["Borg Sans Mono"];
-                sansSerif = ["Borg Sans Mono"];
+                monospace = ["Roboto Mono"];
+                serif = ["Roboto Mono"];
+                sansSerif = ["Roboto Mono"];
                 emoji = ["Noto Color Emoji"];
             };
         };
@@ -420,8 +420,8 @@
                 "ctrl+g" = "show_last_command_output";
             };
             font = {
-                name = "Borg Sans Mono";
-                package = pkgs.borg-sans-mono;
+                name = "Roboto Mono";
+                package = pkgs.roboto-mono;
                 size = 14;
             };
             settings = {
@@ -558,8 +558,8 @@
                 #ytdl-raw-options = "sub-langs=\"en,en-orig,de,hu\"";
                 sid = "no";
                 volume-max = "100";
-                osd-font = "Borg Sans Mono";
-                sub-font = "Borg Sans Mono";
+                osd-font = "Roboto Mono";
+                sub-font = "Roboto Mono";
             };
             scriptOpts = {
                 stats.key_page_0 = "2";
