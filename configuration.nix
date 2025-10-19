@@ -106,6 +106,7 @@
         obsidian
         qdirstat
         zotero
+        firefox
         audacity
         iwgtk
         logseq
@@ -755,11 +756,11 @@
             mimeApps = {
                 enable = true;
                 defaultApplications = {
-                    "text/html" = "librewolf.desktop";
-                    "x-scheme-handler/http" = "librewolf.desktop";
-                    "x-scheme-handler/https" = "librewolf.desktop";
-                    "x-scheme-handler/about" = "librewolf.desktop";
-                    "x-scheme-handler/unknown" = "librewolf.desktop";
+                    "text/html" = "firefox.desktop";
+                    "x-scheme-handler/http" = "firefox.desktop";
+                    "x-scheme-handler/https" = "firefox.desktop";
+                    "x-scheme-handler/about" = "firefox.desktop";
+                    "x-scheme-handler/unknown" = "firefox.desktop";
                     "x-scheme-handler/mailto" = "thunderbird.desktop";
                     "application/pdf" = "zathura.desktop";
                     "video/mp4" = "mpv.desktop";
