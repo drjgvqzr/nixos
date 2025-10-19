@@ -843,10 +843,10 @@
                 "R" = "rotate";
             };
             options = {
-                guioptions = "vh";
-                adjust-open = "best-fit";
-                inputbar-bg = "#000000";
-                inputbar-fg = "#FFFFFF";
+                #guioptions = "vh";
+                #adjust-open = "best-fit";
+                #inputbar-bg = "#000000";
+                #inputbar-fg = "#FFFFFF";
                 #recolor = "true";
                 selection-clipboard = "clipboard";
             };
