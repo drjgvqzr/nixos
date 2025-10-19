@@ -47,8 +47,8 @@
                 "browser.newtabpage.enabled" = false;
                 "browser.download.open_pdf_attachments_inline" = true;
                 "findbar.highlightAll" = true;
-                "font.name.monospace.x-western" = "Roboto Mono";
-                "font.name.sans-serif.x-western" = "Roboto Mono";
+                "font.name.monospace.x-western" = "Borg Sans Mono";
+                "font.name.sans-serif.x-western" = "Borg Sans Mono";
                 "font.name.serif.x-western" = "Roboto  Mono";
                 "font.size.variable.x-western" = "18";
                 "sidebar.verticalTabs" = true;
