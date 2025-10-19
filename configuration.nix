@@ -66,7 +66,6 @@
         ghc
         mailsy
         piper-tts
-        tts
         iomelt
         hyperfine
         smartmontools
