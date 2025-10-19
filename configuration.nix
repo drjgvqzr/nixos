@@ -65,6 +65,7 @@
         gtrash
         ghc
         mailsy
+        piper-tts
         iomelt
         hyperfine
         smartmontools
