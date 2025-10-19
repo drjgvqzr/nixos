@@ -49,7 +49,6 @@
         pulsemixer
         wget
         gh
-        unrar-free
         unoconv
         jq
         ripgrep

@@ -381,7 +381,6 @@
             abbrev-alias cdx="cd ~/dx"
             abbrev-alias cdc="cd ~/dx/nixos"
             abbrev-alias b="btop"
-            abbrev-alias untar="tar -xvf"
             abbrev-alias wgu="doas systemctl start wg-quick-wg0.service"
             abbrev-alias wgd="doas systemctl stop wg-quick-wg0.service"
             abbrev-alias wgr="doas systemctl restart wg-quick-wg0.service"
@@ -412,7 +411,6 @@
             hibernate = "systemctl hibernate";
             zathura = "swallow zathura";
             fastfetch = "fastfetch --logo nixos_old";
-            unrar = "unrar-free";
             qalc = "qalc -c -s 'upxrates 1'";
             ls = "ls -hpNF --color --hyperlink=auto";
             mv = "mv -vu";
