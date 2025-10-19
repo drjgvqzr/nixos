@@ -181,7 +181,7 @@
         fontconfig = {
             enable = true;
             defaultFonts = {
-                monospace = ["Roboto Mono"];
+                monospace = ["Borg Sans Mono"];
                 serif = ["Borg Sans Mono"];
                 sansSerif = ["Borg Sans Mono"];
                 emoji = ["Noto Color Emoji"];
@@ -420,8 +420,8 @@
                 "ctrl+g" = "show_last_command_output";
             };
             font = {
-                name = "Roboto Mono";
-                package = pkgs.roboto-mono;
+                name = "Borg Sans Mono";
+                package = pkgs.borg-sans-mono;
                 size = 14;
             };
             settings = {
