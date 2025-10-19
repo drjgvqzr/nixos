@@ -181,9 +181,9 @@
         fontconfig = {
             enable = true;
             defaultFonts = {
-                monospace = ["Roboto Mono"];
-                serif = ["Roboto Mono"];
-                sansSerif = ["Roboto Mono"];
+                monospace = ["Borg Sans Mono"];
+                serif = ["Borg Sans Mono"];
+                sansSerif = ["Borg Sans Mono"];
                 emoji = ["Noto Color Emoji"];
             };
         };
@@ -558,8 +558,8 @@
                 #ytdl-raw-options = "sub-langs=\"en,en-orig,de,hu\"";
                 sid = "no";
                 volume-max = "100";
-                osd-font = "Roboto Mono";
-                sub-font = "Roboto Mono";
+                osd-font = "Borg Sans Mono";
+                sub-font = "Borg Sans Mono";
             };
             scriptOpts = {
                 stats.key_page_0 = "2";
