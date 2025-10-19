@@ -420,6 +420,7 @@
             rg = "rg --hyperlink-format=kitty";
             fd = "fd --hyperlink";
             trash = "gtrash restore";
+            fontname = "\ls /nix/var/nix/profiles/system/sw/share/X11/fonts | fzf --ansi | xargs -I {} fc-query /nix/var/nix/profiles/system/sw/share/X11/fonts/{} | grep '^\s\+family:' | cut -d'\"' -f2";
             trashinfo = "gtrash summary";
             newsboat = "newsboat -q -u /home/soma/dx/nixos/misc/newsboat";
             ba = "echo $(cat /sys/class/power_supply/BAT0/capacity)%";
