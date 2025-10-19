@@ -177,7 +177,7 @@
     };
     fonts = {
         fontDir.enable = true;
-        packages = with pkgs; [roboto-mono noto-fonts-color-emoji];
+        packages = with pkgs; [roboto-mono noto-fonts-color-emoji borg-sans-mono];
         fontconfig = {
             enable = true;
             defaultFonts = {
