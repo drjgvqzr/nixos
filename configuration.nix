@@ -65,6 +65,7 @@
         gtrash
         ghc
         mailsy
+        sox
         mapscii
         undollar
         fdupes
