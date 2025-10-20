@@ -65,6 +65,9 @@
         gtrash
         ghc
         mailsy
+        mapscii
+        undollar
+        fdupes
         bat
         piper-tts
         iomelt
