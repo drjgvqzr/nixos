@@ -59,7 +59,7 @@
         qrrs
         alejandra
         links2
-        xdg-utils
+        #xdg-utils
         fzf
         lf
         gtrash
