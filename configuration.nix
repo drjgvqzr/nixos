@@ -408,6 +408,33 @@
                 };
             };
         };
+        programs.alacritty = {
+            enable = true;
+            settings = {
+                colors = {
+                    normal = {
+                        black = "#000000";
+                        red = "#aa0000";
+                        green = "#00aa00";
+                        yellow = "#aa5500";
+                        blue = "#0000ff";
+                        magenta = "#aa00aa";
+                        cyan = "#00aaaa";
+                        white = "#aaaaaa";
+                    };
+                    bright = {
+                        bright_black = "#555555";
+                        bright_red = "#ff5555";
+                        bright_green = "#55ff55";
+                        bright_yellow = "#ffff55";
+                        bright_blue = "#5555ff";
+                        bright_magenta = "#ff55ff";
+                        bright_cyan = "#55ffff";
+                        bright_white = "#ffffff";
+                    };
+                };
+            };
+        };
         programs.kitty = {
             enable = true;
             extraConfig = ''
