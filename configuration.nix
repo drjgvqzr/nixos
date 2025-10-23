@@ -412,8 +412,17 @@
             enable = true;
             settings = {
                 font.size = 14;
-
-                padding = "{ x = 10, y = 10 }";
+                window.dimensions = {
+                    lines = 3;
+                    columns = 200;
+                };
+                keyboard.bindings = [
+                    {
+                        key = "K";
+                        mods = "Control";
+                        chars = "\\u000c";
+                    }
+                ];
                 colors = {
                     primary.background = "#000000";
                     normal = {
