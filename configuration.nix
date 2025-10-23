@@ -412,6 +412,7 @@
             enable = true;
             settings = {
                 colors = {
+                    primary.background = "#000000";
                     normal = {
                         black = "#000000";
                         red = "#aa0000";
