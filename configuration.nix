@@ -457,11 +457,23 @@
                     }
                     {
                         key = "PageUp";
+                        mods = "Control";
                         action = "ScrollPageUp";
                     }
                     {
                         key = "PageDown";
+                        mods = "Control";
                         action = "ScrollPageDown";
+                    }
+                    {
+                        key = "Home";
+                        mods = "Control";
+                        action = "ScrollToTop";
+                    }
+                    {
+                        key = "End";
+                        mods = "Control";
+                        action = "ScrollToBottom";
                     }
                 ];
             };
