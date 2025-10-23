@@ -418,9 +418,14 @@
                 };
                 selection.save_to_clipboard = true;
                 cursor = {
-                    shape = "Underline";
-                    blinking = "On";
+                    style = {
+                        shape = "Underline";
+                        blinking = "On";
+                    };
+                    blink_interval = 500;
+                    blink_timeout = 0;
                 };
+                mouse.hide_when_typing = true;
                 colors = {
                     primary.background = "#000000";
                     normal = {
