@@ -455,6 +455,14 @@
                         mods = "Control";
                         action = "Paste";
                     }
+                    {
+                        key = "PageUp";
+                        action = "ScrollPageUp";
+                    }
+                    {
+                        key = "PageDown";
+                        action = "ScrollPageDown";
+                    }
                 ];
             };
         };
