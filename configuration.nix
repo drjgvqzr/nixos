@@ -449,6 +449,13 @@
                         white = "#ffffff";
                     };
                 };
+                keyboard.bindings = [
+                    {
+                        key = "V";
+                        mods = "Control";
+                        action = "Paste";
+                    }
+                ];
             };
         };
         programs.kitty = {
