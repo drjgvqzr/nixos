@@ -1125,7 +1125,7 @@
                     source = "/home/soma/dx/nixos/misc/.links";
                 };
                 kitty_open = {
-                    enable = false;
+                    enable = true;
                     force = true;
                     target = ".config/kitty/open-actions.conf";
                     text = ''
