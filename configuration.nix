@@ -413,8 +413,8 @@
             settings = {
                 font.size = 14;
                 window.padding = {
-                    x = 10;
-                    y = 10;
+                    x = 5;
+                    y = 5;
                 };
                 colors = {
                     primary.background = "#000000";
