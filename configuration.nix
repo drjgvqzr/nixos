@@ -127,6 +127,7 @@
         unigine-heaven
         pavucontrol
         protonmail-desktop
+        shotwell
         ungoogled-chromium
         onlyoffice-bin
         kdiskmark
