@@ -416,6 +416,11 @@
                     x = 5;
                     y = 5;
                 };
+                selection.save_to_clipboard = true;
+                cursor = {
+                    shape = "Underline";
+                    blinking = "On";
+                };
                 colors = {
                     primary.background = "#000000";
                     normal = {
