@@ -30,7 +30,6 @@
                 };
             };
             modifier = "Mod1";
-            terminal = "alacritty";
             menu = "wmenu-run";
             defaultWorkspace = "workspace number 1";
             left = "m";
@@ -80,7 +79,8 @@
                 };
             };
             keybindings = {
-                "mod1+Return" = "exec ${pkgs.alacritty}/bin/alacritty";
+                #"mod1+Return" = "exec ${pkgs.alacritty}/bin/alacritty";
+                "mod1+Return" = "exec ${pkgs.kitty}/bin/kitty";
                 "mod1+c" = "kill";
                 "mod1+w" = "exec librewolf";
                 "mod1+g" = "exec chromium";
