@@ -411,6 +411,7 @@
         programs.alacritty = {
             enable = true;
             settings = {
+                font.size = 14;
                 colors = {
                     primary.background = "#000000";
                     normal = {
