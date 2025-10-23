@@ -417,6 +417,7 @@
                     y = 5;
                 };
                 colors = {
+                    draw_bold_text_with_bright_colors = true;
                     primary.background = "#000000";
                     normal = {
                         black = "#000000";
