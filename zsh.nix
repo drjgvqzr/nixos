@@ -438,7 +438,7 @@
             dm = "echo -en \"\\e]P0000000\";echo -en \"\\e]P7aaaaaa\";clear";
             chown = "chown -Rv";
             chmod = "chmod -Rv";
-            shred = "shred -uvf -n 1";
+            shred = "shred -uvf -n 1 --remove=wipe";
             wttr = "curl https://wttr.in/budapest;sunwait list 47.62344395N 19.04990553124715E";
             speedtest = "speedtest-go -u decimal-bytes";
             blkid = "grc --colour=on blkid";
