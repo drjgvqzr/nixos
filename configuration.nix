@@ -108,7 +108,7 @@
         transmission_4
 
         #GUI
-        obsidian
+        #obsidian
         qdirstat
         zotero
         audacity
@@ -240,7 +240,7 @@
             dates = ["monthly"];
         };
     };
-    nixpkgs.config.allowUnfree = true;
+    nixpkgs.config.allowUnfree = false;
     nixpkgs.config.permittedInsecurePackages = [
         "olm-3.2.16"
         "electron-35.7.5"
@@ -987,6 +987,7 @@
         programs.btop = {
             enable = true;
             settings = {
+                net_iface = "wlan0";
                 update_ms = 100;
                 proc_sorting = "cpu direct";
                 proc_per_core = true;
