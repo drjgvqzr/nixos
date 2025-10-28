@@ -108,7 +108,7 @@
         transmission_4
 
         #GUI
-        obsidian
+        #obsidian
         qdirstat
         zotero
         audacity
@@ -245,6 +245,12 @@
         "olm-3.2.16"
         "electron-35.7.5"
     ];
+    nixpkgs.config.allowUnfreePredicate = pkg:
+        builtins.elem (lib.getName pkg) [
+            "unigine-heaven"
+            "steam"
+            "steam-unwrapped"
+        ];
     programs = {
         adb.enable = true;
         bash.shellInit = "export HISTFILE=/tmp/bash_history";
@@ -264,7 +270,7 @@
         localsend.enable = true;
         nano.enable = false;
         steam = {
-            enable = true;
+            enable = false;
             remotePlay.openFirewall = true;
         };
         virt-manager.enable = false;
