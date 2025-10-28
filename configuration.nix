@@ -240,7 +240,7 @@
             dates = ["monthly"];
         };
     };
-    nixpkgs.config.allowUnfree = false;
+    #nixpkgs.config.allowUnfree = false;
     nixpkgs.config.permittedInsecurePackages = [
         "olm-3.2.16"
         "electron-35.7.5"
