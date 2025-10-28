@@ -108,7 +108,7 @@
         transmission_4
 
         #GUI
-        #obsidian
+        obsidian
         qdirstat
         zotero
         audacity
@@ -178,7 +178,7 @@
             XDG_CACHE_HOME = "$HOME/.cache";
             XDG_DATA_HOME = "$HOME/.local/share";
             XDG_STATE_HOME = "$HOME/.local/state";
-            NIXPKGS_ALLOW_UNFREE = 1;
+            #NIXPKGS_ALLOW_UNFREE = 1;
         };
     };
     fonts = {
