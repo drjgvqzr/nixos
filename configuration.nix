@@ -122,15 +122,13 @@
         fluffychat
         bluejay
         browsh
-        gfn-electron
         unigine-heaven
         pavucontrol
-        protonmail-desktop
         shotwell
         ungoogled-chromium
         onlyoffice-bin
         kdiskmark
-        lutris
+        #lutris
         #starsector # TEITW-HP9ON-A7HMK-WA6YA
     ];
     boot = {
@@ -247,8 +245,8 @@
     nixpkgs.config.allowUnfreePredicate = pkg:
         builtins.elem (lib.getName pkg) [
             "unigine-heaven"
-            "steam"
-            "steam-unwrapped"
+            #"steam"
+            #"steam-unwrapped"
         ];
     programs = {
         adb.enable = true;
@@ -268,10 +266,10 @@
         };
         localsend.enable = true;
         nano.enable = false;
-        steam = {
-            enable = false;
-            remotePlay.openFirewall = true;
-        };
+        #steam = {
+        #    enable = false;
+        #    remotePlay.openFirewall = true;
+        #};
         virt-manager.enable = false;
         zsh.enable = true;
     };
