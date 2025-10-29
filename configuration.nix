@@ -75,7 +75,6 @@
         hyperfine
         smartmontools
         tldr
-        vscodium
         ouch
         glow
         pdftk
