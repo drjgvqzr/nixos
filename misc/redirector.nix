@@ -22,11 +22,11 @@
                 redirectUrl = "https://xcancel.com/$1";
                 appliesTo = ["main_frame"];
             }
-            {
-                includePattern = "https://*.fandom.com/wiki/*";
-                redirectUrl = "https://breezewiki.com/$1/wiki/$2";
-                appliesTo = ["main_frame"];
-            }
+            #{
+            #    includePattern = "https://*.fandom.com/wiki/*";
+            #    redirectUrl = "https://breezewiki.com/$1/wiki/$2";
+            #    appliesTo = ["main_frame"];
+            #}
             #{
             #    includePattern = "https://github.com/*/*";
             #    excludePattern = "*/issues*|*/raw*|*/wiki*|*/releases*|*/discussions*|*/pull*|*/topics*";
