@@ -714,7 +714,7 @@
             viAlias = true;
             vimdiffAlias = true;
             #plugins = with pkgs.vimPlugins; [vim-wayland-clipboard nvimpager vim-manpager vim-plugin-AnsiEsc lightline-vim];
-            plugins = with pkgs.vimPlugins; [lightline-vim vim-plugin-AnsiEsc indentLine];
+            #plugins = with pkgs.vimPlugins; [lightline-vim vim-plugin-AnsiEsc indentLine];
             extraLuaConfig = ''vim.o.shada = ""'';
             extraConfig = ''
                 set ignorecase
