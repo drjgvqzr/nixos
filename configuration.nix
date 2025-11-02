@@ -416,6 +416,7 @@
             enable = true;
             functions = {
                 fish_prompt = "string join '' -- (set_color red) '%' (set_color white)  (prompt_pwd --dir-length=0) (set_color green) '>' (set_color normal)";
+                pb = ''links "https://torrents-csv.com/search?q=$argv"'';
                 ay = ''
                     yt-dlp --write-auto-sub -q --no-warnings --skip-download -o /tmp/sub $(wl-paste | sed 's|inv.nadeko.net|youtube.com|');
                     cat /tmp/sub.en.vtt|
@@ -655,7 +656,6 @@
                 sg = "links https://github.com/search?q=$argv&s=stars";
                 w = "links https://en.wikipedia.org/wiki/$argv#bodyContent";
                 we = "links https://en.wiktionary.org/wiki/$argv#English";
-                pb = ''links "https://torrents-csv.com/search?q=$argv"'';
                 cdmnt = ''cd /mnt/'';
                 "0" = "cd ~;clear";
                 hibernate = "systemctl hibernate";
