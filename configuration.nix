@@ -757,7 +757,7 @@
                     scrollback-home = "Control+Home";
                     scrollback-end = "Control+End";
                     show-urls-copy = "Control+y";
-                    search-start = "Control+r";
+                    search-start = "Control+Shift+r";
                 };
             };
         };
