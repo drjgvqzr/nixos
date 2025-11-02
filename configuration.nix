@@ -414,7 +414,7 @@
         programs.fish = {
             enable = true;
             functions = {
-                s = "links https://lite.duckduckgo.com/lite/?q=$*";
+                s = "links https://lite.duckduckgo.com/lite/?q=$argv";
             };
             shellAbbrs = {
                 "8" = "cd -";
