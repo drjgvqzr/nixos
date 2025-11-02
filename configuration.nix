@@ -449,6 +449,8 @@
                     scrollback-down-page = "Control+Page_Down";
                     scrollback-home = "Control+Home";
                     scrollback-end = "Control+End";
+                    show-urls-copy = "Control+y";
+                    search-start = "Control+r";
                 };
             };
         };
