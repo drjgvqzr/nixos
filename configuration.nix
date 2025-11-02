@@ -416,9 +416,10 @@
             settings = {
                 main = {
                     font = "Roboto Mono:size=14";
-                    dpi-aware = "yes";
+                    #dpi-aware = "yes";
                 };
                 bell.system = "no";
+                scrollback.lines = 100000;
             };
         };
         programs.alacritty = {
