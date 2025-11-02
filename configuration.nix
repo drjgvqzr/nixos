@@ -418,7 +418,7 @@
                 window = {
                     padding = {
                         x = 5;
-                        y = 4;
+                        y = 0;
                     };
                     dynamic_padding = true;
                 };
