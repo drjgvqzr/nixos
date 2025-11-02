@@ -416,7 +416,6 @@
             enable = true;
             functions = {
                 fish_prompt = "string join '' -- (set_color red) '%' (set_color white)  (prompt_pwd --dir-length=0) (set_color green) '>' (set_color normal)";
-                s = ''links https://lite.duckduckgo.com/lite/?q=$argv'';
                 sdh = ''links "https://lite.duckduckgo.com/lite/?q=$argv&kl=hu-hu"'';
                 sud = ''links "https://rd.vern.cc/define.php?term=$argv"'';
                 sg = ''links "https://github.com/search?q=$argv&s=stars"'';
@@ -589,6 +588,7 @@
                     pdftk $argv[1] cat 1-end"$argv[2]" output $(echo "$1" | sed 's/\.[^.]*$//')-"$2".pdf'';
             };
             shellAbbrs = {
+                s = ''links https://lite.duckduckgo.com/lite/?q=$argv'';
                 "8" = "cd -";
                 "9" = "cd ..";
                 d = "doas";
