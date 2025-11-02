@@ -413,6 +413,11 @@
         };
         programs.foot = {
             enable = true;
+            settings = {
+                main = {
+                    font = "Roboto Mono:size=14";
+                };
+            };
         };
         programs.alacritty = {
             enable = true;
