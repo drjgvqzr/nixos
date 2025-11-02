@@ -732,7 +732,7 @@
                 mouse.hide-when-typing = true;
                 colors = {
                     background = "000000";
-                    foreground = "aaaaaa";
+                    foreground = "ffffff";
                     regular0 = "000000";
                     regular1 = "aa0000";
                     regular2 = "00aa00";
@@ -835,7 +835,7 @@
             };
         };
         programs.kitty = {
-            enable = true;
+            enable = false;
             extraConfig = ''
                 mouse_map ctrl+right press ungrabbed mouse_show_command_output
             '';
