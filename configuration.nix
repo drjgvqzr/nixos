@@ -416,7 +416,6 @@
             enable = true;
             functions = {
                 fish_prompt = "string join '' -- (set_color red) '%' (set_color white)  (prompt_pwd --dir-length=0) (set_color green) '>' (set_color normal)";
-                __fish_cursor_xterm = "underline";
                 s = "links https://lite.duckduckgo.com/lite/?q=$argv";
             };
             shellAbbrs = {
@@ -548,7 +547,8 @@
                 uptime = "grc --colour=on uptime";
             };
             shellInit = ''                set fish_color_command green
-                set fish_greeting'';
+                set fish_greeting
+                printf '\e[3 q' '';
         };
         programs.foot = {
             enable = true;
