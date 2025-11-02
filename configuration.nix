@@ -156,7 +156,7 @@
         binsh = "${pkgs.dash}/bin/dash";
         defaultPackages = [];
         pathsToLink = ["/share/xdg-desktop-portal" "/share/applications"];
-        shells = with pkgs; [zsh];
+        shells = with pkgs; [fish];
         sessionVariables = {
             EDITOR = "nvim";
             BROWSER = "xdg-open";
@@ -253,6 +253,7 @@
         bash.shellInit = "export HISTFILE=/tmp/bash_history";
         command-not-found.enable = true;
         dconf.enable = true;
+        fish.enable = true;
         git = {
             enable = true;
             config = [
@@ -374,7 +375,7 @@
     };
     time.timeZone = "Europe/Budapest";
     users = {
-        defaultUserShell = pkgs.zsh;
+        defaultUserShell = pkgs.fish;
         users.soma = {
             isNormalUser = true;
             extraGroups = [
