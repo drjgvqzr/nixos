@@ -422,6 +422,8 @@
                 scrollback.lines = 100000;
                 mouse.hide-when-typing = true;
                 colors = {
+                    background = "000000";
+                    foreground = "aaaaaa";
                     regular0 = "000000";
                     regular1 = "aa0000";
                     regular2 = "00aa00";
