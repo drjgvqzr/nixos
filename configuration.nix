@@ -416,7 +416,175 @@
             enable = true;
             functions = {
                 fish_prompt = "string join '' -- (set_color red) '%' (set_color white)  (prompt_pwd --dir-length=0) (set_color green) '>' (set_color normal)";
-                s = "links https://lite.duckduckgo.com/lite/?q=$argv";
+                s = ''links https://lite.duckduckgo.com/lite/?q=$argv'';
+                sdh = ''links "https://lite.duckduckgo.com/lite/?q=$*&kl=hu-hu"'';
+                sud = ''links "https://rd.vern.cc/define.php?term=$*"'';
+                sg = ''links "https://github.com/search?q=$*&s=stars"'';
+                w = ''links "https://en.wikipedia.org/wiki/$*#bodyContent"'';
+                we = ''links "https://en.wiktionary.org/wiki/$*#English"'';
+                ay = ''
+                    yt-dlp --write-auto-sub -q --no-warnings --skip-download -o /tmp/sub $(wl-paste | sed 's|inv.nadeko.net|youtube.com|');
+                    cat /tmp/sub.en.vtt|
+                    sed -e '/^[0-9]\{2\}:[0-9]\{2\}:[0-9]\{2\}\.[0-9]\{3\} -->/d' -e '/^[0-9]\{2\}:[0-9]\{2\}:[0-9]\{2\}\.[0-9]\{3\}/d' -e 's/<[^>]*>//g'|
+                    awk 'NF'|
+                    uniq -d|
+                    sed 's/$/ /'|
+                    tr -d '\n'|
+                    aichat "give a detailed summary of the previous text with the main points. Do not mention any promotions or sponsors."'';
+                pb = ''links "https://torrents-csv.com/search?q=$*"'';
+                "4" = ''
+                    curl -sL $(wl-paste)|
+                    grep -o 'is2.4chan.org[^"]*webm'|
+                    uniq|
+                    sed s.^.https://.|
+                    mpv --playlist=-'';
+                "4d" = ''
+                    curl -sL $(wl-paste)|
+                    grep -o 'is2.4chan.org[^"]*webm'|
+                    uniq|
+                    sed s.^.https://.|
+                    xargs -I {} wget -nc -P ~/Videos/$1 {}'';
+                bcnp = ''
+                    bluetoothctl power on
+                    [[ -z $(pgrep -f bluetoothctl) ]] && bluetoothctl -t 60 scan on > /dev/null &
+                    watch -c -n 1 "bluetoothctl devices| grep Device | grep -v '.*-.*-.*-.*-.*-.*' | sort"
+                    selected=$(bluetoothctl devices | grep Device | grep -v '.*-.*-.*-.*-.*-.*' | sort | fzf | cut -d' ' -f2)
+                    bluetoothctl pair $selected
+                    bluetoothctl connect $selected'';
+                bcn = ''
+                    bluetoothctl power on
+                    [[ -z $(pgrep -f bluetoothctl) ]] && bluetoothctl -t 60 scan on > /dev/null &
+                    watch -c -n 1 "bluetoothctl devices| grep Device | grep -v '.*-.*-.*-.*-.*-.*' | sort"
+                    bluetoothctl devices | grep Device | grep -v '.*-.*-.*-.*-.*-.*' | sort | fzf | cut -d' ' -f2 | xargs -I {} bluetoothctl connect {}'';
+                bdcn = ''bluetoothctl devices Connected | grep Device | sort | fzf | cut -d' ' -f2 | xargs -I {} bluetoothctl disconnect {}'';
+                bcnf = ''bluetoothctl devices Paired | grep Device | sort | fzf | cut -d' ' -f2 | xargs -I {} bluetoothctl remove {}'';
+                sn = ''iwctl station wlan0 scan;iwctl station wlan0 get-networks'';
+                cn = ''
+                    watch -c -n 1 "iwctl station wlan0 scan ; iwctl station wlan0 get-networks"
+                    ssid=$(iwctl station wlan0 get-networks | fzf --ansi |sed -e 's/ \{10,\}.*//' -e 's/^[[:space:]]*//')
+                    read -r "?Password: " password
+                    iwctl --passphrase="$password" station wlan0 connect "$ssid"'';
+                cnf = ''
+                    ssid=$(iwctl known-networks list | fzf --ansi |sed -e 's/ \{10,\}.*//' -e 's/^[[:space:]]*//')
+                    iwctl known-networks $ssid forget'';
+                nformat = ''
+                    [ "$(pwd)" = "/mnt" ] && cd ~
+                        ls /mnt 2>/dev/null || doas mkdir -p /mnt
+                        doas umount /mnt 2>/dev/null;
+                        doas cryptsetup close sd"$1"1 2>/dev/null;
+                        doas parted -s /dev/sd"$1" mklabel msdos;
+                        doas parted -s /dev/sd"$1" mkpart primary 0% 100%;
+                        doas cryptsetup luksFormat -q /dev/sd"$1"1;
+                        doas cryptsetup open /dev/sd"$1"1 sd"$1"1;
+                        doas mkfs.ext4 -q /dev/mapper/sd"$1"1;
+                        doas mount /dev/mapper/sd"$1"1 /mnt/;
+                        doas chown -R "$USER":users /mnt/;
+                        cd /mnt;'';
+                format = ''
+                    [ "$(pwd)" = "/mnt" ] && cd ~
+                        ls /mnt 2>/dev/null || doas mkdir -p /mnt
+                        doas umount /mnt 2>/dev/null;
+                        doas cryptsetup close sd"$1"1 2>/dev/null;
+                        doas parted -s /dev/sd"$1" mklabel msdos;
+                        doas parted -s /dev/sd"$1" mkpart primary 0% 100%;
+                        doas mkfs.ext4 -q /dev/sd"$1"1 &>/dev/null;
+                        doas mount /dev/sd"$1"1 /mnt/;
+                        doas chown -R "$USER":users /mnt/;
+                        cd /mnt;'';
+                wformat = ''
+                    [ "$(pwd)" = "/mnt" ] && cd ~
+                        ls /mnt 2>/dev/null || doas mkdir -p /mnt
+                        doas umount /mnt 2>/dev/null;
+                        doas parted -s /dev/mmcblk0 mklabel msdos;
+                        doas parted -s /dev/mmcblk0 mkpart primary 0% 100%;
+                        doas mkfs.ext4 -q /dev/mmcblk0p1 &>/dev/null;
+                        doas mount /dev/mmcblk0p1 /mnt/;
+                        doas chown -R "$USER":users /mnt/;
+                        cd /mnt;'';
+                wmnt = ''
+                    [ "$(pwd)" = "/mnt" ] && cd ~
+                        ls /mnt 2>/dev/null || doas mkdir -p /mnt
+                        doas umount /mnt 2>/dev/null;
+                        doas mount /dev/mmcblk0p1 /mnt/;
+                        doas chown -R "$USER":users /mnt/;
+                        cd /mnt;'';
+                wumnt = ''
+                    [ "$(pwd)" = "/mnt" ] && cd ~
+                        ls /mnt 2>/dev/null || doas mkdir -p /mnt
+                        doas umount /mnt/;'';
+                formatcomp = ''
+                    [ "$(pwd)" = "/mnt" ] && cd ~
+                        ls /mnt 2>/dev/null || doas mkdir -p /mnt
+                        doas umount /mnt 2>/dev/null;
+                        doas cryptsetup close sd"$1"1 2>/dev/null;
+                        doas parted -s /dev/sd"$1" mklabel msdos;
+                        doas parted -s /dev/sd"$1" mkpart primary 0% 100%;
+                        doas parted /dev/sd"$1" type 1 07;
+                        doas mkfs.exfat -q /dev/sd"$1"1 &>/dev/null;
+                        doas mount /dev/sd"$1"1 /mnt/;
+                        cd /mnt;'';
+                mnt = ''
+                    [ "$(pwd)" = "/mnt" ] && cd ~
+                        ls /mnt 2>/dev/null || doas mkdir -p /mnt
+                        doas umount /mnt 2>/dev/null;
+                        doas cryptsetup close sd"$1"1 2>/dev/null;
+                        doas cryptsetup open /dev/sd"$1"1 sd"$1"1 2>/dev/null;
+                        doas mount /dev/mapper/sd"$1"1 /mnt/ 2>/dev/null || doas mount /dev/sd"$1"1 /mnt/;
+                        doas chown -R "$USER":users /mnt/;
+                        cd /mnt;'';
+                umnt = ''
+                    [ "$(pwd)" = "/mnt" ] && cd ~
+                        ls /mnt 2>/dev/null || doas mkdir -p /mnt
+                        doas umount /mnt/;
+                        doas cryptsetup close sd"$1"1 2>/dev/null;'';
+                cdmnt = ''cd /mnt/'';
+                #sca = ''
+                #  scanimage -p --format png --output-file $1
+                #  mpv $1
+                #}
+                nd = ''
+                    git -C ~/dx/nixos diff HEAD~$1 HEAD'';
+                rebuild = ''
+                    nixos_dir=~/dx/nixos
+                    alejandra --experimental-config /home/soma/dx/nixos/misc/alejandra.toml --quiet $nixos_dir
+                    git -C $nixos_dir diff --quiet '*.nix' &&
+                        echo "No changes detected, exiting." &&
+                        return 1
+                    git -C $nixos_dir diff -U0 '*.nix'
+                    echo "NixOS Rebuilding..."
+                    doas nice -n 19 nixos-rebuild switch &> $nixos_dir/misc/nixos-switch.log && {
+                      generation=$(git -C $nixos_dir diff -U20 HEAD | aichat summarize what changed in my nixos config in one short sentence | sed 's/.$//' )
+                      git -C $nixos_dir commit -q -am $generation
+                      git -C $nixos_dir push -q -u origin main
+                      echo "\n$generation"
+                      notify-send -e -t 5000 "Rebuild successful"
+                    } || {
+                      cat $nixos_dir/misc/nixos-switch.log | grep -i --color error | tail -n 1
+                      notify-send -e -t 5000 "Rebuild Failed"
+                      return 1
+                      }'';
+                rebuildu = ''
+                    nixos_dir=~/dx/nixos
+                    alejandra --experimental-config /home/soma/dx/nixos/misc/alejandra.toml --quiet $nixos_dir
+                    git -C $nixos_dir diff -U0 '*.nix'
+                    echo "NixOS Rebuilding..."
+                    doas nice -n 19 nixos-rebuild switch &> $nixos_dir/misc/nixos-switch.log && {
+                        generation=$(git -C $nixos_dir diff -U20 HEAD | aichat summarize what changed in my nixos config in one short sentence | sed 's/.$//' )
+                        git -C $nixos_dir commit -q -am $generation
+                        git -C $nixos_dir push -q -u origin main
+                        echo "\n$generation"
+                        notify-send -e -t 5000 "Rebuild successful"
+                    } || {
+                        cat $nixos_dir/misc/nixos-switch.log | grep --color error | tail -n 1
+                        notify-send -e -t 5000 "Rebuild Failed"
+                        return 1
+                    }'';
+                tra = ''
+                    doas systemctl stop wg-quick-wg0.service ;
+                    \transmission-cli -er -w /home/soma/tr/ $1 ;
+                    doas systemctl start wg-quick-wg0.service'';
+                pdfr = ''
+                    pdftk $1 cat 1-end"$2" output $(echo "$1" | sed 's/\.[^.]*$//')-"$2".pdf'';
             };
             shellAbbrs = {
                 "8" = "cd -";
