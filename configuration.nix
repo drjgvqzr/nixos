@@ -716,8 +716,29 @@
             };
             shellInit = ''                set fish_color_command green
                 set fish_greeting
-                set ttynum $(tty)
+                set TTY1 (tty)
+                [ "$TTY1" = "/dev/tty1" ] && exec sway
                 printf '\e[3 q' '';
+            plugins = [
+                {
+                    name = "ctrl-z.fish";
+                    src = pkgs.fetchFromGitHub {
+                        owner = "kpbaks";
+                        repo = "ctrl-z.fish";
+                        rev = "689d60cb9706d2a19cb65286c2dea488b3293807";
+                        sha256 = "OaCMGsIP6wsbzgCNqQR1FOERL+k1ShAjOOg3T9Wln3k=";
+                    };
+                }
+                {
+                    name = "autopair.fish";
+                    src = pkgs.fetchFromGitHub {
+                        owner = "jorgebucaran";
+                        repo = "autopair.fish";
+                        rev = "4d1752ff5b39819ab58d7337c69220342e9de0e2";
+                        sha256 = "qt3t1iKRRNuiLWiVoiAYOu+9E7jsyECyIqZJ/oRIT1A=";
+                    };
+                }
+            ];
         };
         programs.foot = {
             enable = true;
