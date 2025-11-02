@@ -413,6 +413,9 @@
         };
         programs.fish = {
             enable = true;
+            functions = {
+                s = "links https://lite.duckduckgo.com/lite/?q=$*";
+            };
             shellAbbrs = {
                 "8" = "cd -";
                 "9" = "cd ..";
