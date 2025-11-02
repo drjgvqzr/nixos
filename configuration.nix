@@ -416,11 +416,6 @@
             enable = true;
             functions = {
                 fish_prompt = "string join '' -- (set_color red) '%' (set_color white)  (prompt_pwd --dir-length=0) (set_color green) '>' (set_color normal)";
-                sdh = ''links "https://lite.duckduckgo.com/lite/?q=$argv&kl=hu-hu"'';
-                sud = ''links "https://rd.vern.cc/define.php?term=$argv"'';
-                sg = ''links "https://github.com/search?q=$argv&s=stars"'';
-                w = ''links "https://en.wikipedia.org/wiki/$argv#bodyContent"'';
-                we = ''links "https://en.wiktionary.org/wiki/$argv#English"'';
                 ay = ''
                     yt-dlp --write-auto-sub -q --no-warnings --skip-download -o /tmp/sub $(wl-paste | sed 's|inv.nadeko.net|youtube.com|');
                     cat /tmp/sub.en.vtt|
@@ -430,7 +425,6 @@
                     sed 's/$/ /'|
                     tr -d '\n'|
                     aichat "give a detailed summary of the previous text with the main points. Do not mention any promotions or sponsors."'';
-                pb = ''links "https://torrents-csv.com/search?q=$argv"'';
                 "4" = ''
                     curl -sL $(wl-paste)|
                     grep -o 'is2.4chan.org[^"]*webm'|
@@ -538,13 +532,10 @@
                         ls /mnt 2>/dev/null || doas mkdir -p /mnt
                         doas umount /mnt/;
                         doas cryptsetup close sd"$argv[1]"1 2>/dev/null;'';
-                cdmnt = ''cd /mnt/'';
                 #sca = ''
                 #  scanimage -p --format png --output-file $argv[1]
                 #  mpv $argv[1]
                 #}
-                nd = ''
-                    git -C ~/dx/nixos diff HEAD~$argv[1] HEAD'';
                 rebuild = ''
                     set nixos_dir ~/dx/nixos
                     alejandra --experimental-config /home/soma/dx/nixos/misc/alejandra.toml --quiet $nixos_dir
@@ -588,7 +579,6 @@
                     pdftk $argv[1] cat 1-end"$argv[2]" output $(echo "$1" | sed 's/\.[^.]*$//')-"$2".pdf'';
             };
             shellAbbrs = {
-                s = ''links https://lite.duckduckgo.com/lite/?q=$argv'';
                 "8" = "cd -";
                 "9" = "cd ..";
                 d = "doas";
@@ -659,6 +649,14 @@
                 aw = "aichat provide the etymology, pronounciation without using phonetic symbols, meaning, and usage examples, all on new lines with markdown formatting, of the word";
             };
             shellAliases = {
+                s = "links https://lite.duckduckgo.com/lite/?q=$argv";
+                sdh = "links https://lite.duckduckgo.com/lite/?q=$argv&kl=hu-hu";
+                sud = "links https://rd.vern.cc/define.php?term=$argv";
+                sg = "links https://github.com/search?q=$argv&s=stars";
+                w = "links https://en.wikipedia.org/wiki/$argv#bodyContent";
+                we = "links https://en.wiktionary.org/wiki/$argv#English";
+                pb = "links https://torrents-csv.com/search?q=$argv";
+                cdmnt = ''cd /mnt/'';
                 "0" = "cd ~;clear";
                 hibernate = "systemctl hibernate";
                 zathura = "swallow zathura";
