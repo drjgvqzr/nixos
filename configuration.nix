@@ -441,6 +441,9 @@
                     bright6 = "55ffff";
                     bright7 = "ffffff";
                 };
+                key-bindings = {
+                    clipboard-paste = "Control+v";
+                };
             };
         };
         programs.alacritty = {
