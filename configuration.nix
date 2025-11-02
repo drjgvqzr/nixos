@@ -716,6 +716,7 @@
             };
             shellInit = ''                set fish_color_command green
                 set fish_greeting
+                [[ "$(tty)" == /dev/tty1 ]] && sway
                 printf '\e[3 q' '';
         };
         programs.foot = {
