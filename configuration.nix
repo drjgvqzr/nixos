@@ -446,9 +446,10 @@
                     xargs -I {} wget -nc -P ~/Videos/$argv[1] {}'';
                 bcnp = ''
                     bluetoothctl power on
-                    [[ -z $(pgrep -f bluetoothctl) ]] && bluetoothctl -t 60 scan on > /dev/null &
+                    set btexists $(pgrep -f bluetoothctl)
+                    [[ -z $btexists ]] && bluetoothctl -t 60 scan on > /dev/null &
                     watch -c -n 1 "bluetoothctl devices| grep Device | grep -v '.*-.*-.*-.*-.*-.*' | sort"
-                    set selected (bluetoothctl devices | grep Device | grep -v '.*-.*-.*-.*-.*-.*' | sort | fzf | cut -d' ' -f2)
+                    selected=$(bluetoothctl devices | grep Device | grep -v '.*-.*-.*-.*-.*-.*' | sort | fzf | cut -d' ' -f2)
                     bluetoothctl pair $selected
                     bluetoothctl connect $selected'';
                 bcn = ''
