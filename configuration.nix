@@ -445,6 +445,8 @@
                 };
                 key-bindings = {
                     clipboard-paste = "Control+v";
+                    scrollback-up-page = "Control+Shift+Page_Up";
+                    scrollback-down-page = "Control+Shift+Page_Down";
                 };
             };
         };
