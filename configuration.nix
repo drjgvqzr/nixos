@@ -445,8 +445,10 @@
                 };
                 key-bindings = {
                     clipboard-paste = "Control+v";
-                    scrollback-up-page = "Control+Shift+Page_Up";
-                    scrollback-down-page = "Control+Shift+Page_Down";
+                    scrollback-up-page = "Control+Page_Up";
+                    scrollback-down-page = "Control+Page_Down";
+                    scrollback-home = "Control+Home";
+                    scrollback-end = "Control+End";
                 };
             };
         };
