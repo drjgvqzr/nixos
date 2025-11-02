@@ -454,7 +454,8 @@
                     bluetoothctl connect $selected'';
                 bcn = ''
                     bluetoothctl power on
-                    [[ -z $(pgrep -f bluetoothctl) ]] && bluetoothctl -t 60 scan on > /dev/null &
+                    set btexists $(pgrep -f bluetoothctl)
+                    [[ -z $btexists ]] && bluetoothctl -t 60 scan on > /dev/null &
                     watch -c -n 1 "bluetoothctl devices| grep Device | grep -v '.*-.*-.*-.*-.*-.*' | sort"
                     bluetoothctl devices | grep Device | grep -v '.*-.*-.*-.*-.*-.*' | sort | fzf | cut -d' ' -f2 | xargs -I {} bluetoothctl connect {}'';
                 bdcn = ''bluetoothctl devices Connected | grep Device | sort | fzf | cut -d' ' -f2 | xargs -I {} bluetoothctl disconnect {}'';
@@ -462,11 +463,11 @@
                 sn = ''iwctl station wlan0 scan;iwctl station wlan0 get-networks'';
                 cn = ''
                     watch -c -n 1 "iwctl station wlan0 scan ; iwctl station wlan0 get-networks"
-                    ssid=$(iwctl station wlan0 get-networks | fzf --ansi |sed -e 's/ \{10,\}.*//' -e 's/^[[:space:]]*//')
+                    set ssid $(iwctl station wlan0 get-networks | fzf --ansi |sed -e 's/ \{10,\}.*//' -e 's/^[[:space:]]*//')
                     read -r "?Password: " password
                     iwctl --passphrase="$password" station wlan0 connect "$ssid"'';
                 cnf = ''
-                    ssid=$(iwctl known-networks list | fzf --ansi |sed -e 's/ \{10,\}.*//' -e 's/^[[:space:]]*//')
+                    set ssid $(iwctl known-networks list | fzf --ansi |sed -e 's/ \{10,\}.*//' -e 's/^[[:space:]]*//')
                     iwctl known-networks $ssid forget'';
                 nformat = ''
                     [ "$(pwd)" = "/mnt" ] && cd ~
@@ -565,12 +566,12 @@
                       return 1
                       }'';
                 rebuildu = ''
-                    nixos_dir=~/dx/nixos
+                    set nixos_dir ~/dx/nixos
                     alejandra --experimental-config /home/soma/dx/nixos/misc/alejandra.toml --quiet $nixos_dir
                     git -C $nixos_dir diff -U0 '*.nix'
                     echo "NixOS Rebuilding..."
                     doas nice -n 19 nixos-rebuild switch &> $nixos_dir/misc/nixos-switch.log && {
-                        generation=$(git -C $nixos_dir diff -U20 HEAD | aichat summarize what changed in my nixos config in one short sentence | sed 's/.$//' )
+                        set generation $(git -C $nixos_dir diff -U20 HEAD | aichat summarize what changed in my nixos config in one short sentence | sed 's/.$//' )
                         git -C $nixos_dir commit -q -am $generation
                         git -C $nixos_dir push -q -u origin main
                         echo "\n$generation"
