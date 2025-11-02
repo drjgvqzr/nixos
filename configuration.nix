@@ -416,7 +416,9 @@
             settings = {
                 main = {
                     font = "Roboto Mono:size=14";
+                    dpi-aware = "yes";
                 };
+                bell.system = "no";
             };
         };
         programs.alacritty = {
