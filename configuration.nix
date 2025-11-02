@@ -414,6 +414,7 @@
         programs.fish = {
             enable = true;
             functions = {
+                fish_prompt = "string join '' -- (set_color green) (prompt_pwd) (set_color normal) '>'";
                 s = "links https://lite.duckduckgo.com/lite/?q=$argv";
             };
             shellAbbrs = {
