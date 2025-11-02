@@ -545,7 +545,7 @@
                 nd = ''
                     git -C ~/dx/nixos diff HEAD~$1 HEAD'';
                 rebuild = ''
-                    nixos_dir=~/dx/nixos
+                    set nixos_dir ~/dx/nixos
                     alejandra --experimental-config /home/soma/dx/nixos/misc/alejandra.toml --quiet $nixos_dir
                     git -C $nixos_dir diff --quiet '*.nix' &&
                         echo "No changes detected, exiting." &&
@@ -553,7 +553,7 @@
                     git -C $nixos_dir diff -U0 '*.nix'
                     echo "NixOS Rebuilding..."
                     doas nice -n 19 nixos-rebuild switch &> $nixos_dir/misc/nixos-switch.log && {
-                      generation=$(git -C $nixos_dir diff -U20 HEAD | aichat summarize what changed in my nixos config in one short sentence | sed 's/.$//' )
+                      set generation $(git -C $nixos_dir diff -U20 HEAD | aichat summarize what changed in my nixos config in one short sentence | sed 's/.$//' )
                       git -C $nixos_dir commit -q -am $generation
                       git -C $nixos_dir push -q -u origin main
                       echo "\n$generation"
