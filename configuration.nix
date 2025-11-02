@@ -545,7 +545,8 @@
                 traceroute = "grc --colour=on traceroute";
                 uptime = "grc --colour=on uptime";
             };
-            shellInit = ''set fish_color_command green'';
+            shellInit = ''                set fish_color_command green
+                set fish_greeting'';
         };
         programs.foot = {
             enable = true;
