@@ -449,7 +449,7 @@
                     set btexists $(pgrep -f bluetoothctl)
                     [[ -z $btexists ]] && bluetoothctl -t 60 scan on > /dev/null &
                     watch -c -n 1 "bluetoothctl devices| grep Device | grep -v '.*-.*-.*-.*-.*-.*' | sort"
-                    selected=$(bluetoothctl devices | grep Device | grep -v '.*-.*-.*-.*-.*-.*' | sort | fzf | cut -d' ' -f2)
+                    set selected $(bluetoothctl devices | grep Device | grep -v '.*-.*-.*-.*-.*-.*' | sort | fzf | cut -d' ' -f2)
                     bluetoothctl pair $selected
                     bluetoothctl connect $selected'';
                 bcn = ''
