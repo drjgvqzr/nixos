@@ -415,10 +415,10 @@
             enable = true;
             settings = {
                 font.size = 14;
-                window.padding = {
-                    x = 5;
-                    y = 5;
-                };
+                #window.padding = {
+                #    x = 5;
+                #    y = 5;
+                #};
                 selection.save_to_clipboard = true;
                 cursor = {
                     style = {
