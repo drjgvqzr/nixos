@@ -418,8 +418,27 @@
                     font = "Roboto Mono:size=14";
                     #dpi-aware = "yes";
                 };
-                bell.system = "no";
+                bell.system = false;
                 scrollback.lines = 100000;
+                mouse.hide-when-typing = true;
+                colors = {
+                    regular0 = "#000000";
+                    regular1 = "#aa0000";
+                    regular2 = "#00aa00";
+                    regular3 = "#aa5500";
+                    regular4 = "#0000ff";
+                    regular5 = "#aa00aa";
+                    regular6 = "#00aaaa";
+                    regular7 = "#aaaaaa";
+                    bright0 = "#555555";
+                    bright1 = "#ff5555";
+                    bright2 = "#55ff55";
+                    bright3 = "#ffff55";
+                    bright4 = "#5555ff";
+                    bright5 = "#ff55ff";
+                    bright6 = "#55ffff";
+                    bright7 = "#ffffff";
+                };
             };
         };
         programs.alacritty = {
