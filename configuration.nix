@@ -417,11 +417,11 @@
             functions = {
                 fish_prompt = "string join '' -- (set_color red) '%' (set_color white)  (prompt_pwd --dir-length=0) (set_color green) '>' (set_color normal)";
                 s = ''links https://lite.duckduckgo.com/lite/?q=$argv'';
-                sdh = ''links "https://lite.duckduckgo.com/lite/?q=$*&kl=hu-hu"'';
-                sud = ''links "https://rd.vern.cc/define.php?term=$*"'';
-                sg = ''links "https://github.com/search?q=$*&s=stars"'';
-                w = ''links "https://en.wikipedia.org/wiki/$*#bodyContent"'';
-                we = ''links "https://en.wiktionary.org/wiki/$*#English"'';
+                sdh = ''links "https://lite.duckduckgo.com/lite/?q=$argv&kl=hu-hu"'';
+                sud = ''links "https://rd.vern.cc/define.php?term=$argv"'';
+                sg = ''links "https://github.com/search?q=$argv&s=stars"'';
+                w = ''links "https://en.wikipedia.org/wiki/$argv#bodyContent"'';
+                we = ''links "https://en.wiktionary.org/wiki/$argv#English"'';
                 ay = ''
                     yt-dlp --write-auto-sub -q --no-warnings --skip-download -o /tmp/sub $(wl-paste | sed 's|inv.nadeko.net|youtube.com|');
                     cat /tmp/sub.en.vtt|
@@ -431,7 +431,7 @@
                     sed 's/$/ /'|
                     tr -d '\n'|
                     aichat "give a detailed summary of the previous text with the main points. Do not mention any promotions or sponsors."'';
-                pb = ''links "https://torrents-csv.com/search?q=$*"'';
+                pb = ''links "https://torrents-csv.com/search?q=$argv"'';
                 "4" = ''
                     curl -sL $(wl-paste)|
                     grep -o 'is2.4chan.org[^"]*webm'|
@@ -443,12 +443,12 @@
                     grep -o 'is2.4chan.org[^"]*webm'|
                     uniq|
                     sed s.^.https://.|
-                    xargs -I {} wget -nc -P ~/Videos/$1 {}'';
+                    xargs -I {} wget -nc -P ~/Videos/$argv[1] {}'';
                 bcnp = ''
                     bluetoothctl power on
                     [[ -z $(pgrep -f bluetoothctl) ]] && bluetoothctl -t 60 scan on > /dev/null &
                     watch -c -n 1 "bluetoothctl devices| grep Device | grep -v '.*-.*-.*-.*-.*-.*' | sort"
-                    selected=$(bluetoothctl devices | grep Device | grep -v '.*-.*-.*-.*-.*-.*' | sort | fzf | cut -d' ' -f2)
+                    set selected $(bluetoothctl devices | grep Device | grep -v '.*-.*-.*-.*-.*-.*' | sort | fzf | cut -d' ' -f2)
                     bluetoothctl pair $selected
                     bluetoothctl connect $selected'';
                 bcn = ''
@@ -471,24 +471,24 @@
                     [ "$(pwd)" = "/mnt" ] && cd ~
                         ls /mnt 2>/dev/null || doas mkdir -p /mnt
                         doas umount /mnt 2>/dev/null;
-                        doas cryptsetup close sd"$1"1 2>/dev/null;
-                        doas parted -s /dev/sd"$1" mklabel msdos;
-                        doas parted -s /dev/sd"$1" mkpart primary 0% 100%;
-                        doas cryptsetup luksFormat -q /dev/sd"$1"1;
-                        doas cryptsetup open /dev/sd"$1"1 sd"$1"1;
-                        doas mkfs.ext4 -q /dev/mapper/sd"$1"1;
-                        doas mount /dev/mapper/sd"$1"1 /mnt/;
+                        doas cryptsetup close sd"$argv[1]"1 2>/dev/null;
+                        doas parted -s /dev/sd"$argv[1]" mklabel msdos;
+                        doas parted -s /dev/sd"$argv[1]" mkpart primary 0% 100%;
+                        doas cryptsetup luksFormat -q /dev/sd"$argv[1]"1;
+                        doas cryptsetup open /dev/sd"$argv[1]"1 sd"$1"1;
+                        doas mkfs.ext4 -q /dev/mapper/sd"$argv[1]"1;
+                        doas mount /dev/mapper/sd"$argv[1]"1 /mnt/;
                         doas chown -R "$USER":users /mnt/;
                         cd /mnt;'';
                 format = ''
                     [ "$(pwd)" = "/mnt" ] && cd ~
                         ls /mnt 2>/dev/null || doas mkdir -p /mnt
                         doas umount /mnt 2>/dev/null;
-                        doas cryptsetup close sd"$1"1 2>/dev/null;
-                        doas parted -s /dev/sd"$1" mklabel msdos;
-                        doas parted -s /dev/sd"$1" mkpart primary 0% 100%;
-                        doas mkfs.ext4 -q /dev/sd"$1"1 &>/dev/null;
-                        doas mount /dev/sd"$1"1 /mnt/;
+                        doas cryptsetup close sd"$argv[1]"1 2>/dev/null;
+                        doas parted -s /dev/sd"$argv[1]" mklabel msdos;
+                        doas parted -s /dev/sd"$argv[1]" mkpart primary 0% 100%;
+                        doas mkfs.ext4 -q /dev/sd"$argv[1]"1 &>/dev/null;
+                        doas mount /dev/sd"$argv[1]"1 /mnt/;
                         doas chown -R "$USER":users /mnt/;
                         cd /mnt;'';
                 wformat = ''
@@ -516,34 +516,34 @@
                     [ "$(pwd)" = "/mnt" ] && cd ~
                         ls /mnt 2>/dev/null || doas mkdir -p /mnt
                         doas umount /mnt 2>/dev/null;
-                        doas cryptsetup close sd"$1"1 2>/dev/null;
-                        doas parted -s /dev/sd"$1" mklabel msdos;
-                        doas parted -s /dev/sd"$1" mkpart primary 0% 100%;
-                        doas parted /dev/sd"$1" type 1 07;
-                        doas mkfs.exfat -q /dev/sd"$1"1 &>/dev/null;
-                        doas mount /dev/sd"$1"1 /mnt/;
+                        doas cryptsetup close sd"$argv[1]"1 2>/dev/null;
+                        doas parted -s /dev/sd"$argv[1]" mklabel msdos;
+                        doas parted -s /dev/sd"$argv[1]" mkpart primary 0% 100%;
+                        doas parted /dev/sd"$argv[1]" type 1 07;
+                        doas mkfs.exfat -q /dev/sd"$argv[1]"1 &>/dev/null;
+                        doas mount /dev/sd"$argv[1]"1 /mnt/;
                         cd /mnt;'';
                 mnt = ''
                     [ "$(pwd)" = "/mnt" ] && cd ~
                         ls /mnt 2>/dev/null || doas mkdir -p /mnt
                         doas umount /mnt 2>/dev/null;
-                        doas cryptsetup close sd"$1"1 2>/dev/null;
-                        doas cryptsetup open /dev/sd"$1"1 sd"$1"1 2>/dev/null;
-                        doas mount /dev/mapper/sd"$1"1 /mnt/ 2>/dev/null || doas mount /dev/sd"$1"1 /mnt/;
+                        doas cryptsetup close sd"$argv[1]"1 2>/dev/null;
+                        doas cryptsetup open /dev/sd"$argv[1]"1 sd"$1"1 2>/dev/null;
+                        doas mount /dev/mapper/sd"$argv[1]"1 /mnt/ 2>/dev/null || doas mount /dev/sd"$1"1 /mnt/;
                         doas chown -R "$USER":users /mnt/;
                         cd /mnt;'';
                 umnt = ''
                     [ "$(pwd)" = "/mnt" ] && cd ~
                         ls /mnt 2>/dev/null || doas mkdir -p /mnt
                         doas umount /mnt/;
-                        doas cryptsetup close sd"$1"1 2>/dev/null;'';
+                        doas cryptsetup close sd"$argv[1]"1 2>/dev/null;'';
                 cdmnt = ''cd /mnt/'';
                 #sca = ''
-                #  scanimage -p --format png --output-file $1
-                #  mpv $1
+                #  scanimage -p --format png --output-file $argv[1]
+                #  mpv $argv[1]
                 #}
                 nd = ''
-                    git -C ~/dx/nixos diff HEAD~$1 HEAD'';
+                    git -C ~/dx/nixos diff HEAD~$argv[1] HEAD'';
                 rebuild = ''
                     set nixos_dir ~/dx/nixos
                     alejandra --experimental-config /home/soma/dx/nixos/misc/alejandra.toml --quiet $nixos_dir
@@ -581,10 +581,10 @@
                     }'';
                 tra = ''
                     doas systemctl stop wg-quick-wg0.service ;
-                    \transmission-cli -er -w /home/soma/tr/ $1 ;
+                    \transmission-cli -er -w /home/soma/tr/ $argv[1] ;
                     doas systemctl start wg-quick-wg0.service'';
                 pdfr = ''
-                    pdftk $1 cat 1-end"$2" output $(echo "$1" | sed 's/\.[^.]*$//')-"$2".pdf'';
+                    pdftk $argv[1] cat 1-end"$argv[2]" output $(echo "$1" | sed 's/\.[^.]*$//')-"$2".pdf'';
             };
             shellAbbrs = {
                 "8" = "cd -";
