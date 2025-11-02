@@ -421,6 +421,7 @@
                 };
                 bell.system = false;
                 scrollback.lines = 100000;
+                cursor.underline-thickness = "2px";
                 mouse.hide-when-typing = true;
                 colors = {
                     background = "000000";
