@@ -655,7 +655,7 @@
                 sg = "links https://github.com/search?q=$argv&s=stars";
                 w = "links https://en.wikipedia.org/wiki/$argv#bodyContent";
                 we = "links https://en.wiktionary.org/wiki/$argv#English";
-                pb = "links https://torrents-csv.com/search?q=$argv";
+                pb = ''links "https://torrents-csv.com/search?q=$argv"'';
                 cdmnt = ''cd /mnt/'';
                 "0" = "cd ~;clear";
                 hibernate = "systemctl hibernate";
