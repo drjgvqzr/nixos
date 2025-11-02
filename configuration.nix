@@ -417,6 +417,7 @@
                 main = {
                     font = "Roboto Mono:size=14";
                     #dpi-aware = "yes";
+                    selection-target = "clipboard";
                 };
                 bell.system = false;
                 scrollback.lines = 100000;
