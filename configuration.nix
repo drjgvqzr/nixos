@@ -455,7 +455,7 @@
             };
         };
         programs.alacritty = {
-            enable = true;
+            enable = false;
             settings = {
                 font.size = 14;
                 window = {
@@ -528,7 +528,7 @@
             };
         };
         programs.kitty = {
-            enable = true;
+            enable = false;
             extraConfig = ''
                 mouse_map ctrl+right press ungrabbed mouse_show_command_output
             '';
