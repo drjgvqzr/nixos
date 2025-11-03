@@ -732,15 +732,6 @@
                 printf '\e[3 q' '';
             plugins = [
                 {
-                    name = "ctrl-z.fish";
-                    src = pkgs.fetchFromGitHub {
-                        owner = "kpbaks";
-                        repo = "ctrl-z.fish";
-                        rev = "689d60cb9706d2a19cb65286c2dea488b3293807";
-                        sha256 = "OaCMGsIP6wsbzgCNqQR1FOERL+k1ShAjOOg3T9Wln3k=";
-                    };
-                }
-                {
                     name = "autopair.fish";
                     src = pkgs.fetchFromGitHub {
                         owner = "jorgebucaran";
