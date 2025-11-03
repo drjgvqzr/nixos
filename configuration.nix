@@ -758,7 +758,7 @@
                     font = "Roboto Mono:size=14";
                     #dpi-aware = "yes";
                     selection-target = "clipboard";
-                    pad = "10x0";
+                    pad = "5x3";
                 };
                 bell.system = false;
                 scrollback.lines = 100000;
