@@ -715,6 +715,14 @@
                 traceroute = "grc --colour=auto traceroute";
                 uptime = "grc --colour=auto uptime";
             };
+            binds = {
+                m.command = "backward-char";
+                n.command = "down-or-search";
+                e.command = "up-or-search";
+                i.command = "forward-char";
+                "n,e".command = "cancel";
+                "e,n".command = "cancel";
+            };
             shellInit = ''
                 set fish_color_command green
                 set fish_greeting
@@ -1079,13 +1087,13 @@
                 vim.o.shada = ""
                 require('nvim-highlight-colors').setup({})'';
             extraConfig = ''
+                autocmd VimLeave * set guicursor=a:hor1-blinkwait500-blinkon250-blinkoff250
                 set ignorecase
                 set shortmess=I
                 set linebreak
                 set noerrorbells
                 set hls is
                 set wildmode=longest,list,full
-                autocmd VimLeave * set guicursor=a:hor1-blinkwait500-blinkon250-blinkoff250
                 set incsearch
                 set mouse=a
                 set splitright
