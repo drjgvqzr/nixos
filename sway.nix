@@ -79,7 +79,7 @@
                 };
             };
             keybindings = {
-                "mod1+Return" = "exec foot";
+                "mod1+Return" = "exec alacritty";
                 #"mod1+Return" = "exec ${pkgs.alacritty}/bin/alacritty";
                 #"mod1+Return" = "exec ${pkgs.kitty}/bin/kitty";
                 "mod1+c" = "kill";
