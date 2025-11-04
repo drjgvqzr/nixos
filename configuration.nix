@@ -428,7 +428,7 @@
                         if test "$LS_AFTER_CD" = true; and status --is-interactive
                         ls -hpNF --color
                         end'';
-                    onVariable = "PWD";
+                    onVariable = ''PWD'';
                 };
                 s = "links https://lite.duckduckgo.com/lite/?q=$argv";
                 sdh = "links https://lite.duckduckgo.com/lite/?q=$argv&kl=hu-hu";
