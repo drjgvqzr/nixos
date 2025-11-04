@@ -423,7 +423,7 @@
             enable = true;
             functions = {
                 fish_prompt = "string join '' -- (set_color red) '%' (set_color white)  (prompt_pwd --dir-length=0) (set_color green) '>' (set_color normal)";
-                __ls_after_cd__on_variable_pwd = {
+                ls_after_cd__on_variable_pwd = {
                     onVariable = "PWD";
                     body = ''
                         if test "$LS_AFTER_CD" = true
