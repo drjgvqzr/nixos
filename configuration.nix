@@ -423,13 +423,6 @@
             enable = true;
             functions = {
                 fish_prompt = "string join '' -- (set_color red) '%' (set_color white)  (prompt_pwd --dir-length=0) (set_color green) '>' (set_color normal)";
-                ls_after_cd__on_variable_pwd = {
-                    body = ''
-                        if test "$LS_AFTER_CD" = true; and status --is-interactive
-                        ls -hpNF --color
-                        end'';
-                    onVariable = ''PWD'';
-                };
                 s = "links https://lite.duckduckgo.com/lite/?q=$argv";
                 sdh = "links https://lite.duckduckgo.com/lite/?q=$argv&kl=hu-hu";
                 sud = "links https://rd.vern.cc/define.php?term=$argv";
@@ -731,6 +724,11 @@
 
                 set -q LS_AFTER_CD || set -xg LS_AFTER_CD true
                 # show directory listing on directory change
+                function __ls_after_cd__on_variable_pwd --on-variable PWD
+                    if test "$LS_AFTER_CD" = true; and status --is-interactive
+                        ls -hpNF --color
+                    end
+                end
 
                 any-nix-shell fish | source
 
