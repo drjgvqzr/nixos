@@ -59,11 +59,11 @@
             focus.followMouse = "always";
             colors = {
                 focused = {
-                    background = "#aa0000";
-                    border = "#aa0000";
-                    childBorder = "#aa0000";
-                    indicator = "#aa0000";
-                    text = "#aa0000";
+                    background = "#ffffff";
+                    border = "#ffffff";
+                    childBorder = "#ffffff";
+                    indicator = "#ffffff";
+                    text = "#ffffff";
                 };
             };
             input = {

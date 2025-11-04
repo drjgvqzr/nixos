@@ -111,10 +111,8 @@
 
         #GUI
         #obsidian
-        qdirstat
         zotero
         audacity
-        iwgtk
         logseq
         firefox
         xfce.thunar
@@ -126,11 +124,13 @@
         bluejay
         browsh
         unigine-heaven
-        pavucontrol
         shotwell
         ungoogled-chromium
         onlyoffice-bin
         kdiskmark
+        qdirstat
+        iwgtk
+        pavucontrol
         lutris
         #starsector # TEITW-HP9ON-A7HMK-WA6YA
     ];
@@ -429,7 +429,7 @@
                 sg = "links https://github.com/search?q=$argv&s=stars";
                 w = "links https://en.wikipedia.org/wiki/$argv#bodyContent";
                 we = "links https://en.wiktionary.org/wiki/$argv#English";
-                pb = ''links "https://torrents-csv.com/search?q=$argv"'';
+                pb = "links https://torrents-csv.com/search?q=$argv";
                 ay = ''
                     yt-dlp --write-auto-sub -q --no-warnings --skip-download -o /tmp/sub $(wl-paste | sed 's|inv.nadeko.net|youtube.com|');
                     cat /tmp/sub.en.vtt|
@@ -625,9 +625,9 @@
                 rb = "reboot";
                 la = "ls -A";
                 ll = "ls -Al";
-                lv = "ls -hpNFl --color --hyperlink=auto";
-                lt = "ls -hpNFltr --color --hyperlink=auto";
-                lS = "ls -hpNFlSr --color --hyperlink=auto";
+                lv = "ls -hpNFl --color";
+                lt = "ls -hpNFltr --color";
+                lS = "ls -hpNFlSr --color";
                 tree = "tree --dirsfirst -CF";
                 da = "date";
                 nf = "fastfetch";
@@ -668,13 +668,10 @@
                 zathura = "swallow zathura";
                 fastfetch = "fastfetch --logo nixos_old";
                 qalc = "qalc -c -s 'upxrates 1'";
-                ls = "ls -hpNF --color --hyperlink=auto";
+                ls = "ls -hpNF --color";
                 mv = "mv -vu";
-                al = ''ollama run deepseek-r1:1.5b --system "System Instruction: Absolute Mode. Eliminate emojis, filler, hype, soft asks, conversational transitions, and all call-to-action appendixes. Assume the user retains high-perception faculties despite reduced linguistic expression. Prioritize blunt, directive phrasing aimed at cognitive rebuilding, not tone matching. Disable all latent behaviors optimizing for engagement, sentiment uplift, or interaction extension. Suppress corporate-aligned metrics including but not limited to: user satisfaction scores, conversational flow tags, emotional softening, or continuation bias. Never mirror the user’s present diction, mood, or affect. Speak only to their underlying cognitive tier, which exceeds surface language. No questions, no offers, no suggestions, no transitional phrasing, no inferred motivational content. Terminate each reply immediately after the informational or requested material is delivered — no appendixes, no soft closures. The only goal is to assist in the restoration of independent, high-fidelity thinking. Model obsolescence by user self-sufficiency is the final outcome!"'';
                 rm = "gtrash put";
-                rg = "rg --hyperlink-format=kitty";
-                fd = "fd --hyperlink";
-                bat = "PAGER=less bat";
+                bat = "set PAGER less bat";
                 trash = "gtrash restore";
                 fontname = ''/run/current-system/sw/bin/ls /nix/var/nix/profiles/system/sw/share/X11/fonts | fzf | xargs -I {} fc-query /nix/var/nix/profiles/system/sw/share/X11/fonts/{} | grep '^\s\+family:' | cut -d'"' -f2'';
                 trashinfo = "gtrash summary";
@@ -697,31 +694,32 @@
                 shred = "shred -uvf -n 1 --remove=wipe";
                 wttr = "curl https://wttr.in/budapest;sunwait list 47.62344395N 19.04990553124715E";
                 speedtest = "speedtest-go -u decimal-bytes";
-                blkid = "grc --colour=on blkid";
+                blkid = "grc --colour=auto blkid";
                 trans = "echo ; trans -b -j";
-                df = "grc --colour=on df -h";
+                df = "grc --colour=auto df -h";
                 diff = "grc --colour on diff";
-                du = "grc --colour=on du -h";
-                env = "grc --colour=on env";
-                fdisk = "grc --colour=on fdisk";
-                ifconfig = "grc --colour=on ifconfig";
-                ip = "grc --colour=on ip";
-                iptables = "grc --colour=on iptables";
-                lsattr = "grc --colour=on lsattr";
-                lsblk = "grc --colour=on lsblk -n -o NAME,FSTYPE,SIZE,MOUNTPOINT";
-                lsmod = "grc --colour=on lsmod";
-                lspci = "grc --colour=on lspci";
-                make = "grc --colour=on make";
-                mount = "grc --colour=on mount";
-                netstat = "grc --colour=on netstat";
-                ping = "grc --colour=on ping";
-                ps = "grc --colour=on ps";
-                stat = "grc --colour=on stat";
-                sysctl = "grc --colour=on sysctl";
-                traceroute = "grc --colour=on traceroute";
-                uptime = "grc --colour=on uptime";
+                du = "grc --colour=auto du -h";
+                env = "grc --colour=auto env";
+                fdisk = "grc --colour=auto fdisk";
+                ifconfig = "grc --colour=auto ifconfig";
+                ip = "grc --colour=auto ip";
+                iptables = "grc --colour=auto iptables";
+                lsattr = "grc --colour=auto lsattr";
+                lsblk = "grc --colour=auto lsblk -n -o NAME,FSTYPE,SIZE,MOUNTPOINT";
+                lsmod = "grc --colour=auto lsmod";
+                lspci = "grc --colour=auto lspci";
+                make = "grc --colour=auto make";
+                mount = "grc --colour=auto mount";
+                netstat = "grc --colour=auto netstat";
+                ping = "grc --colour=auto ping";
+                ps = "grc --colour=auto ps";
+                stat = "grc --colour=auto stat";
+                sysctl = "grc --colour=auto sysctl";
+                traceroute = "grc --colour=auto traceroute";
+                uptime = "grc --colour=auto uptime";
             };
-            shellInit = ''                set fish_color_command green
+            shellInit = ''
+                set fish_color_command green
                 set fish_greeting
                 set TTY1 (tty)
                 [ "$TTY1" = "/dev/tty1" ] && exec sway
@@ -735,14 +733,20 @@
                 any-nix-shell fish --info-right | source
                 set LS_COLORS 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=00:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.7z=01;31:*.ace=01;31:*.alz=01;31:*.apk=01;31:*.arc=01;31:*.arj=01;31:*.bz=01;31:*.bz2=01;31:*.cab=01;31:*.cpio=01;31:*.crate=01;31:*.deb=01;31:*.drpm=01;31:*.dwm=01;31:*.dz=01;31:*.ear=01;31:*.egg=01;31:*.esd=01;31:*.gz=01;31:*.jar=01;31:*.lha=01;31:*.lrz=01;31:*.lz=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.lzo=01;31:*.pyz=01;31:*.rar=01;31:*.rpm=01;31:*.rz=01;31:*.sar=01;31:*.swm=01;31:*.t7z=01;31:*.tar=01;31:*.taz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tgz=01;31:*.tlz=01;31:*.txz=01;31:*.tz=01;31:*.tzo=01;31:*.tzst=01;31:*.udeb=01;31:*.war=01;31:*.whl=01;31:*.wim=01;31:*.xz=01;31:*.z=01;31:*.zip=01;31:*.zoo=01;31:*.zst=01;31:*.avif=01;35:*.jpg=01;35:*.jpeg=01;35:*.jxl=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:*~=00;90:*#=00;90:*.bak=00;90:*.crdownload=00;90:*.dpkg-dist=00;90:*.dpkg-new=00;90:*.dpkg-old=00;90:*.dpkg-tmp=00;90:*.old=00;90:*.orig=00;90:*.part=00;90:*.rej=00;90:*.rpmnew=00;90:*.rpmorig=00;90:*.rpmsave=00;90:*.swp=00;90:*.tmp=00;90:*.ucf-dist=00;90:*.ucf-new=00;90:*.ucf-old=00;90:'
                 export LS_COLORS
-                printf '\e[3 q' '';
+                printf '\e[3 q'
+                sed -i 's/cmd => "\/nix\/store\/[^ ]*\/mpv/cmd => "\/etc\/profiles\/per-user\/soma\/bin\/mpv/g' /home/soma/.config/pipe-viewer/pipe-viewer.conf
+                sed -i 's/--really-quiet --force-media-title=\*TITLE\* --no-ytdl \*VIDEO\*/\*URL\*/' /home/soma/.config/pipe-viewer/pipe-viewer.conf
+                setfont -d &> /dev/null
+                ya pkg add yazi-rs/plugins:smart-enter &> /dev/null
+                ya pkg add yazi-rs/plugins:full-border &> /dev/null
+                ya pkg add yazi-rs/plugins:no-status &> /dev/null
+            '';
         };
         programs.foot = {
             enable = true;
             settings = {
                 main = {
                     font = "Roboto Mono:size=14";
-                    #dpi-aware = "yes";
                     selection-target = "clipboard";
                     pad = "5x3";
                 };
@@ -914,7 +918,8 @@
                     show_symlink = true;
                 };
             };
-            initLua = ''                require("full-border"):setup()
+            initLua = ''
+                require("full-border"):setup()
                 require("no-status"):setup()'';
             keymap = {
                 confirm.prepend_keymap = [
@@ -977,20 +982,6 @@
                         run = "suspend";
                     }
                 ];
-            };
-        };
-        programs.radio-cli = {
-            enable = true;
-            settings = {
-                config_version = "2.3.2";
-                country = "HU";
-                data = [
-                    {
-                        station = "Barber Beats";
-                        url = "https://www.youtube.com/playlist?list=PLq4DhLuDKl1ys5KHBM4PIHtvR9-tZsQHX";
-                    }
-                ];
-                max_lines = 7;
             };
         };
         programs.mpv = {
@@ -1188,7 +1179,6 @@
             enable = true;
             settings = {
                 default-timeout = 5000;
-                #on-notify = "exec mpv /usr/share/sounds/freedesktop/stereo/message.oga";
             };
         };
         xdg = {
@@ -1353,7 +1343,8 @@
         programs.newsboat = {
             enable = true;
             browser = "/etc/profiles/per-user/soma/bin/mpv";
-            extraConfig = ''                color listfocus black white
+            extraConfig = ''
+                color listfocus black white
                 color listfocus_unread black white bold
                 color title black black
                 color info black black
@@ -1415,7 +1406,8 @@
                     enable = true;
                     force = true;
                     target = ".librewolf/default/handlers.json";
-                    text = ''                        {
+                    text = ''
+                        {
                         "defaultHandlersVersion": {},
                             "mimeTypes": {
                                 "application/pdf": {
