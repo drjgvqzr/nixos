@@ -739,8 +739,7 @@
                 bind -M visual e up-line
                 bind -M visual i forward-char
 
-                bind --preset -M insert ne
-                        if commandline -P
+                bind --preset -M insert ne if commandline -P
                         commandline -f cancel
                         else
                         set fish_bind_mode default
