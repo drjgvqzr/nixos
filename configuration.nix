@@ -739,6 +739,7 @@
                 bind -M visual i forward-char
 
                 bind \' "set fish_bind_mode insert"
+                bind \" beginning-of-line "set fish_bind_mode insert"
 
                 bind -M insert en \n\ \ \ \ \ \ \ \ if\ commandline\ -P\n\ \ \ \ \ \ \ \ \ \ \ \ commandline\ -f\ cancel\n\ \ \ \ \ \ \ \ else\n\ \ \ \ \ \ \ \ \ \ \ \ set\ fish_bind_mode\ default\n\ \ \ \ \ \ \ \ \ \ \ \ if\ test\ \(count\ \(commandline\ --cut-at-cursor\ \|\ tail\ -c2\)\)\ !=\ 2\n\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ commandline\ -f\ backward-char\n\ \ \ \ \ \ \ \ \ \ \ \ end\n\ \ \ \ \ \ \ \ \ \ \ \ commandline\ -f\ repaint-mode\n\ \ \ \ \ \ \ \ end\n\ \ \ \
 
