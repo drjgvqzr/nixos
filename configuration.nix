@@ -726,12 +726,12 @@
                 set fish_color_command green
                 set fish_greeting
 
-                set fish_cursor_default block
-                set fish_cursor_insert underscore
-                set fish_cursor_replace_one line
-                set fish_cursor_replace line
-                set fish_cursor_external line
-                set fish_cursor_visual block
+                set fish_cursor_default block blink
+                set fish_cursor_insert underscore blink
+                set fish_cursor_replace_one line blink
+                set fish_cursor_replace line blink
+                set fish_cursor_external line blink
+                set fish_cursor_visual block blink
 
                 set TTY1 (tty)
                 [ "$TTY1" = "/dev/tty1" ] && exec sway
