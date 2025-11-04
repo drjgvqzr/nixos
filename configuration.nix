@@ -720,12 +720,12 @@
                 n.command = "down-or-search";
                 e.command = "up-or-search";
                 i.command = "forward-char";
-                ne = {
-                    command = "cancel";
+                "n,e" = {
+                    command = "";
                     mode = "insert";
                 };
-                en = {
-                    command = "cancel";
+                "e,n" = {
+                    command = "";
                     mode = "insert";
                 };
             };
