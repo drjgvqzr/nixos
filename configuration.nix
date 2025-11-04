@@ -604,7 +604,6 @@
                 "9" = "cd ..";
                 d = "doas";
                 q = "qalc";
-                cat = "bat";
                 f = "yazi";
                 qr = "qrrs";
                 z = "zathura";
@@ -677,7 +676,6 @@
                 ls = "ls -hpNF --color";
                 mv = "mv -vu";
                 rm = "gtrash put";
-                bat = "set PAGER less bat";
                 trash = "gtrash restore";
                 fontname = ''/run/current-system/sw/bin/ls /nix/var/nix/profiles/system/sw/share/X11/fonts | fzf | xargs -I {} fc-query /nix/var/nix/profiles/system/sw/share/X11/fonts/{} | grep '^\s\+family:' | cut -d'"' -f2'';
                 trashinfo = "gtrash summary";
