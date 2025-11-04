@@ -426,7 +426,7 @@
                 __ls_after_cd__on_variable_pwd = {
                     onVariable = "PWD";
                     body = ''
-                        if test "$LS_AFTER_CD" = true; and status --is-interactive
+                        if test "$LS_AFTER_CD" = true
                             ls -hpNF --color
                         end
                     '';
