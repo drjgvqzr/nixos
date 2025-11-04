@@ -881,7 +881,7 @@
             };
         };
         programs.kitty = {
-            enable = false;
+            enable = true;
             extraConfig = ''
                 mouse_map ctrl+right press ungrabbed mouse_show_command_output
             '';
