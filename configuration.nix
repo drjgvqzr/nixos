@@ -720,13 +720,15 @@
                 n.command = "down-or-search";
                 e.command = "up-or-search";
                 i.command = "forward-char";
-                "n,e" = {
+                ne = {
                     command = "";
                     mode = "insert";
+                    setsMode = "default";
                 };
-                "e,n" = {
+                en = {
                     command = "";
                     mode = "insert";
+                    setsMode = "default";
                 };
             };
             shellInit = ''
