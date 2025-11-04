@@ -599,6 +599,7 @@
                 "9" = "cd ..";
                 d = "doas";
                 q = "qalc";
+                o = "handlr open";
                 f = "yazi";
                 qr = "qrrs";
                 z = "zathura";
