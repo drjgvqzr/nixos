@@ -721,14 +721,12 @@
                 e.command = "up-or-search";
                 i.command = "forward-char";
                 ne = {
-                    command = "";
+                    command = "set fish_bind_mode default";
                     mode = "insert";
-                    setsMode = "default";
                 };
                 en = {
-                    command = "";
+                    command = "set fish_bind_mode default";
                     mode = "insert";
-                    setsMode = "default";
                 };
             };
             shellInit = ''
