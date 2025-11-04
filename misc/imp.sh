@@ -20,4 +20,10 @@ rm -rf ~/.zsh_history 2> /dev/null
 rm -rf ~/.zcompdump* 2> /dev/null
 rm -rf ~/.lesshst 2> /dev/null
 rm -rf ~/.bash_history 2> /dev/null
+sed -i 's/cmd => "\/nix\/store\/[^ ]*\/mpv/cmd => "\/etc\/profiles\/per-user\/soma\/bin\/mpv/g' /home/soma/.config/pipe-viewer/pipe-viewer.conf
+sed -i 's/--really-quiet --force-media-title=\*TITLE\* --no-ytdl \*VIDEO\*/\*URL\*/' /home/soma/.config/pipe-viewer/pipe-viewer.conf
+setfont -d &> /dev/null
+ya pkg add yazi-rs/plugins:smart-enter &> /dev/null
+ya pkg add yazi-rs/plugins:full-border &> /dev/null
+ya pkg add yazi-rs/plugins:no-status &> /dev/null
 exit
