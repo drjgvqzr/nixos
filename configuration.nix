@@ -423,6 +423,7 @@
             enable = true;
             functions = {
                 fish_prompt = "string join '' -- (set_color red) '%' (set_color white)  (prompt_pwd --dir-length=0) (set_color green) '>' (set_color normal)";
+                fish_mode_prompt = "";
                 s = "links https://lite.duckduckgo.com/lite/?q=$argv";
                 sdh = "links https://lite.duckduckgo.com/lite/?q=$argv&kl=hu-hu";
                 sud = "links https://rd.vern.cc/define.php?term=$argv";
@@ -724,6 +725,13 @@
             shellInit = ''
                 set fish_color_command green
                 set fish_greeting
+
+                set fish_cursor_default block
+                set fish_cursor_insert underscore
+                set fish_cursor_replace_one line
+                set fish_cursor_replace line
+                set fish_cursor_external line
+                set fish_cursor_visual block
 
                 set TTY1 (tty)
                 [ "$TTY1" = "/dev/tty1" ] && exec sway
