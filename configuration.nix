@@ -720,11 +720,11 @@
                 n.command = "down-or-search";
                 e.command = "up-or-search";
                 i.command = "forward-char";
-                ne = {
+                "n,e" = {
                     command = "set fish_bind_mode default";
                     mode = "insert";
                 };
-                en = {
+                "e,n" = {
                     command = "set fish_bind_mode default";
                     mode = "insert";
                 };
