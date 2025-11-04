@@ -423,10 +423,13 @@
             enable = true;
             functions = {
                 fish_prompt = "string join '' -- (set_color red) '%' (set_color white)  (prompt_pwd --dir-length=0) (set_color green) '>' (set_color normal)";
-                "__ls_after_cd__on_variable_pwd --on-variable PWD" = ''
-                    if test "$LS_AFTER_CD" = true; and status --is-interactive
+                __ls_after_cd__on_variable_pwd = {
+                    body = ''
+                        if test "$LS_AFTER_CD" = true; and status --is-interactive
                         ls -hpNF --color
-                    end'';
+                        end'';
+                    onVariable = "PWD";
+                };
                 s = "links https://lite.duckduckgo.com/lite/?q=$argv";
                 sdh = "links https://lite.duckduckgo.com/lite/?q=$argv&kl=hu-hu";
                 sud = "links https://rd.vern.cc/define.php?term=$argv";
