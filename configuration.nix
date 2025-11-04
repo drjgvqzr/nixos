@@ -1156,6 +1156,7 @@
                 noremap n j
                 noremap e k
                 noremap i l
+                noremap l e
                 noremap N n
                 noremap E N
                 noremap ' i
