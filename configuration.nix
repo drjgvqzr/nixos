@@ -426,9 +426,7 @@
                 ls_after_cd__on_variable_pwd = {
                     onVariable = "PWD";
                     body = ''
-                        if test "$LS_AFTER_CD" = true
-                            ls -hpNF --color
-                        end
+                        ls -hpNF --color
                     '';
                 };
                 s = "links https://lite.duckduckgo.com/lite/?q=$argv";
