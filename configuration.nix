@@ -720,14 +720,6 @@
                 n.command = "down-or-search";
                 e.command = "up-or-search";
                 i.command = "forward-char";
-                "n,e" = {
-                    command = "set fish_bind_mode default";
-                    mode = "insert";
-                };
-                "e,n" = {
-                    command = "set fish_bind_mode default";
-                    mode = "insert";
-                };
             };
             shellInit = ''
                 set fish_color_command green
