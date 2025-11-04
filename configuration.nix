@@ -739,7 +739,8 @@
                 bind -M visual e up-line
                 bind -M visual i forward-char
 
-                bind -M insert ne \n\ \ \ \ \ \ \ \ if\ commandline\ -P\n\ \ \ \ \ \ \ \ \ \ \ \ commandline\ -f\ cancel\n\ \ \ \ \ \ \ \ else\n\ \ \ \ \ \ \ \ \ \ \ \ set\ fish_bind_mode\ default\n\ \ \ \ \ \ \ \ \ \ \ \ if\ test\ \(count\ \(commandline\ --cut-at-cursor\ \|\ tail\ -c2\)\)\ !=\ 2\n\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ commandline\ -f\ backward-char\n\ \ \ \ \ \ \ \ \ \ \ \ end\n\ \ \ \ \ \ \ \ \ \ \ \ commandline\ -f\ repaint-mode\n\ \ \ \ \ \ \ \ end\n\ \ \ \
+                bind -M insert ne if commandline -P commandline -f cancel else set fish_bind_mode default if test (count (commandline --cut-at-cursor | tail -c2)) != 2 commandline -f backward-char end commandline -f repaint-mode end
+
                 bind -M insert en \n\ \ \ \ \ \ \ \ if\ commandline\ -P\n\ \ \ \ \ \ \ \ \ \ \ \ commandline\ -f\ cancel\n\ \ \ \ \ \ \ \ else\n\ \ \ \ \ \ \ \ \ \ \ \ set\ fish_bind_mode\ default\n\ \ \ \ \ \ \ \ \ \ \ \ if\ test\ \(count\ \(commandline\ --cut-at-cursor\ \|\ tail\ -c2\)\)\ !=\ 2\n\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ commandline\ -f\ backward-char\n\ \ \ \ \ \ \ \ \ \ \ \ end\n\ \ \ \ \ \ \ \ \ \ \ \ commandline\ -f\ repaint-mode\n\ \ \ \ \ \ \ \ end\n\ \ \ \
 
                 set TTY1 (tty)
