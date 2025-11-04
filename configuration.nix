@@ -128,6 +128,7 @@
         shotwell
         ungoogled-chromium
         onlyoffice-desktopeditors
+        kdePackages.kolourpaint
         kdiskmark
         qdirstat
         iwgtk
