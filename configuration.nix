@@ -423,6 +423,10 @@
             enable = true;
             functions = {
                 fish_prompt = "string join '' -- (set_color red) '%' (set_color white)  (prompt_pwd --dir-length=0) (set_color green) '>' (set_color normal)";
+                "__ls_after_cd__on_variable_pwd --on-variable PWD" = ''
+                    if test "$LS_AFTER_CD" = true; and status --is-interactive
+                        ls -hpNF --color
+                    end'';
                 s = "links https://lite.duckduckgo.com/lite/?q=$argv";
                 sdh = "links https://lite.duckduckgo.com/lite/?q=$argv&kl=hu-hu";
                 sud = "links https://rd.vern.cc/define.php?term=$argv";
@@ -607,7 +611,6 @@
                 nr = "doas systemctl restart iwd.service wg-quick-wg0.service";
                 y = "pipe-viewer";
                 yd = "yt-dlp";
-                pm = "pulsemixer";
                 mkexec = "chmod +x";
                 nrs = "rebuild";
                 nrst = "tail -c +0 -f ~/dx/nixos/misc/nixos-switch.log";
@@ -727,11 +730,6 @@
 
                 set -q LS_AFTER_CD || set -xg LS_AFTER_CD true
                 # show directory listing on directory change
-                function __ls_after_cd__on_variable_pwd --on-variable PWD
-                    if test "$LS_AFTER_CD" = true; and status --is-interactive
-                        ls -hpNF --color
-                    end
-                end
 
                 any-nix-shell fish | source
 
