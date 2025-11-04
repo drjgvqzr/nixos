@@ -716,12 +716,6 @@
                 traceroute = "grc --colour=auto traceroute";
                 uptime = "grc --colour=auto uptime";
             };
-            binds = {
-                m.command = "backward-char";
-                n.command = "down-or-search";
-                e.command = "up-or-search";
-                i.command = "forward-char";
-            };
             shellInit = ''
                 set fish_color_command green
                 set fish_greeting
@@ -732,6 +726,16 @@
                 set fish_cursor_replace line blink
                 set fish_cursor_external line blink
                 set fish_cursor_visual block blink
+
+                bind m backward-char
+                bind n down-or-search
+                bind e up-or-search
+                bind i forward-char
+
+                bind -M visual m backward-char
+                bind -M visual n down-line
+                bind -M visual e up-line
+                bind -M visual i forward-char
 
                 set TTY1 (tty)
                 [ "$TTY1" = "/dev/tty1" ] && exec sway
