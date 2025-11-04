@@ -64,6 +64,7 @@
         xdg-utils
         fzf
         any-nix-shell
+        handlr-regex
         lf
         gtrash
         ghc
@@ -91,7 +92,7 @@
         libqalculate
         catdocx
         ripgrep-all
-        poppler_utils
+        poppler-utils
         grc
         ncdu
         tree
@@ -126,7 +127,7 @@
         unigine-heaven
         shotwell
         ungoogled-chromium
-        onlyoffice-bin
+        onlyoffice-desktopeditors
         kdiskmark
         qdirstat
         iwgtk
