@@ -808,7 +808,7 @@
             };
         };
         programs.alacritty = {
-            enable = false;
+            enable = true;
             settings = {
                 font.size = 14;
                 window = {
