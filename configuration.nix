@@ -670,6 +670,7 @@
                 hibernate = "systemctl hibernate";
                 #zathura = "swallow zathura";
                 fastfetch = "fastfetch --logo nixos_old";
+                "rec" = "pactl set-source-volume @DEFAULT_SOURCE@ 50% ; rec /home/soma/dx/Recordings/$(date \"+%Y-%m-%d %H.%M.%S\").ogg";
                 qalc = "qalc -c -s 'upxrates 1'";
                 ls = "ls -hpNF --color";
                 mv = "mv -vu";
