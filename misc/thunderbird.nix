@@ -90,7 +90,7 @@
             "browser.search.separatePrivateDefault" = true;
             "browser.search.separatePrivateDefault.ui.enabled" = true;
 
-            #"signon.autofillForms" = false;
+            "signon.autofillForms" = false;
             "signon.formlessCapture.enabled" = false;
             "network.auth.subresource-http-auth-allow" = 1;
 
