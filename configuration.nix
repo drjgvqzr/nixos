@@ -71,7 +71,6 @@
         mailsy
         sox
         mapscii
-        undollar
         fdupes
         bat
         piper-tts
@@ -604,7 +603,7 @@
                 o = "handlr open";
                 f = "yazi";
                 qr = "qrrs";
-                z = "zathura";
+                #z = "zathura";
                 nb = "newsboat";
                 nsp = "nix-shell -p";
                 nt = "ping google.com";
@@ -637,8 +636,8 @@
                 #tra="transmission-cli";
                 #tra="transmission-cli $(wl-paste)";
                 l = "links";
-                v = "vi";
-                m = "mpv";
+                #v = "vi";
+                #m = "mpv";
                 mt = "mpv --no-really-quiet";
                 mtp = "mpv --no-really-quiet *";
                 p = "mpv *";
@@ -668,7 +667,7 @@
                 cdmnt = ''cd /mnt/'';
                 "0" = "cd ~;clear";
                 hibernate = "systemctl hibernate";
-                zathura = "swallow zathura";
+                #zathura = "swallow zathura";
                 fastfetch = "fastfetch --logo nixos_old";
                 qalc = "qalc -c -s 'upxrates 1'";
                 ls = "ls -hpNF --color";
