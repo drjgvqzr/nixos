@@ -8,6 +8,7 @@
         enable = true;
         profiles.default.isDefault = true;
         settings = {
+            #https://github.com/HorlogeSkynet/thunderbird-user.js
             "datareporting.healthreport.uploadEnabled" = false;
             "layout.css.always_underline_links" = true;
             "mailnews.start_page.enabled" = false;
@@ -89,7 +90,7 @@
             "browser.search.separatePrivateDefault" = true;
             "browser.search.separatePrivateDefault.ui.enabled" = true;
 
-            "signon.autofillForms" = false;
+            #"signon.autofillForms" = false;
             "signon.formlessCapture.enabled" = false;
             "network.auth.subresource-http-auth-allow" = 1;
 
