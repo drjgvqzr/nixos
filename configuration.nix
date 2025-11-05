@@ -604,7 +604,7 @@
                 o = "handlr open";
                 f = "yazi";
                 qr = "qrrs";
-                #z = "zathura";
+                z = "zathura";
                 nb = "newsboat";
                 nsp = "nix-shell -p";
                 nt = "ping google.com";
@@ -634,11 +634,11 @@
                 tree = "tree --dirsfirst -CF";
                 da = "date \"+%H:%M\"|figlet;cal";
                 nf = "fastfetch";
-                #tra="transmission-cli";
+                tra = "transmission-cli";
                 #tra="transmission-cli $(wl-paste)";
                 l = "links";
-                #v = "vi";
-                #m = "mpv";
+                v = "vi";
+                m = "mpv";
                 mt = "mpv --no-really-quiet";
                 mtp = "mpv --no-really-quiet *";
                 p = "mpv *";
