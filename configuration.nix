@@ -492,9 +492,10 @@
                         doas parted -s /dev/sd"$argv[1]" mklabel msdos;
                         doas parted -s /dev/sd"$argv[1]" mkpart primary 0% 100%;
                         doas cryptsetup luksFormat -q /dev/sd"$argv[1]"1;
-                        doas cryptsetup open /dev/sd"$argv[1]"1 sd"$1"1;
+                        doas cryptsetup open /dev/sd"$argv[1]"1 sd"$argv[1]"1;
                         doas mkfs.ext4 -q /dev/mapper/sd"$argv[1]"1;
                         doas mount /dev/mapper/sd"$argv[1]"1 /mnt/;
+                        doas rm /mnt/lost+found
                         doas chown -R "$USER":users /mnt/;
                         cd /mnt;'';
                 format = ''
@@ -506,6 +507,7 @@
                         doas parted -s /dev/sd"$argv[1]" mkpart primary 0% 100%;
                         doas mkfs.ext4 -q /dev/sd"$argv[1]"1 &>/dev/null;
                         doas mount /dev/sd"$argv[1]"1 /mnt/;
+                        doas rm /mnt/lost+found
                         doas chown -R "$USER":users /mnt/;
                         cd /mnt;'';
                 wformat = ''
@@ -516,6 +518,7 @@
                         doas parted -s /dev/mmcblk0 mkpart primary 0% 100%;
                         doas mkfs.ext4 -q /dev/mmcblk0p1 &>/dev/null;
                         doas mount /dev/mmcblk0p1 /mnt/;
+                        doas rm /mnt/lost+found
                         doas chown -R "$USER":users /mnt/;
                         cd /mnt;'';
                 wmnt = ''
@@ -539,6 +542,7 @@
                         doas parted /dev/sd"$argv" type 1 07;
                         doas mkfs.exfat -q /dev/sd"$argv"1 &>/dev/null;
                         doas mount /dev/sd"$argv"1 /mnt/;
+                        doas rm /mnt/lost+found
                         cd /mnt;'';
                 mnt = ''
                     [ "$(pwd)" = "/mnt" ] && cd ~
@@ -598,7 +602,7 @@
                     \transmission-cli -er -w /home/soma/tr/ $argv[1] ;
                     doas systemctl start wg-quick-wg0.service'';
                 pdfr = ''
-                    pdftk $argv[1] cat 1-end"$argv[2]" output $(echo "$1" | sed 's/\.[^.]*$//')-"$2".pdf'';
+                    pdftk $argv[1] cat 1-end"$argv[2]" output $(echo "$argv[1]" | sed 's/\.[^.]*$//')-"$argv[2]".pdf'';
             };
             shellAbbrs = {
                 "8" = "cd -";
