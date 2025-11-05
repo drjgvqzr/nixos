@@ -66,6 +66,9 @@
             behind-the-scene * 3p-script noop
             behind-the-scene * image noop
             behind-the-scene * inline-script noop
+            no-remote-fonts: www.duolingo.com false
+            www.duolingo.com * 3p-frame noop
+            www.duolingo.com * 3p-script noop
             elte.dkodaj.net * * noop
             elte.dkodaj.net * 3p-frame noop
             elte.dkodaj.net * 3p-script noop
