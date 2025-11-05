@@ -16,6 +16,8 @@
 
             map l nextTab
             map u previousTab
+            map L moveTabRight
+            map U moveTabLeft
             map yt duplicateTab
             map x removeTab
             map X restoreTab
@@ -80,9 +82,6 @@
 
             map gm toggleMuteTab all
             map gr toggleReaderMode
-
-            map << moveTabLeft
-            map >> moveTabRight
 
             ##map c zoomReset
             map ? showHelp
