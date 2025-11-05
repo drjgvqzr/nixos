@@ -5,7 +5,7 @@
     ...
 }: {
     home-manager.users.soma.programs.thunderbird = {
-        enable = false;
+        enable = true;
         profiles.default.isDefault = true;
     };
 }
