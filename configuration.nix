@@ -129,6 +129,7 @@
         ungoogled-chromium
         onlyoffice-desktopeditors
         kdePackages.kolourpaint
+        kdePackages.kdenlive
         kdiskmark
         qdirstat
         iwgtk
