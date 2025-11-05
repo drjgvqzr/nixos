@@ -710,7 +710,7 @@
                 lsblk = "grc --colour=auto lsblk -n -o NAME,FSTYPE,SIZE,MOUNTPOINT";
                 lsmod = "grc --colour=auto lsmod";
                 lspci = "grc --colour=auto lspci";
-                make = "grc --colour=auto make";
+                #make = "grc --colour=auto make";
                 mount = "grc --colour=auto mount";
                 netstat = "grc --colour=auto netstat";
                 ping = "grc --colour=auto ping";
