@@ -5,7 +5,7 @@
     ...
 }: {
     home-manager.users.soma.programs.thunderbird = {
-        enable = true;
+        enable = false;
         profiles.default.isDefault = true;
         settings = {
             "datareporting.healthreport.uploadEnabled" = false;
