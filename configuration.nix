@@ -533,12 +533,12 @@
                     [ "$(pwd)" = "/mnt" ] && cd ~
                         ls /mnt 2>/dev/null || doas mkdir -p /mnt
                         doas umount /mnt 2>/dev/null;
-                        doas cryptsetup close sd"$argv[1]"1 2>/dev/null;
-                        doas parted -s /dev/sd"$argv[1]" mklabel msdos;
-                        doas parted -s /dev/sd"$argv[1]" mkpart primary 0% 100%;
-                        doas parted /dev/sd"$argv[1]" type 1 07;
-                        doas mkfs.exfat -q /dev/sd"$argv[1]"1 &>/dev/null;
-                        doas mount /dev/sd"$argv[1]"1 /mnt/;
+                        doas cryptsetup close sd"$argv"1 2>/dev/null;
+                        doas parted -s /dev/sd"$argv" mklabel msdos;
+                        doas parted -s /dev/sd"$argv" mkpart primary 0% 100%;
+                        doas parted /dev/sd"$argv" type 1 07;
+                        doas mkfs.exfat -q /dev/sd"$argv"1 &>/dev/null;
+                        doas mount /dev/sd"$argv"1 /mnt/;
                         cd /mnt;'';
                 mnt = ''
                     [ "$(pwd)" = "/mnt" ] && cd ~
