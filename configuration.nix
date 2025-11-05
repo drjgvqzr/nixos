@@ -431,7 +431,7 @@
                 sdh = ''links "https://lite.duckduckgo.com/lite/?q=$argv&kl=hu-hu"'';
                 sud = ''links "https://rd.vern.cc/define.php?term=$argv"'';
                 sg = ''links "https://github.com/search?q=$argv&s=stars"'';
-                w = ''links "https://en.wikipedia.org/wiki/$argv#bodyContent"'';
+                w = ''links "https://en.wikipedia.org/wiki/$argv&useskin=minerva#bodyContent"'';
                 we = ''links "https://en.wiktionary.org/wiki/$argv#English"'';
                 pb = ''links "https://torrents-csv.com/search?q=$argv"'';
                 ay = ''
