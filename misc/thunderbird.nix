@@ -188,7 +188,7 @@
 
             "browser.cache.memory.enable" = false;
             "browser.cache.memory.capacity" = 0;
-            "signon.rememberSignons" = false;
+            #"signon.rememberSignons" = false;
             "permissions.memory_only" = true;
             "browser.chrome.site_icons" = false;
             "browser.sessionstore.max_tabs_undo" = 0;
