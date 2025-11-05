@@ -392,10 +392,13 @@
             extraGroups = [
                 "wheel"
                 "adbusers"
+                "docker"
             ];
         };
     };
-
+    virtualisation.docker = {
+        enable = true;
+    };
     home-manager = {
         useUserPackages = true;
         useGlobalPkgs = true;
