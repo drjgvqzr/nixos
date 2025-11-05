@@ -545,8 +545,8 @@
                         ls /mnt 2>/dev/null || doas mkdir -p /mnt
                         doas umount /mnt 2>/dev/null;
                         doas cryptsetup close sd"$argv[1]"1 2>/dev/null;
-                        doas cryptsetup open /dev/sd"$argv[1]"1 sd"$1"1 2>/dev/null;
-                        doas mount /dev/mapper/sd"$argv[1]"1 /mnt/ 2>/dev/null || doas mount /dev/sd"$1"1 /mnt/;
+                        doas cryptsetup open /dev/sd"$argv[1]"1 sd"$argv[1]"1 2>/dev/null;
+                        doas mount /dev/mapper/sd"$argv[1]"1 /mnt/ 2>/dev/null || doas mount /dev/sd"$argv[1]"1 /mnt/;
                         doas chown -R "$USER":users /mnt/;
                         cd /mnt;'';
                 umnt = ''
