@@ -131,6 +131,7 @@
         kdePackages.kolourpaint
         kdePackages.kdenlive
         kdiskmark
+        winboat
         qdirstat
         iwgtk
         pavucontrol
