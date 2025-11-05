@@ -632,7 +632,7 @@
                 lt = "ls -hpNFltr --color";
                 lS = "ls -hpNFlSr --color";
                 tree = "tree --dirsfirst -CF";
-                da = "date";
+                da = "date \"+%H:%M\"|figlet;cal";
                 nf = "fastfetch";
                 #tra="transmission-cli";
                 #tra="transmission-cli $(wl-paste)";
@@ -686,7 +686,6 @@
                 cp = "cp -rvp";
                 cal = "cal -mw";
                 wget = "wget --hsts-file=~/.cache/wget-hsts";
-                date = "date \"+%H:%M\"|figlet;cal";
                 rename = "rename -iv";
                 ln = "ln -ivP";
                 lm = "echo -en \"\\e]P0aaaaaa\";echo -en \"\\e]P7000000\";clear";
