@@ -108,6 +108,11 @@
                 "mod1+Shift+e" = "move up";
                 "mod1+Shift+i" = "move right";
 
+                "mod1+Ctrl+m" = "resize shrink width 10px";
+                "mod1+Ctrl+n" = "resize grow height 10px";
+                "mod1+Ctrl+e" = "resize shrink height 10px";
+                "mod1+Ctrl+i" = "resize grow width 10px";
+
                 "mod1+1" = "workspace number 1";
                 "mod1+2" = "workspace number 2";
                 "mod1+3" = "workspace number 3";
@@ -117,6 +122,9 @@
                 "mod1+Left" = "workspace prev";
                 "mod1+Right" = "workspace next";
                 "mod1+Tab" = "workspace back_and_forth";
+
+                "mod1+Shift+space" = "floating toggle";
+                "mod1+space" = "focus mode_toggle";
 
                 "mod1+Shift+1" = "move container to workspace number 1";
                 "mod1+Shift+2" = "move container to workspace number 2";

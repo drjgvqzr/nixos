@@ -65,6 +65,7 @@
         fzf
         any-nix-shell
         handlr-regex
+        groff
         pulseaudio
         lf
         gtrash
