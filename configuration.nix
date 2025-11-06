@@ -565,6 +565,7 @@
                 #}
                 rebuild = ''
                     set nixos_dir ~/dx/nixos
+                      set generation $(git -C $nixos_dir diff -U20 HEAD | aichat summarize what changed in my nixos config in one short sentence 2>/dev/null | sed 's/.$//' & )
                     alejandra --experimental-config /home/soma/dx/nixos/misc/alejandra.toml --quiet $nixos_dir
                     git -C $nixos_dir diff --quiet '*.nix' &&
                         echo "No changes detected, exiting." &&
@@ -572,7 +573,6 @@
                     git -C $nixos_dir diff -U0 '*.nix'
                     echo "NixOS Rebuilding..."
                     doas nice -n 19 nixos-rebuild switch &> $nixos_dir/misc/nixos-switch.log && {
-                      set generation $(git -C $nixos_dir diff -U20 HEAD | aichat summarize what changed in my nixos config in one short sentence | sed 's/.$//' )
                       git -C $nixos_dir commit -q -am $generation
                       git -C $nixos_dir push -q -u origin main
                       echo "\n$generation"
@@ -1427,7 +1427,7 @@
                 embed-chapters = true;
                 #embed-metadata = true;
                 sponsorblock-remove = "all";
-                extractor-args = "youtube:player-client=default,-tv_simply";
+                #extractor-args = "youtube:player-client=default,-tv_simply";
             };
         };
         home = {
