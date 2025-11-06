@@ -377,14 +377,7 @@
             domains = ["dns.mullvad.net"];
         };
         thermald.enable = true;
-        udisks2 = {
-            enable = true;
-            #    settings = {
-            #        program_options = {
-            #            file_manager = "foot yazi";
-            #        };
-            #    };
-        };
+        udisks2.enable = true;
         xserver = {
             xkb.layout = "us";
             xkb.variant = "colemak_dh";
@@ -1217,10 +1210,20 @@
                 };
             };
         };
-        services.mako = {
-            enable = true;
-            settings = {
-                default-timeout = 5000;
+        services = {
+            mako = {
+                enable = true;
+                settings = {
+                    default-timeout = 5000;
+                };
+            };
+            udiskie = {
+                enable = true;
+                settings = {
+                    program_options = {
+                        file_manager = "foot yazi";
+                    };
+                };
             };
         };
         xdg = {
