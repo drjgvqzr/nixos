@@ -613,6 +613,8 @@
                 o = "handlr open";
                 f = "yazi";
                 qr = "qrrs";
+                mc = "man configuration.nix";
+                mh = "man home-configuration.nix";
                 z = "zathura";
                 nb = "newsboat";
                 nsp = "nix-shell -p";
