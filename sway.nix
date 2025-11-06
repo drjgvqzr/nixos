@@ -109,8 +109,8 @@
                 "mod1+Shift+i" = "move right";
 
                 "mod1+Ctrl+m" = "resize shrink width 10px";
-                "mod1+Ctrl+n" = "resize grow height 10px";
-                "mod1+Ctrl+e" = "resize shrink height 10px";
+                "mod1+Ctrl+n" = "resize shrink height 10px";
+                "mod1+Ctrl+e" = "resize grow height 10px";
                 "mod1+Ctrl+i" = "resize grow width 10px";
 
                 "mod1+1" = "workspace number 1";
