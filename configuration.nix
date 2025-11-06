@@ -377,6 +377,14 @@
             domains = ["dns.mullvad.net"];
         };
         thermald.enable = true;
+        udisks2 = {
+            enable = true;
+            #    settings = {
+            #        program_options = {
+            #            file_manager = "foot yazi";
+            #        };
+            #    };
+        };
         xserver = {
             xkb.layout = "us";
             xkb.variant = "colemak_dh";
