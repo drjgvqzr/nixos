@@ -74,7 +74,7 @@
                 };
                 "type:touchpad" = {
                     tap = "enabled";
-                    dwt = "disabled";
+                    dwt = "enabled";
                     natural_scroll = "enabled";
                 };
             };
