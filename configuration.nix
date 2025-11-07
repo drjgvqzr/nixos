@@ -65,6 +65,7 @@
         fzf
         any-nix-shell
         handlr-regex
+        gnumake
         timer
         groff
         lf
@@ -707,29 +708,16 @@
                 shred = "shred -uvf -n 1 --remove=wipe";
                 wttr = "curl https://wttr.in/budapest;sunwait list 47.62344395N 19.04990553124715E";
                 speedtest = "speedtest-go -u decimal-bytes";
-                blkid = "grc --colour=auto blkid";
                 trans = "echo ; /run/current-system/sw/bin/trans -b -j";
-                df = "grc --colour=auto df -h";
                 diff = "grc --colour on diff";
                 du = "grc --colour=auto du -h";
                 env = "grc --colour=auto env";
-                fdisk = "grc --colour=auto fdisk";
-                ifconfig = "grc --colour=auto ifconfig";
-                ip = "grc --colour=auto ip";
-                iptables = "grc --colour=auto iptables";
-                lsattr = "grc --colour=auto lsattr";
                 lsblk = "grc --colour=auto lsblk -n -o NAME,FSTYPE,SIZE,MOUNTPOINT";
                 lsmod = "grc --colour=auto lsmod";
                 lspci = "grc --colour=auto lspci";
-                #make = "grc --colour=auto make";
-                mount = "grc --colour=auto mount";
-                netstat = "grc --colour=auto netstat";
+                make = "grc --colour=auto make";
                 ping = "grc --colour=auto ping";
-                ps = "grc --colour=auto ps";
                 stat = "grc --colour=auto stat";
-                sysctl = "grc --colour=auto sysctl";
-                traceroute = "grc --colour=auto traceroute";
-                uptime = "grc --colour=auto uptime";
             };
             shellInit = ''
                 set fish_color_command green
@@ -756,9 +744,9 @@
                 bind \' "set fish_bind_mode insert"
                 bind \" beginning-of-line "set fish_bind_mode insert"
 
-                bind -M insert en \n\ \ \ \ \ \ \ \ if\ commandline\ -P\n\ \ \ \ \ \ \ \ \ \ \ \ commandline\ -f\ cancel\n\ \ \ \ \ \ \ \ else\n\ \ \ \ \ \ \ \ \ \ \ \ set\ fish_bind_mode\ default\n\ \ \ \ \ \ \ \ \ \ \ \ if\ test\ \(count\ \(commandline\ --cut-at-cursor\ \|\ tail\ -c2\)\)\ !=\ 2\n\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ commandline\ -f\ backward-char\n\ \ \ \ \ \ \ \ \ \ \ \ end\n\ \ \ \ \ \ \ \ \ \ \ \ commandline\ -f\ repaint-mode\n\ \ \ \ \ \ \ \ end\n\ \ \ \
+                #bind -M insert en \n\ \ \ \ \ \ \ \ if\ commandline\ -P\n\ \ \ \ \ \ \ \ \ \ \ \ commandline\ -f\ cancel\n\ \ \ \ \ \ \ \ else\n\ \ \ \ \ \ \ \ \ \ \ \ set\ fish_bind_mode\ default\n\ \ \ \ \ \ \ \ \ \ \ \ if\ test\ \(count\ \(commandline\ --cut-at-cursor\ \|\ tail\ -c2\)\)\ !=\ 2\n\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ commandline\ -f\ backward-char\n\ \ \ \ \ \ \ \ \ \ \ \ end\n\ \ \ \ \ \ \ \ \ \ \ \ commandline\ -f\ repaint-mode\n\ \ \ \ \ \ \ \ end\n\ \ \ \
 
-                bind -M insert ne \n\ \ \ \ \ \ \ \ if\ commandline\ -P\n\ \ \ \ \ \ \ \ \ \ \ \ commandline\ -f\ cancel\n\ \ \ \ \ \ \ \ else\n\ \ \ \ \ \ \ \ \ \ \ \ set\ fish_bind_mode\ default\n\ \ \ \ \ \ \ \ \ \ \ \ if\ test\ \(count\ \(commandline\ --cut-at-cursor\ \|\ tail\ -c2\)\)\ !=\ 2\n\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ commandline\ -f\ backward-char\n\ \ \ \ \ \ \ \ \ \ \ \ end\n\ \ \ \ \ \ \ \ \ \ \ \ commandline\ -f\ repaint-mode\n\ \ \ \ \ \ \ \ end\n\ \ \ \
+                #bind -M insert ne \n\ \ \ \ \ \ \ \ if\ commandline\ -P\n\ \ \ \ \ \ \ \ \ \ \ \ commandline\ -f\ cancel\n\ \ \ \ \ \ \ \ else\n\ \ \ \ \ \ \ \ \ \ \ \ set\ fish_bind_mode\ default\n\ \ \ \ \ \ \ \ \ \ \ \ if\ test\ \(count\ \(commandline\ --cut-at-cursor\ \|\ tail\ -c2\)\)\ !=\ 2\n\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ commandline\ -f\ backward-char\n\ \ \ \ \ \ \ \ \ \ \ \ end\n\ \ \ \ \ \ \ \ \ \ \ \ commandline\ -f\ repaint-mode\n\ \ \ \ \ \ \ \ end\n\ \ \ \
 
                 set TTY1 (tty)
                 [ "$TTY1" = "/dev/tty1" ] && exec sway
