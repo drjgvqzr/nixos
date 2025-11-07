@@ -708,7 +708,7 @@
                 wttr = "curl https://wttr.in/budapest;sunwait list 47.62344395N 19.04990553124715E";
                 speedtest = "speedtest-go -u decimal-bytes";
                 blkid = "grc --colour=auto blkid";
-                trans = "echo ; trans -b -j";
+                trans = "echo ; /run/current-system/sw/bin/trans -b -j";
                 df = "grc --colour=auto df -h";
                 diff = "grc --colour on diff";
                 du = "grc --colour=auto du -h";
