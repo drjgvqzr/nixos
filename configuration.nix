@@ -31,7 +31,7 @@
         brightnessctl
         wev
         wmenu
-        #wl-clipboard-rs
+        wl-clipboard-rs
         hyprpicker
         autotiling-rs
         swaylock
