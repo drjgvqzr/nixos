@@ -702,8 +702,6 @@
                 wget = "wget --hsts-file=~/.cache/wget-hsts";
                 rename = "rename -iv";
                 ln = "ln -ivP";
-                lm = "echo -en \"\\e]P0aaaaaa\";echo -en \"\\e]P7000000\";clear";
-                dm = "echo -en \"\\e]P0000000\";echo -en \"\\e]P7aaaaaa\";clear";
                 chown = "chown -Rv";
                 chmod = "chmod -Rv";
                 shred = "shred -uvf -n 1 --remove=wipe";
