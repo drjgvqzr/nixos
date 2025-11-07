@@ -31,7 +31,7 @@
         brightnessctl
         wev
         wmenu
-        wl-clipboard-rs
+        #wl-clipboard-rs
         hyprpicker
         autotiling-rs
         swaylock
@@ -1219,6 +1219,7 @@
                     default-timeout = 5000;
                 };
             };
+            wl-clip-persist.enable = true;
         };
         xdg = {
             enable = true;
