@@ -1104,7 +1104,6 @@
                 "z" = "ignore";
                 "x" = "ignore";
                 "e" = "ignore";
-                "b" = "ignore";
                 "/" = "ignore";
                 "`" = "ignore";
             };
