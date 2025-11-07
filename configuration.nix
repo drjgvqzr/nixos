@@ -634,6 +634,7 @@
                 ns = "nix-search";
                 nsf = "nix-search-tv print | fzf --preview 'nix-search-tv preview {}' --scheme history";
                 sw = "sway";
+                gal = "shotwell";
                 po = "poweroff";
                 hn = "hibernate";
                 rb = "reboot";
