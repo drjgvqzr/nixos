@@ -438,7 +438,7 @@
                 sg = ''links "https://github.com/search?q=$argv&s=stars"'';
                 w = ''links "https://en.wikipedia.org/wiki/$argv?useskin=minerva#bodyContent"'';
                 we = ''links "https://en.wiktionary.org/wiki/$argv#English"'';
-                pb = ''links "https://torrents-csv.com/search?q=$argv"'';
+                pb = ''links "https://thepiratebay.party/search/$argv"'';
                 ay = ''
                     yt-dlp --write-auto-sub -q --no-warnings --skip-download -o /tmp/sub $(wl-paste | sed 's|inv.nadeko.net|youtube.com|');
                     cat /tmp/sub.en.vtt|
