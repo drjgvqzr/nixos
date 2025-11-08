@@ -1288,7 +1288,7 @@
         qt = {
             enable = true;
             platformTheme.name = "adwaita";
-            style.name = "adwaita-dark";
+            style.name = "Adwaita-dark";
             style.package = pkgs.adwaita-qt;
         };
         dconf.settings."org/gnome/desktop/interface".color-scheme = "prefer-dark";
