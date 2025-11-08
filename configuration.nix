@@ -379,6 +379,7 @@
             domains = ["dns.mullvad.net"];
         };
         thermald.enable = true;
+        vnstat.enable = true;
         xserver = {
             xkb.layout = "us";
             xkb.variant = "colemak_dh";
