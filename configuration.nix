@@ -339,8 +339,8 @@
         cron = {
             enable = true;
             systemCronJobs = [
-                "*/1 * * * * soma [ $(cat /sys/class/power_supply/BAT0/capacity) -le 20 ] && [ $(cat /sys/class/power_supply/BAT0/status) = Discharging ] && systemctl hibernate"
-                "* * * * 1 soma gtrash prune --size 20GB --day 90"
+                "*/1 * * * * root [ $(cat /sys/class/power_supply/BAT0/capacity) -le 20 ] && [ $(cat /sys/class/power_supply/BAT0/status) = Discharging ] && systemctl hibernate"
+                "* * * * 1 root gtrash prune --size 20GB --day 90"
             ];
         };
         getty = {
