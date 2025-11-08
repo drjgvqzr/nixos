@@ -158,9 +158,6 @@
         };
     };
     console.useXkbConfig = true;
-    hardware.enableAllFirmware = true;
-    hardware.enableAllHardware = true;
-    nixpkgs.config.allowUnfree = true;
     environment = {
         binsh = "${pkgs.dash}/bin/dash";
         defaultPackages = [];
