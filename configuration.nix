@@ -151,7 +151,10 @@
         loader = {
             systemd-boot = {
                 enable = true;
-                configurationLimit = 500;
+                configurationLimit =
+                    if config.networking.hostName == "Mini"
+                    then 500
+                    else 1;
             };
             efi.canTouchEfiVariables = true;
             timeout = 1;
