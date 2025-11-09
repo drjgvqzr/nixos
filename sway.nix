@@ -29,15 +29,8 @@
                     scale = "1.5";
                 };
             };
-            modifier = "Mod1";
-            menu = "wmenu-run";
             defaultWorkspace = "workspace number 1";
-            left = "m";
-            down = "n";
-            up = "e";
-            right = "i";
             bindswitches."lid:toggle".action = "exec ${pkgs.swaylock}/bin/swaylock -fFK -s fill -i /home/soma/dx/nixos/misc/wallpaper.jpg";
-            bindswitches."tablet:toggle".action = "exec ${pkgs.swaylock}/bin/swaylock -fFK -s fill -i /home/soma/dx/nixos/misc/wallpaper.jpg";
             bars = [];
             modes = {};
             window = {
