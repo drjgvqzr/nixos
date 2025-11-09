@@ -245,6 +245,7 @@
             automatic = true;
             dates = ["monthly"];
         };
+        settings.experimental-features = ["nix-command" "flakes"];
     };
     #nixpkgs.config.allowUnfree = false;
     nixpkgs.config.permittedInsecurePackages = [
