@@ -131,6 +131,7 @@
         onlyoffice-desktopeditors
         kdePackages.kolourpaint
         kdePackages.kdenlive
+        gimp
         kdiskmark
         winboat
         qdirstat
