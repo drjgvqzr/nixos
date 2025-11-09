@@ -25,7 +25,7 @@
         config = {
             output = {
                 DSI-1 = {
-                    transform = "90";
+                    #transform = "90";
                     scale = "1.5";
                 };
             };
