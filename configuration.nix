@@ -65,6 +65,7 @@
         any-nix-shell
         handlr-regex
         gnumake
+        zbar
         nixos-anywhere
         bat
         timer
