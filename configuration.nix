@@ -220,6 +220,7 @@
             if builtins.pathExists /sys/kernel/btf/thinkpad_acpi
             then "W520"
             else "Mini";
+        nameservers = ["1.1.1.1#one.one.one.one" "1.0.0.1#one.one.one.one"];
         networkmanager.enable = false;
         nftables.enable = true;
         useDHCP = false;
@@ -376,10 +377,10 @@
         playerctld.enable = true;
         resolved = {
             enable = true;
-            llmnr = "false";
-            dnsovertls = "opportunistic";
             dnssec = "true";
-            domains = ["dns.mullvad.net"];
+            domains = ["~."];
+            fallbackDns = ["1.1.1.1#one.one.one.one" "1.0.0.1#one.one.one.one"];
+            dnsovertls = "true";
         };
         thermald.enable = true;
         vnstat.enable = true;
