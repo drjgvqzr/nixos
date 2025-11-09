@@ -159,6 +159,7 @@
             efi.canTouchEfiVariables = true;
             timeout = 1;
         };
+        plymouth.enable = true;
     };
     console.useXkbConfig = true;
     environment = {
