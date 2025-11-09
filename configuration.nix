@@ -140,7 +140,7 @@
     boot = {
         kernelParams =
             if config.networking.hostName == "Mini"
-            then ["fbcon=rotate:1"]
+            then ["fbcon=rotate:1" "video=DSI-1:panel_orientation=right_side_up"]
             else [];
         initrd = {
             checkJournalingFS = true;
