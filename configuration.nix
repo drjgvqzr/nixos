@@ -65,6 +65,7 @@
         any-nix-shell
         handlr-regex
         gnumake
+        nixos-anywhere
         bat
         timer
         groff
