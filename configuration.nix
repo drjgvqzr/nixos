@@ -65,6 +65,7 @@
         any-nix-shell
         handlr-regex
         gnumake
+        pipe-rename
         jmtpfs
         zbar
         nixos-anywhere
