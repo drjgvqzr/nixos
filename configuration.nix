@@ -65,6 +65,7 @@
         any-nix-shell
         handlr-regex
         gnumake
+        pulseaudio
         pipe-rename
         jmtpfs
         zbar
