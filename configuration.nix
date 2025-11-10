@@ -690,7 +690,7 @@
                 #zathura = "swallow zathura";
                 fastfetch = "fastfetch --logo nixos_old";
                 "rec" = "pactl set-source-volume @DEFAULT_SOURCE@ 50% ; /run/current-system/sw/bin/rec -c 1 /home/soma/dx/Recordings/$(date \"+%Y-%m-%d %H.%M.%S\").ogg";
-                irec = "ffmpeg -f pulse -i record_sink.monitor /home/soma/dx/Recordings/$(date \"+%Y-%m-%d %H.%M.%S\").ogg";
+                irec = "ffmpeg -ac 1 -f pulse -i record_sink.monitor /home/soma/dx/Recordings/$(date \"+%Y-%m-%d %H.%M.%S\").ogg";
                 qalc = "qalc -c -s 'upxrates 1'";
                 ls = "ls -hpNF --color";
                 mv = "mv -vu";
