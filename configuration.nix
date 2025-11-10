@@ -360,7 +360,6 @@
             greetingLine = "";
         };
         gnome.gnome-keyring.enable = true;
-        gvfs.enable = true;
         logind.settings.Login = {
             HandleLidSwitch = "suspend-then-hibernate";
             HandleLidSwitchExternalPower = "suspend-then-hibernate";
