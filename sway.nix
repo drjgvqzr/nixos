@@ -8,7 +8,7 @@
         enable = true;
         extraConfig = ''
             exec autotiling-rs
-            exec wlsunset -t 3000 -l 47.5 -L 19
+            #exec wlsunset -t 3000 -l 47.5 -L 19
             exec mako
             exec swayosd-server
             exec swaybg -m fill -i /home/soma/dx/nixos/misc/wallpaper.jpg

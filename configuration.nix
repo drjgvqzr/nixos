@@ -1213,6 +1213,12 @@
                 };
             };
             wl-clip-persist.enable = true;
+            wlsunset = {
+                enable = true;
+                latitude = 47.5;
+                longitude = 19;
+                temperature.night = 3000;
+            };
         };
         xdg = {
             enable = true;
