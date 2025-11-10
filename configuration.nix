@@ -1427,7 +1427,8 @@
                 enable = true;
                 package = pkgs.vanilla-dmz;
                 name = "Vanilla-DMZ-AA";
-                size = 24;
+                #size = 24;
+                size = 32;
                 sway.enable = true;
             };
             stateVersion = "24.11";
