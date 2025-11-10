@@ -254,7 +254,8 @@
     #nixpkgs.config.allowUnfree = false;
     nixpkgs.config.permittedInsecurePackages = [
         "olm-3.2.16"
-        "electron-35.7.5"
+        #"electron-35.7.5"
+        "electron-36.9.5"
     ];
     nixpkgs.config.allowUnfreePredicate = pkg:
         builtins.elem (lib.getName pkg) [
@@ -1409,7 +1410,7 @@
         programs.yt-dlp = {
             enable = true;
             settings = {
-                format-sort = "res:1080";
+                format-sort = "res:720";
                 retries = "infinite";
                 file-access-retries = "infinite";
                 fragment-retries = "infinite";
