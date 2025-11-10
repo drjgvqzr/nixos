@@ -65,6 +65,7 @@
         any-nix-shell
         handlr-regex
         gnumake
+        simple-mtpfs
         zbar
         nixos-anywhere
         bat
