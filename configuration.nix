@@ -403,6 +403,7 @@
                 "wheel"
                 "adbusers"
                 "docker"
+                "plugdev"
             ];
         };
     };
