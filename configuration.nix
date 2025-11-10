@@ -134,7 +134,6 @@
         kdePackages.kdenlive
         gimp
         kdiskmark
-        winboat
         qdirstat
         iwgtk
         pavucontrol
@@ -402,13 +401,8 @@
             extraGroups = [
                 "wheel"
                 "adbusers"
-                "docker"
-                "input"
             ];
         };
-    };
-    virtualisation.docker = {
-        enable = true;
     };
     home-manager = {
         useUserPackages = true;
