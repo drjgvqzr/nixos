@@ -629,6 +629,7 @@
                 nr = "doas systemctl restart iwd.service wg-quick-wg0.service";
                 y = "pipe-viewer";
                 yd = "yt-dlp";
+                yda = "yt-dlp -x";
                 mkexec = "chmod +x";
                 nrs = "rebuild";
                 nrst = "tail -c +0 -f ~/dx/nixos/misc/nixos-switch.log";
@@ -1422,10 +1423,12 @@
                 concurrent-fragments = 4;
                 quiet = true;
                 progress = true;
-                #embed-subs = true;
+                embed-subs = true;
+                audio-quality = 0;
                 #write-subs = true;
-                #write-auto-subs = true;
+                write-auto-subs = true;
                 #sub-langs = "en,en-orig,de";
+                sub-langs = "en";
                 embed-chapters = true;
                 embed-thumbnail = true;
                 #embed-metadata = true;
