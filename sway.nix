@@ -13,8 +13,8 @@
             bindsym XF86AudioMute exec volumectl toggle-mute
             bindsym XF86AudioRaiseVolume exec volumectl -u up
             bindsym XF86AudioLowerVolume exec volumectl -u down
-            bindsym XF86MonBrightnessDown exec lightctl up
-            bindsym XF86MonBrightnessUp exec lightctl down
+            bindsym XF86MonBrightnessDown exec lightctl down
+            bindsym XF86MonBrightnessUp exec lightctl up
             bindsym Pause exec playerctl --player mpv play-pause || playerctl play-pause
             bindsym XF86AudioNext exec playerctl --player mpv next || playerctl next
             bindsym XF86AudioPrev exec playerctl --player mpv previous || playerctl previous
