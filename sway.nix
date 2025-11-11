@@ -138,6 +138,12 @@
     home-manager.users.soma.services.swayosd.enable = true;
     home-manager.users.soma.services.avizo = {
         enable = true;
+        settings = {
+            default = {
+                time = 1.0;
+                image-opacity = 0.75;
+            };
+        };
     };
     home-manager.users.soma.services.swayidle = {
         enable = true;
