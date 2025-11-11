@@ -9,13 +9,12 @@
         extraConfig = ''
             exec autotiling-rs
             exec mako
-            exec swayosd-server
             exec swaybg -m fill -i /home/soma/dx/nixos/misc/wallpaper.jpg
-            bindsym XF86AudioMute exec wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle
-            bindsym XF86AudioRaiseVolume exec swayosd-client --output-volume raise --max-volume 100
-            bindsym XF86AudioLowerVolume exec swayosd-client --output-volume lower --max-volume 100
-            bindsym XF86MonBrightnessDown exec brightnessctl set 5%-
-            bindsym XF86MonBrightnessUp exec brightnessctl set 5%+
+            bindsym XF86AudioMute exec volumectl toggle-mute
+            bindsym XF86AudioRaiseVolume exec volumectl -u up
+            bindsym XF86AudioLowerVolume exec volumectl -u down
+            bindsym XF86MonBrightnessDown exec lightctl up
+            bindsym XF86MonBrightnessUp exec lightctl down
             bindsym Pause exec playerctl --player mpv play-pause || playerctl play-pause
             bindsym XF86AudioNext exec playerctl --player mpv next || playerctl next
             bindsym XF86AudioPrev exec playerctl --player mpv previous || playerctl previous
