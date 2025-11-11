@@ -19,7 +19,21 @@
             bindsym XF86AudioNext exec playerctl --player mpv next || playerctl next
             bindsym XF86AudioPrev exec playerctl --player mpv previous || playerctl previous
             bindsym --release Super_L exec wmenu-run
-            bindgesture swipe:4:up input type:keyboard events toggle'';
+            bindgesture swipe:4:up input type:keyboard events toggle
+            exec rm -f /tmp/sovpipe && mkfifo /tmp/sovpipe && tail -f /tmp/sovpipe | sov -t 500
+            bindsym --no-repeat mod1+1 workspace number 1; exec "echo 1 > /tmp/sovpipe"
+            bindsym --no-repeat mod1+2 workspace number 2; exec "echo 1 > /tmp/sovpipe"
+            bindsym --no-repeat mod1+3 workspace number 3; exec "echo 1 > /tmp/sovpipe"
+            bindsym --no-repeat mod1+4 workspace number 4; exec "echo 1 > /tmp/sovpipe"
+            bindsym --no-repeat mod1+5 workspace number 5; exec "echo 1 > /tmp/sovpipe"
+            bindsym --no-repeat mod1+6 workspace number 6; exec "echo 1 > /tmp/sovpipe"
+
+            bindsym --release mod1+1 exec "echo 0 > /tmp/sovpipe"
+            bindsym --release mod1+2 exec "echo 0 > /tmp/sovpipe"
+            bindsym --release mod1+3 exec "echo 0 > /tmp/sovpipe"
+            bindsym --release mod1+4 exec "echo 0 > /tmp/sovpipe"
+            bindsym --release mod1+5 exec "echo 0 > /tmp/sovpipe"
+            bindsym --release mod1+6 exec "echo 0 > /tmp/sovpipe"'';
         wrapperFeatures.gtk = true;
         config = {
             output = {
@@ -105,12 +119,12 @@
                 "mod1+Ctrl+e" = "resize grow height";
                 "mod1+Ctrl+i" = "resize grow width";
 
-                "mod1+1" = "workspace number 1";
-                "mod1+2" = "workspace number 2";
-                "mod1+3" = "workspace number 3";
-                "mod1+4" = "workspace number 4";
-                "mod1+5" = "workspace number 5";
-                "mod1+6" = "workspace number 6";
+                #"mod1+1" = "workspace number 1";
+                #"mod1+2" = "workspace number 2";
+                #"mod1+3" = "workspace number 3";
+                #"mod1+4" = "workspace number 4";
+                #"mod1+5" = "workspace number 5";
+                #"mod1+6" = "workspace number 6";
                 "mod1+Left" = "workspace prev";
                 "mod1+Right" = "workspace next";
                 "mod1+Tab" = "workspace back_and_forth";
