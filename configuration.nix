@@ -37,6 +37,7 @@
         swaylock
         swayidle
         swaybg
+        sov
         i3-swallow
         hunspell
         hunspellDicts.en_US-large
