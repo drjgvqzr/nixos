@@ -142,8 +142,8 @@
             default = {
                 time = 1.0;
                 image-opacity = 0.75;
-                background = "rgba(12, 12, 12, 1)";
-                bar-fg-color = "rgba(160, 160, 160, 1)";
+                background = "rgba(45, 46, 48, 0.75)";
+                bar-fg-color = "rgba(160, 160, 160, 0.75)";
             };
         };
     };
