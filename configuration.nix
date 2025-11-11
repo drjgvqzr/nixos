@@ -1419,7 +1419,6 @@
                 file-access-retries = "infinite";
                 fragment-retries = "infinite";
                 extractor-retries = "infinite";
-                #extractor-args = "youtube:player_skip=configs,js;player_client=ios";
                 #embed-subs = true;
                 #write-subs = true;
                 #write-auto-subs = true;
@@ -1428,7 +1427,6 @@
                 embed-thumbnail = true;
                 #embed-metadata = true;
                 sponsorblock-remove = "all";
-                #extractor-args = "youtube:player-client=default,-tv_simply";
             };
         };
         home = {
