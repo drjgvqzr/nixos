@@ -1024,7 +1024,7 @@
                 gapless-audio = "yes";
                 gpu-context = "wayland";
                 image-display-duration = "inf";
-                audio-display = "no";
+                #audio-display = "no";
                 msg-level = "vo/gpu=no,vo/ffmpeg=no,ffmpeg/demuxer=no";
                 term-osd-bar = "yes";
                 really-quiet = "yes";
