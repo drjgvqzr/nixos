@@ -1419,6 +1419,7 @@
                 file-access-retries = "infinite";
                 fragment-retries = "infinite";
                 extractor-retries = "infinite";
+                concurrent-fragments = 4;
                 #embed-subs = true;
                 #write-subs = true;
                 #write-auto-subs = true;
