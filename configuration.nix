@@ -197,6 +197,7 @@
         packages = with pkgs; [roboto-mono noto-fonts-color-emoji];
         fontconfig = {
             enable = true;
+            antialias = false;
             defaultFonts = {
                 monospace = ["Roboto Mono"];
                 serif = ["Roboto Mono"];
