@@ -218,8 +218,6 @@
     networking = {
         enableIPv6 = false;
         dhcpcd.enable = false;
-        #firewall.allowedTCPPorts = [6881];
-        #firewall.allowedUDPPorts = [6881];
         hostName =
             if builtins.pathExists /sys/kernel/btf/thinkpad_acpi
             then "W520"
@@ -254,10 +252,9 @@
         };
         settings.experimental-features = ["nix-command" "flakes"];
     };
-    #nixpkgs.config.allowUnfree = false;
+    nixpkgs.config.allowUnfree = false;
     nixpkgs.config.permittedInsecurePackages = [
         "olm-3.2.16"
-        #"electron-35.7.5"
         "electron-36.9.5"
     ];
     nixpkgs.config.allowUnfreePredicate = pkg:
