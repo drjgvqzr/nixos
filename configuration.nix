@@ -1425,6 +1425,7 @@
                 #write-auto-subs = true;
                 #sub-langs = "en,en-orig,de";
                 embed-chapters = true;
+                embed-thumbnail = true;
                 #embed-metadata = true;
                 sponsorblock-remove = "all";
                 #extractor-args = "youtube:player-client=default,-tv_simply";
