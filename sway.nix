@@ -137,6 +137,9 @@
         };
     };
     home-manager.users.soma.services.swayosd.enable = true;
+    home-manager.users.soma.services.avizo = {
+        enable = true;
+    };
     home-manager.users.soma.services.swayidle = {
         enable = true;
         timeouts = [
