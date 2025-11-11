@@ -140,7 +140,7 @@
         enable = true;
         settings = {
             default = {
-                time = 1.0;
+                time = 0.5;
                 image-opacity = 0.75;
                 background = "rgba(160, 160, 160, 0.8)";
                 border-color = "rgba(90, 90, 90, 0.8)";
