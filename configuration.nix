@@ -110,6 +110,7 @@
         swaybg
         swayidle
         swaylock
+        wayprompt
         wev
         wf-recorder
         wl-clipboard-rs
