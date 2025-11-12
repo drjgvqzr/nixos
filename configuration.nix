@@ -1086,7 +1086,7 @@
             viAlias = true;
             vimdiffAlias = true;
             #plugins = with pkgs.vimPlugins; [vim-wayland-clipboard nvimpager vim-manpager vim-plugin-AnsiEsc lightline-vim];
-            plugins = with pkgs.vimPlugins; [lightline-vim vim-plugin-AnsiEsc indentLine nvim-highlight-colors vimoutliner];
+            plugins = with pkgs.vimPlugins; [lightline-vim vim-plugin-AnsiEsc indentLine nvim-highlight-colors];
             extraLuaConfig = ''
                 vim.o.shada = ""
                 require('nvim-highlight-colors').setup({})'';
