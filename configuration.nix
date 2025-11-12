@@ -182,7 +182,6 @@
             XDG_CACHE_HOME = "$HOME/.cache";
             XDG_DATA_HOME = "$HOME/.local/share";
             XDG_STATE_HOME = "$HOME/.local/state";
-            #NIXPKGS_ALLOW_UNFREE = 1;
         };
     };
     fonts = {
@@ -1211,7 +1210,7 @@
                 };
                 transmission = {
                     name = "Transmission";
-                    exec = " sh -c \"doas systemctl stop wg-quick-wg0.service && transmission-cli -er -w /home/soma/tr %f && doas systemctl start wg-quick-wg0.service\"";
+                    exec = "transmission-cli -er -w /home/soma/tr";
                 };
             };
             mimeApps = {
