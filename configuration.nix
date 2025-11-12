@@ -39,6 +39,7 @@
         fishPlugins.autopair
         fishPlugins.puffer
         fzf
+        gallery-dl
         gh
         ghc
         glow
@@ -51,6 +52,7 @@
         iftop
         jmtpfs
         jq
+        ledger
         libnotify
         libqalculate
         links2
