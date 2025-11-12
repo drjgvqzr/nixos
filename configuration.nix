@@ -1403,6 +1403,7 @@
                 quiet = true;
                 progress = true;
                 embed-subs = true;
+                no-warnings = true;
                 audio-quality = 0;
                 #write-subs = true;
                 write-auto-subs = true;
