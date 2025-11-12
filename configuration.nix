@@ -24,117 +24,116 @@
     ];
     environment.systemPackages = with pkgs; [
         #CLI
-        libnotify
-        speedtest-go
-        pulsemixer
-        wget
-        gh
-        unoconv
-        jq
-        ripgrep
+        alejandra
+        any-nix-shell
+        bat
+        catdocx
+        dash
+        exfatprogs
+        fastfetch
+        fbcat
+        fd
+        fdupes
+        ffmpeg
+        figlet
         fishPlugins.autopair
         fishPlugins.puffer
-        pandoc
-        stc-cli
-        woeusb
-        ocrmypdf
-        qrrs
-        alejandra
-        links2
-        xdg-utils
         fzf
-        any-nix-shell
-        handlr-regex
+        gh
+        ghc
+        glow
         gnumake
-        pulseaudio
-        pipe-rename
-        jmtpfs
-        zbar
-        nixos-anywhere
-        bat
-        timer
+        grc
         groff
         gtrash
-        ghc
-        mailsy
-        sox
-        mapscii
-        fdupes
-        piper-tts
+        handlr-regex
         hyperfine
-        smartmontools
-        tldr
-        ouch
-        glow
-        pdftk
-        translate-shell
-        fd
-        ffmpeg
-        pipe-viewer
-        nix-search-tv
-        toipe
-        libqalculate
-        catdocx
-        ripgrep-all
-        poppler-utils
-        grc
-        ncdu
-        tree
         iftop
+        jmtpfs
+        jq
+        libnotify
+        libqalculate
+        links2
+        mailsy
+        mapscii
+        ncdu
+        nixos-anywhere
+        nix-search-tv
+        ocrmypdf
         openai-whisper
-        speedread
-        figlet
+        ouch
+        pandoc
+        parted
         pciutils
-        fastfetch
+        pdftk
+        pipe-rename
+        piper-tts
+        pipe-viewer
+        poppler-utils
+        pulseaudio
+        pulsemixer
+        qrrs
+        ripgrep
+        ripgrep-all
+        smartmontools
+        sox
+        speedread
+        speedtest-go
+        stc-cli
         stress
         sunwait
-        fbcat
-        exfatprogs
-        dash
-        parted
+        timer
+        tldr
+        toipe
+        translate-shell
         transmission_4
+        tree
+        unoconv
+        wget
+        woeusb
+        xdg-utils
+        zbar
 
         #Wayland
-        grim
-        slurp
-        wf-recorder
-        brightnessctl
-        wev
-        wmenu
-        wl-clipboard-rs
-        hyprpicker
         autotiling-rs
-        swaylock
-        swayidle
-        swaybg
-        sov
-        i3-swallow
+        brightnessctl
+        grim
         hunspell
         hunspellDicts.en_US-large
         hunspellDicts.hu_HU
+        hyprpicker
+        i3-swallow
+        slurp
+        sov
+        swaybg
+        swayidle
+        swaylock
+        wev
+        wf-recorder
+        wl-clipboard-rs
+        wmenu
 
         #GUI
-        #obsidian
-        zotero
-        logseq
-        firefox
-        tor-browser
-        webcord
-        mullvad-browser
-        fluffychat
-        unigine-heaven
-        shotwell
-        ungoogled-chromium
-        onlyoffice-desktopeditors
-        kdePackages.kolourpaint
-        kdePackages.kdenlive
-        gimp
         audacity
+        firefox
+        fluffychat
+        gimp
+        kdePackages.kdenlive
+        kdePackages.kolourpaint
         kdiskmark
-        qdirstat
-        pavucontrol
+        logseq
         lutris
+        mullvad-browser
+        onlyoffice-desktopeditors
+        pavucontrol
+        qdirstat
+        shotwell
         #starsector # TEITW-HP9ON-A7HMK-WA6YA
+        tor-browser
+        ungoogled-chromium
+        unigine-heaven
+        webcord
+        zotero
     ];
     boot = {
         kernelParams =
