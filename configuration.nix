@@ -71,7 +71,6 @@
         fd
         ffmpeg
         pipe-viewer
-        nix-search
         nix-search-tv
         toipe
         libqalculate
@@ -117,17 +116,12 @@
         #GUI
         #obsidian
         zotero
-        audacity
         logseq
         firefox
-        xfce.thunar
         tor-browser
         webcord
         mullvad-browser
-        element-desktop
         fluffychat
-        bluejay
-        browsh
         unigine-heaven
         shotwell
         ungoogled-chromium
@@ -135,9 +129,9 @@
         kdePackages.kolourpaint
         kdePackages.kdenlive
         gimp
+        audacity
         kdiskmark
         qdirstat
-        iwgtk
         pavucontrol
         lutris
         #starsector # TEITW-HP9ON-A7HMK-WA6YA
@@ -242,8 +236,8 @@
     nix = {
         gc = {
             automatic = true;
-            dates = "monthly";
-            options = "--delete-older-than 30d";
+            dates = "weekly";
+            options = "--delete-older-than 7d";
         };
         optimise = {
             automatic = true;
@@ -251,18 +245,20 @@
         };
         settings.experimental-features = ["nix-command" "flakes"];
     };
-    nixpkgs.config.allowUnfree = false;
-    nixpkgs.config.permittedInsecurePackages = [
-        "olm-3.2.16"
-        "jitsi-meet-1.0.8792"
-        "electron-36.9.5"
-    ];
-    nixpkgs.config.allowUnfreePredicate = pkg:
-        builtins.elem (lib.getName pkg) [
-            "unigine-heaven"
-            "steam"
-            "steam-unwrapped"
+    nixpkgs.config = {
+        allowUnfree = false;
+        permittedInsecurePackages = [
+            "olm-3.2.16"
+            "jitsi-meet-1.0.8792"
+            "electron-36.9.5"
         ];
+        allowUnfreePredicate = pkg:
+            builtins.elem (lib.getName pkg) [
+                "unigine-heaven"
+                "steam"
+                "steam-unwrapped"
+            ];
+    };
     programs = {
         adb.enable = true;
         bash.shellInit = "export HISTFILE=/tmp/bash_history";
@@ -637,8 +633,7 @@
                 nconfl = "vi ~/dx/nixos/librewolf.nix";
                 nconfs = "vi ~/dx/nixos/sway.nix";
                 nconfz = "vi ~/dx/nixos/zsh.nix";
-                ns = "nix-search";
-                nsf = "nix-search-tv print | fzf --preview 'nix-search-tv preview {}' --scheme history";
+                ns = "nix-search-tv print | fzf --preview 'nix-search-tv preview {}' --scheme history";
                 sw = "sway";
                 gal = "shotwell";
                 po = "poweroff";
