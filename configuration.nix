@@ -23,26 +23,6 @@
         #./misc/printing.nix
     ];
     environment.systemPackages = with pkgs; [
-        #Wayland
-        grim
-        slurp
-        wf-recorder
-        wlsunset
-        brightnessctl
-        wev
-        wmenu
-        wl-clipboard-rs
-        hyprpicker
-        autotiling-rs
-        swaylock
-        swayidle
-        swaybg
-        sov
-        i3-swallow
-        hunspell
-        hunspellDicts.en_US-large
-        hunspellDicts.hu_HU
-
         #CLI
         libnotify
         speedtest-go
@@ -114,6 +94,25 @@
         dash
         parted
         transmission_4
+
+        #Wayland
+        grim
+        slurp
+        wf-recorder
+        brightnessctl
+        wev
+        wmenu
+        wl-clipboard-rs
+        hyprpicker
+        autotiling-rs
+        swaylock
+        swayidle
+        swaybg
+        sov
+        i3-swallow
+        hunspell
+        hunspellDicts.en_US-large
+        hunspellDicts.hu_HU
 
         #GUI
         #obsidian
@@ -255,6 +254,7 @@
     nixpkgs.config.allowUnfree = false;
     nixpkgs.config.permittedInsecurePackages = [
         "olm-3.2.16"
+        "jitsi-meet-1.0.8792"
         "electron-36.9.5"
     ];
     nixpkgs.config.allowUnfreePredicate = pkg:
@@ -1216,7 +1216,7 @@
                 enable = true;
                 latitude = 47.5;
                 longitude = 19;
-                temperature.night = 3000;
+                temperature.night = 2000;
             };
         };
         xdg = {
