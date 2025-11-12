@@ -275,13 +275,8 @@
                 }
             ];
         };
-        localsend.enable = true;
         nano.enable = false;
-        steam = {
-            enable = true;
-            remotePlay.openFirewall = true;
-        };
-        virt-manager.enable = false;
+        steam.enable = true;
         zsh.enable = true;
     };
     security = {
@@ -341,7 +336,6 @@
             enable = true;
             systemCronJobs = [
                 "*/1 * * * * root [ $(cat /sys/class/power_supply/BAT0/capacity) -le 5 ] && [ $(cat /sys/class/power_supply/BAT0/status) = Discharging ] && systemctl hibernate"
-                "* * * * 1 root gtrash prune --size 20GB --day 90"
             ];
         };
         getty = {
@@ -558,10 +552,6 @@
                         ls /mnt 2>/dev/null || doas mkdir -p /mnt
                         doas umount /mnt/;
                         doas cryptsetup close sd"$argv[1]"1 2>/dev/null;'';
-                #sca = ''
-                #  scanimage -p --format png --output-file $argv[1]
-                #  mpv $argv[1]
-                #}
                 rebuild = ''
                     set nixos_dir ~/dx/nixos
                     alejandra --experimental-config /home/soma/dx/nixos/misc/alejandra.toml --quiet $nixos_dir
@@ -744,15 +734,10 @@
                 bind \' "set fish_bind_mode insert"
                 bind \" beginning-of-line "set fish_bind_mode insert"
 
-                #bind -M insert en \n\ \ \ \ \ \ \ \ if\ commandline\ -P\n\ \ \ \ \ \ \ \ \ \ \ \ commandline\ -f\ cancel\n\ \ \ \ \ \ \ \ else\n\ \ \ \ \ \ \ \ \ \ \ \ set\ fish_bind_mode\ default\n\ \ \ \ \ \ \ \ \ \ \ \ if\ test\ \(count\ \(commandline\ --cut-at-cursor\ \|\ tail\ -c2\)\)\ !=\ 2\n\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ commandline\ -f\ backward-char\n\ \ \ \ \ \ \ \ \ \ \ \ end\n\ \ \ \ \ \ \ \ \ \ \ \ commandline\ -f\ repaint-mode\n\ \ \ \ \ \ \ \ end\n\ \ \ \
-
-                #bind -M insert ne \n\ \ \ \ \ \ \ \ if\ commandline\ -P\n\ \ \ \ \ \ \ \ \ \ \ \ commandline\ -f\ cancel\n\ \ \ \ \ \ \ \ else\n\ \ \ \ \ \ \ \ \ \ \ \ set\ fish_bind_mode\ default\n\ \ \ \ \ \ \ \ \ \ \ \ if\ test\ \(count\ \(commandline\ --cut-at-cursor\ \|\ tail\ -c2\)\)\ !=\ 2\n\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ commandline\ -f\ backward-char\n\ \ \ \ \ \ \ \ \ \ \ \ end\n\ \ \ \ \ \ \ \ \ \ \ \ commandline\ -f\ repaint-mode\n\ \ \ \ \ \ \ \ end\n\ \ \ \
-
                 set TTY1 (tty)
                 [ "$TTY1" = "/dev/tty1" ] && exec sway
 
                 set -q LS_AFTER_CD || set -xg LS_AFTER_CD true
-                # show directory listing on directory change
                 function __ls_after_cd__on_variable_pwd --on-variable PWD
                     if test "$LS_AFTER_CD" = true; and status --is-interactive
                         ls -hpNF --color
@@ -1210,7 +1195,7 @@
                 enable = true;
                 latitude = 47.5;
                 longitude = 19;
-                temperature.night = 2000;
+                temperature.night = 3000;
             };
         };
         xdg = {
