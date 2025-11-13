@@ -171,7 +171,7 @@
             BROWSER = "xdg-open";
             EDITOR = "nvim";
             GIT_PAGER = "less -R";
-            LEDGER_FILE = "$HOME/dx/finance/2025.journal";
+            LEDGER_FILE = "$HOME/dx/Backups/finance/2025.journal";
             MANPAGER = "nvim +Man!";
             PAGER = "nvim -R +AnsiEsc";
             XDG_CACHE_HOME = "$HOME/.cache";
