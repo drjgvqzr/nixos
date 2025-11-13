@@ -1405,7 +1405,7 @@
                 embed-subs = true;
                 no-warnings = true;
                 audio-quality = 0;
-                #write-subs = true;
+                write-subs = true;
                 write-auto-subs = true;
                 #sub-langs = "en,en-orig,de";
                 sub-langs = "en";
