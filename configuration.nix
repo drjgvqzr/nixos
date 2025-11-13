@@ -606,6 +606,7 @@
                 o = "handlr open";
                 f = "yazi";
                 qr = "qrrs";
+                hl = "hledger";
                 mc = "man configuration.nix";
                 mh = "man home-configuration.nix";
                 z = "zathura";
