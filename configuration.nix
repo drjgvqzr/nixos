@@ -168,23 +168,24 @@
         pathsToLink = ["/share/xdg-desktop-portal" "/share/applications"];
         shells = with pkgs; [fish];
         sessionVariables = {
-            EDITOR = "nvim";
             BROWSER = "xdg-open";
-            PAGER = "nvim -R +AnsiEsc";
+            EDITOR = "nvim";
             GIT_PAGER = "less -R";
+            LEDGER_FILE = "$HOME/dx/finance/2025.journal";
             MANPAGER = "nvim +Man!";
+            PAGER = "nvim -R +AnsiEsc";
+            XDG_CACHE_HOME = "$HOME/.cache";
+            XDG_CONFIG_HOME = "$HOME/.config";
+            XDG_DATA_HOME = "$HOME/.local/share";
             XDG_DESKTOP_DIR = "$HOME/dn";
             XDG_DOCUMENTS_DIR = "$HOME/dx";
             XDG_DOWNLOAD_DIR = "$HOME/dn";
             XDG_MUSIC_DIR = "$HOME/dn";
-            XDG_PUBLICSHARE_DIR = "$HOME/dn";
-            XDG_TEMPLATES_DIR = "$HOME/dn";
             XDG_PICTURES_DIR = "$HOME/px";
-            XDG_VIDEOS_DIR = "$HOME/vs";
-            XDG_CONFIG_HOME = "$HOME/.config";
-            XDG_CACHE_HOME = "$HOME/.cache";
-            XDG_DATA_HOME = "$HOME/.local/share";
+            XDG_PUBLICSHARE_DIR = "$HOME/dn";
             XDG_STATE_HOME = "$HOME/.local/state";
+            XDG_TEMPLATES_DIR = "$HOME/dn";
+            XDG_VIDEOS_DIR = "$HOME/vs";
         };
     };
     fonts = {
