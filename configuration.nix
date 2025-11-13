@@ -606,7 +606,8 @@
                 o = "handlr open";
                 f = "yazi";
                 qr = "qrrs";
-                hl = "hledger";
+                h = "hledger";
+                ha = "hledger add";
                 mc = "man configuration.nix";
                 mh = "man home-configuration.nix";
                 z = "zathura";
