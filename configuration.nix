@@ -1405,13 +1405,12 @@
                 embed-subs = true;
                 no-warnings = true;
                 audio-quality = 0;
-                #write-subs = true;
-                write-auto-subs = true;
+                #write-auto-subs = true;
                 #sub-langs = "en,en-orig,de";
                 sub-langs = "en";
                 embed-chapters = true;
                 embed-thumbnail = true;
-                #embed-metadata = true;
+                embed-metadata = true;
                 sponsorblock-remove = "all";
             };
         };
