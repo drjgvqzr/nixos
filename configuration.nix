@@ -48,11 +48,11 @@
         groff
         gtrash
         handlr-regex
+        hledger
         hyperfine
         iftop
         jmtpfs
         jq
-        ledger
         libnotify
         libqalculate
         links2
