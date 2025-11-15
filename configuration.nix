@@ -438,7 +438,6 @@
                 fish_prompt = "string join '' -- (set_color red) '%' (set_color white)  (prompt_pwd --dir-length=0) (set_color green) '>' (set_color normal)";
                 fish_mode_prompt = "";
                 s = ''links "https://lite.duckduckgo.com/lite/?q=$argv"'';
-                cook = ''(cd ~/dx/Backups/cook && cook $argv)'';
                 sdh = ''links "https://lite.duckduckgo.com/lite/?q=$argv&kl=hu-hu"'';
                 sud = ''links "https://rd.vern.cc/define.php?term=$argv"'';
                 sg = ''links "https://github.com/search?q=$argv&s=stars"'';
@@ -624,6 +623,7 @@
                 nb = "newsboat";
                 nsp = "nix-shell -p";
                 nt = "ping google.com";
+                cdcook = "cd ~/dx/Backups/cook";
                 nr = "doas systemctl restart iwd.service wg-quick-wg0.service";
                 y = "pipe-viewer";
                 yd = "yt-dlp";
