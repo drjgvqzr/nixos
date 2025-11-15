@@ -216,7 +216,7 @@
     };
     i18n.defaultLocale = "en_US.UTF-8";
     networking = {
-        enableIPv6 = true;
+        enableIPv6 = false;
         extraHosts = "0.0.0.0 boards.4chan.org";
         dhcpcd.enable = false;
         hostName =
@@ -236,7 +236,7 @@
                     AddressRandomization = "network";
                 };
                 Network = {
-                    EnableIPv6 = true;
+                    EnableIPv6 = false;
                 };
             };
         };
