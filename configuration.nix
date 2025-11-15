@@ -1011,6 +1011,7 @@
             package = pkgs.taskwarrior3;
             config = {
                 data.location = "/home/soma/dx/Backups/task";
+                verbose = "blank,header,footnote,label,new-id,affected,edit,special,project,sync,filter,override,recur";
             };
         };
         programs.mpv = {
