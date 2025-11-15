@@ -26,11 +26,13 @@
         #CLI
         alejandra
         any-nix-shell
+        backgroundremover
         bat
         catdocx
         cointop
         cook-cli
         dash
+        doxx
         exfatprogs
         fastfetch
         fbcat
@@ -53,10 +55,12 @@
         hledger
         hyperfine
         iftop
+        inxi
         jmtpfs
         jq
         libnotify
         libqalculate
+        lineselect
         links2
         mailsy
         mapscii
@@ -68,8 +72,10 @@
         ouch
         pandoc
         parted
+        pastel
         pciutils
         pdftk
+        percollate
         pipe-rename
         piper-tts
         pipe-viewer
@@ -86,6 +92,7 @@
         stc-cli
         stress
         sunwait
+        surfraw
         ticker
         tickrs
         timer
@@ -137,6 +144,8 @@
         qdirstat
         shotwell
         #starsector # TEITW-HP9ON-A7HMK-WA6YA
+        tageditor
+        timeline
         tor-browser
         ungoogled-chromium
         unigine-heaven
