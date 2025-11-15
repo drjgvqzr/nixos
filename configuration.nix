@@ -1133,7 +1133,7 @@
                 \ 'active': {
                 \   'right': [ [ 'lineinfo' ],
                 \              [ 'percent' ]]},}
-                #Plug 'luizribeiro/vim-cooklang', { 'for': 'cook' }
+                "Plug 'luizribeiro/vim-cooklang', { 'for': 'cook' }
                 cabbrev wq silent wq
                 cabbrev w silent w
                 syntax on
