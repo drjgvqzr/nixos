@@ -64,6 +64,7 @@
         links2
         mailsy
         mapscii
+        morsel
         ncdu
         nixos-anywhere
         nix-search-tv
