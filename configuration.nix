@@ -86,7 +86,6 @@
         stc-cli
         stress
         sunwait
-        taskwarrior3
         ticker
         tickrs
         timer
@@ -1005,6 +1004,13 @@
                         run = "suspend";
                     }
                 ];
+            };
+        };
+        programs.taskwarrior = {
+            enable = true;
+            package = pkgs.taskwarrior3;
+            config = {
+                data.location = "/home/soma/dx/Backups/task";
             };
         };
         programs.mpv = {
