@@ -28,6 +28,8 @@
         any-nix-shell
         bat
         catdocx
+        cointop
+        cook-cli
         dash
         exfatprogs
         fastfetch
@@ -36,8 +38,8 @@
         fdupes
         ffmpeg
         figlet
-        fishPlugins.autopair
-        fishPlugins.puffer
+        #fishPlugins.autopair
+        #fishPlugins.puffer
         fzf
         gallery-dl
         gh
@@ -84,6 +86,9 @@
         stc-cli
         stress
         sunwait
+        taskwarrior3
+        ticker
+        tickrs
         timer
         tldr
         toipe
@@ -91,6 +96,7 @@
         transmission_4
         tree
         unoconv
+        urban-cli
         wget
         woeusb
         xdg-utils
@@ -121,6 +127,7 @@
         firefox
         fluffychat
         gimp
+        googleearth-pro
         kdePackages.kdenlive
         kdePackages.kolourpaint
         kdiskmark
@@ -158,7 +165,7 @@
                     else 1;
             };
             efi.canTouchEfiVariables = true;
-            timeout = 1;
+            timeout = 0;
         };
     };
     console.useXkbConfig = true;
@@ -212,6 +219,7 @@
     i18n.defaultLocale = "en_US.UTF-8";
     networking = {
         enableIPv6 = false;
+        extraHosts = "0.0.0.0 4chan.org";
         dhcpcd.enable = false;
         hostName =
             if builtins.pathExists /sys/kernel/btf/thinkpad_acpi
@@ -250,15 +258,17 @@
     nixpkgs.config = {
         allowUnfree = false;
         permittedInsecurePackages = [
-            "olm-3.2.16"
-            "jitsi-meet-1.0.8792"
             "electron-36.9.5"
+            "googleearth-pro-7.3.6.10201"
+            "jitsi-meet-1.0.8792"
+            "olm-3.2.16"
         ];
         allowUnfreePredicate = pkg:
             builtins.elem (lib.getName pkg) [
-                "unigine-heaven"
+                "googleearth-pro"
                 "steam"
                 "steam-unwrapped"
+                "unigine-heaven"
             ];
     };
     programs = {
@@ -1090,7 +1100,7 @@
             viAlias = true;
             vimdiffAlias = true;
             #plugins = with pkgs.vimPlugins; [vim-wayland-clipboard nvimpager vim-manpager vim-plugin-AnsiEsc lightline-vim];
-            plugins = with pkgs.vimPlugins; [lightline-vim vim-plugin-AnsiEsc indentLine nvim-highlight-colors];
+            plugins = with pkgs.vimPlugins; [lightline-vim vim-plugin-AnsiEsc indentLine nvim-highlight-colors vim-plug];
             extraLuaConfig = ''
                 vim.o.shada = ""
                 require('nvim-highlight-colors').setup({})'';
@@ -1123,6 +1133,7 @@
                 \ 'active': {
                 \   'right': [ [ 'lineinfo' ],
                 \              [ 'percent' ]]},}
+                Plug 'luizribeiro/vim-cooklang', { 'for': 'cook' }
                 cabbrev wq silent wq
                 cabbrev w silent w
                 syntax on
