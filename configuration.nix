@@ -65,7 +65,6 @@
         links2
         mailsy
         mapscii
-        morsel
         mw
         ncdu
         nixos-anywhere
