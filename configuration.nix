@@ -48,6 +48,7 @@
         ghc
         glow
         gnumake
+        gnupg
         grc
         groff
         gtrash
