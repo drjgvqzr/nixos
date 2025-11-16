@@ -626,7 +626,7 @@
                 o = "handlr open";
                 f = "yazi";
                 qr = "qrrs";
-                cr = "cook r (fd cook dx/Backups/cook | fzf )";
+                cr = "cook r (fd cook ~/dx/Backups/cook | fzf )";
                 h = "hledger";
                 ha = "hledger add";
                 mc = "man configuration.nix";
