@@ -794,7 +794,7 @@
                     regular1 = "aa0000";
                     regular2 = "00aa00";
                     regular3 = "aa5500";
-                    regular4 = "4444ff";
+                    regular4 = "3333ff";
                     regular5 = "aa00aa";
                     regular6 = "00aaaa";
                     regular7 = "aaaaaa";
