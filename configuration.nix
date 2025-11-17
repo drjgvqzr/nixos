@@ -89,6 +89,7 @@
         rclone
         ripgrep
         ripgrep-all
+        rsync
         smartmontools
         sox
         speedread
