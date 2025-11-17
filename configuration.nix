@@ -82,9 +82,11 @@
         piper-tts
         pipe-viewer
         poppler-utils
+        presenterm
         pulseaudio
         pulsemixer
         qrrs
+        rclone
         ripgrep
         ripgrep-all
         smartmontools
