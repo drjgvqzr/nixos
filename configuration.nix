@@ -56,6 +56,7 @@
         hledger
         hyperfine
         iftop
+        imagemagick
         inxi
         jmtpfs
         jq
@@ -111,6 +112,7 @@
         wget
         woeusb
         xdg-utils
+        yq
         zbar
 
         #Wayland
