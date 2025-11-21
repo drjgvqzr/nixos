@@ -124,6 +124,7 @@
         hunspellDicts.hu_HU
         hyprpicker
         i3-swallow
+        perl540Packages.Apppapersway
         slurp
         swaybg
         swayidle
@@ -722,7 +723,7 @@
                 head = "head -v";
                 cp = "cp -rvp";
                 cal = "cal -mw";
-                wget = "wget --hsts-file=~/.cache/wget-hsts";
+                wget = "wget -c --hsts-file=~/.cache/wget-hsts";
                 rename = "rename -iv";
                 ln = "ln -ivP";
                 chown = "chown -Rv";
@@ -912,7 +913,7 @@
             enable = true;
             config = {
                 fullscreen = "yes";
-                volume = "50";
+                volume = "100";
                 term-osd-bar-chars = "[/|\\]";
                 gapless-audio = "yes";
                 gpu-context = "wayland";
