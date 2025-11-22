@@ -180,7 +180,7 @@
                     else 1;
             };
             efi.canTouchEfiVariables = true;
-            timeout = 0;
+            timeout = 1;
         };
     };
     console.useXkbConfig = true;
@@ -234,7 +234,7 @@
     i18n.defaultLocale = "en_US.UTF-8";
     networking = {
         enableIPv6 = false;
-        extraHosts = "0.0.0.0 boards.4chan.org";
+        #extraHosts = "0.0.0.0 boards.4chan.org";
         dhcpcd.enable = false;
         hostName =
             if builtins.pathExists /sys/kernel/btf/thinkpad_acpi
