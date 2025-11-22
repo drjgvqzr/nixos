@@ -212,17 +212,15 @@
         };
     };
     fonts = {
-        enableDefaultPackages = true;
         fontDir.enable = true;
-        #packages = with pkgs; [roboto-mono noto-fonts-color-emoji];
-        packages = with pkgs; [roboto-mono];
+        packages = with pkgs; [roboto-mono noto-fonts-color-emoji unifont];
         fontconfig = {
             enable = true;
             defaultFonts = {
                 monospace = ["Roboto Mono"];
                 serif = ["Roboto Mono"];
                 sansSerif = ["Roboto Mono"];
-                #emoji = ["Noto Color Emoji"];
+                emoji = ["Noto Color Emoji"];
             };
         };
     };
