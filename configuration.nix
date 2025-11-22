@@ -147,6 +147,7 @@
         logseq
         lutris
         mullvad-browser
+        obs-studio
         onlyoffice-desktopeditors
         pavucontrol
         qdirstat
