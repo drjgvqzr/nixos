@@ -22,6 +22,11 @@
                 redirectUrl = "https://xcancel.com/$1";
                 appliesTo = ["main_frame"];
             }
+            {
+                includePattern = "https://inv.nadeko.net/feed/popular";
+                redirectUrl = "https://inv.nadeko.net/search";
+                appliesTo = ["main_frame"];
+            }
             #{
             #    includePattern = "https://*.fandom.com/wiki/*";
             #    redirectUrl = "https://breezewiki.com/$1/wiki/$2";
