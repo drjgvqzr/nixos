@@ -119,7 +119,8 @@
             sh: javascript:location='https://sci-hub.st/https://'%20+%20escape(location.hostname%20+%20location.pathname)%20+%20'%20%S'%20;%20void%200
             4pol: https://archive.4plebs.org/pol/search/type/op/text/%s
             4g: https://desuarchive.org/g/search/type/op/text/%s/
-            r34: https://rule34.xxx/index.php?page=post&s=list&tags=%s'';
+            r34: https://rule34.xxx/index.php?page=post&s=list&tags=%s
+            gs: https://scholar.google.com/scholar?q=%s&hl=en'';
         linkHintCharacters = "arstf";
         preferBrowserSearch = true;
         newTabUrl_f = "about:newtab";
@@ -286,6 +287,11 @@
                 name = "Rule 34";
                 urls = [{template = "https://rule34.xxx/index.php?page=post&s=list&tags={searchTerms}";}];
                 definedAliases = ["r34"];
+            };
+            scholar = {
+                name = "Google Scholar";
+                urls = [{template = "https://scholar.google.com/scholar?q={searchTerms}&hl=en";}];
+                definedAliases = ["gs"];
             };
             bing.metaData.hidden = true;
             google.metaData.hidden = true;
