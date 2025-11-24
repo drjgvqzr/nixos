@@ -202,7 +202,7 @@
             XDG_DESKTOP_DIR = "$HOME/dn";
             XDG_DOCUMENTS_DIR = "$HOME/dx";
             XDG_DOWNLOAD_DIR = "$HOME/dn";
-            XDG_MUSIC_DIR = "$HOME/dn";
+            XDG_MUSIC_DIR = "$HOME/mu";
             XDG_PICTURES_DIR = "$HOME/px";
             XDG_PUBLICSHARE_DIR = "$HOME/dn";
             XDG_STATE_HOME = "$HOME/.local/state";
