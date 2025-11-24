@@ -13,7 +13,6 @@
         }/nixos"
         #<nixpkgs/nixos/modules/profiles/hardened.nix>
         ./librewolf.nix
-        ./zsh.nix
         ./sway.nix
         ./misc/secrets.nix
         ./misc/thunderbird.nix
@@ -181,7 +180,7 @@
                     else 1;
             };
             efi.canTouchEfiVariables = true;
-            timeout = 1;
+            timeout = 0;
         };
     };
     console.useXkbConfig = true;
@@ -306,7 +305,6 @@
         };
         nano.enable = false;
         steam.enable = true;
-        zsh.enable = true;
     };
     security = {
         doas = {
@@ -445,7 +443,7 @@
                     epub = "pandoc --to plain $1";
                     docx = "pandoc --to plain $1";
                     odt = "pandoc --to plain $1";
-                    pptx = "zsh -c \"unoconv -d presentation -f pdf --stdout $1 |pdftotext - -\"";
+                    pptx = "sh -c \"unoconv -d presentation -f pdf --stdout $1 |pdftotext - -\"";
                 };
             };
         };
@@ -655,7 +653,6 @@
                 nconf = "vi ~/dx/nixos/configuration.nix";
                 nconfl = "vi ~/dx/nixos/librewolf.nix";
                 nconfs = "vi ~/dx/nixos/sway.nix";
-                nconfz = "vi ~/dx/nixos/zsh.nix";
                 ns = "nix-search-tv print | fzf --preview 'nix-search-tv preview {}' --scheme history";
                 sw = "sway";
                 gal = "shotwell";
@@ -788,7 +785,7 @@
                 main = {
                     font = "Roboto Mono:size=14";
                     selection-target = "clipboard";
-                    pad = "5x3";
+                    pad = "5x0";
                 };
                 bell.system = false;
                 scrollback.lines = 100000;
