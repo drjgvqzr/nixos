@@ -199,20 +199,21 @@
             XDG_CACHE_HOME = "$HOME/.cache";
             XDG_CONFIG_HOME = "$HOME/.config";
             XDG_DATA_HOME = "$HOME/.local/share";
+            XDG_STATE_HOME = "$HOME/.local/state";
             XDG_DESKTOP_DIR = "$HOME/dn";
             XDG_DOCUMENTS_DIR = "$HOME/dx";
             XDG_DOWNLOAD_DIR = "$HOME/dn";
             XDG_MUSIC_DIR = "$HOME/mu";
             XDG_PICTURES_DIR = "$HOME/px";
             XDG_PUBLICSHARE_DIR = "$HOME/dn";
-            XDG_STATE_HOME = "$HOME/.local/state";
             XDG_TEMPLATES_DIR = "$HOME/dn";
             XDG_VIDEOS_DIR = "$HOME/vs";
         };
     };
     fonts = {
         fontDir.enable = true;
-        packages = with pkgs; [roboto-mono noto-fonts-color-emoji unifont];
+        #packages = with pkgs; [roboto-mono noto-fonts-color-emoji unifont];
+        packages = with pkgs; [roboto-mono unifont];
         fontconfig = {
             enable = true;
             defaultFonts = {
