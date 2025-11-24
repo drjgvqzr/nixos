@@ -785,7 +785,7 @@
                 main = {
                     font = "Roboto Mono:size=14";
                     selection-target = "clipboard";
-                    pad = "5x0";
+                    pad = "5x3";
                 };
                 bell.system = false;
                 scrollback.lines = 100000;
