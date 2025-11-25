@@ -156,7 +156,7 @@
         timeline
         tor-browser
         ungoogled-chromium
-        unigine-heaven
+        #unigine-heaven
         webcord
         zotero
     ];

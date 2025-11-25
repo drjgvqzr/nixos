@@ -59,6 +59,8 @@
             * cloudflare.com * noop
             boards.4chan.org * 3p-script noop
             bandcamp.com * 3p-script noop
+            soundcloud.com sndcdn.com * allow
+            soundcloud.com *.cloudfront.net * allow
             behind-the-scene * * noop
             behind-the-scene * 1p-script noop
             behind-the-scene * 3p noop
