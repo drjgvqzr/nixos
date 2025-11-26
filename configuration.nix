@@ -97,7 +97,7 @@
         stc-cli
         stress
         sunwait
-        #surfraw
+        surfraw
         ticker
         tickrs
         timer
@@ -136,6 +136,7 @@
 
         #GUI
         audacity
+        firefox
         fluffychat
         gimp
         googleearth-pro
