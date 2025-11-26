@@ -97,7 +97,7 @@
         stc-cli
         stress
         sunwait
-        surfraw
+        #surfraw
         ticker
         tickrs
         timer
@@ -136,7 +136,6 @@
 
         #GUI
         audacity
-        firefox
         fluffychat
         gimp
         googleearth-pro
@@ -152,7 +151,6 @@
         qdirstat
         shotwell
         #starsector # TEITW-HP9ON-A7HMK-WA6YA
-        tageditor
         timeline
         tor-browser
         ungoogled-chromium

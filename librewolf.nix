@@ -6,6 +6,7 @@
 }: {
     home-manager.users.soma.programs.librewolf = {
         enable = true;
+        package = pkgs.librewolf-bin;
         policies.ExtensionSettings = {
             "redirector@einaregilsson.com" = {
                 install_url = "https://addons.mozilla.org/firefox/downloads/latest/redirector/latest.xpi";
