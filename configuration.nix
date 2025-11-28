@@ -934,7 +934,7 @@
                 sponsorblock_minimal.categories = "sponsor;selfpromo;interaction;intro;outro;preview;hook;music_offtopic;filler";
             };
             scripts = with pkgs.mpvScripts; [
-                #webtorrent-mpv-hook
+                webtorrent-mpv-hook
                 sponsorblock-minimal
                 mpris
             ];
