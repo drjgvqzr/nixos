@@ -643,6 +643,7 @@
                 cdcook = "cd ~/dx/Backups/cook";
                 nr = "doas systemctl restart iwd.service wg-quick-wg0.service";
                 y = "pipe-viewer";
+                tempmail = "mailsy";
                 yd = "yt-dlp";
                 yda = "yt-dlp -x";
                 mkexec = "chmod +x";
