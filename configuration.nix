@@ -1314,7 +1314,7 @@
                 fragment-retries = "infinite";
                 extractor-retries = "infinite";
                 concurrent-fragments = 4;
-                quiet = true;
+                #quiet = true;
                 progress = true;
                 embed-subs = true;
                 no-warnings = true;
