@@ -104,7 +104,7 @@
         tldr
         toipe
         translate-shell
-        transmission_4
+        transmission_4-gtk
         tree
         unoconv
         urban-cli
@@ -615,10 +615,6 @@
                         notify-send -e -t 5000 "Rebuild Failed"
                         return 1
                     }'';
-                tra = ''
-                    doas systemctl stop wg-quick-wg0.service ;
-                    \transmission-cli -er -w /home/soma/tr/ $argv[1] ;
-                    doas systemctl start wg-quick-wg0.service'';
                 pdfr = ''
                     pdftk $argv[1] cat 1-end"$argv[2]" output $(echo "$argv[1]" | sed 's/\.[^.]*$//')-"$argv[2]".pdf'';
                 cb = ''curl -F "reqtype=fileupload" -F "time=1h" -F "fileToUpload=@$argv" https://litterbox.catbox.moe/resources/internals/api.php | wl-copy ; notify-send "File uploaded"'';
@@ -646,6 +642,7 @@
                 tempmail = "mailsy";
                 yd = "yt-dlp";
                 yda = "yt-dlp -x";
+                ydap = "yt-dlp -x -o \"%(playlist_index)s - %(title)s.%(ext)s\"";
                 mkexec = "chmod +x";
                 nrs = "rebuild";
                 nrst = "tail -c +0 -f ~/dx/nixos/misc/nixos-switch.log";
