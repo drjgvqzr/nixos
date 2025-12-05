@@ -154,7 +154,7 @@
         qdirstat
         shotwell
         #starsector # TEITW-HP9ON-A7HMK-WA6YA
-        timeline
+        #timeline
         tor-browser
         ungoogled-chromium
         #unigine-heaven
