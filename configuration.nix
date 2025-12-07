@@ -159,6 +159,7 @@
         ungoogled-chromium
         #unigine-heaven
         webcord
+        xfce.thunar
         zotero
     ];
     boot = {
