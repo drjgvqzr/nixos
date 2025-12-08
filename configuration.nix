@@ -589,7 +589,7 @@
                     git -C $nixos_dir diff --quiet '*.nix' &&
                         echo "No changes detected, exiting." &&
                         return 1
-                    git -C $nixos_dir diff -U0 '*.nix'
+                    git -C $nixos_dir diff --color=always -U0 '*.nix' | tail -n +5
                     echo "NixOS Rebuilding..."
                     doas nice -n 19 nixos-rebuild switch &> $nixos_dir/misc/nixos-switch.log && {
                       set generation $(git -C $nixos_dir diff -U20 HEAD '*.nix' | aichat summarize what changed in my nixos config in one short sentence | sed 's/.$//' )
