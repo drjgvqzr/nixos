@@ -84,7 +84,7 @@
                 "mod1+o" = "exec onlyoffice-desktopeditors";
                 "mod1+y" = "exec freetube";
                 "mod1+l" = "exec swaymsg '[app_id=\"Logseq\"] focus' || exec logseq";
-                "mod1+s" = "exec fluffychat";
+                "mod1+s" = "exec swaymsg '[app_id=\"fluffychat\"] focus' || exec fluffychat";
                 "mod1+f" = "fullscreen";
                 "mod1+BackSpace" = "exec makoctl dismiss";
                 "mod1+r" = ''exec sh -c 'nixos_dir=~/dx/nixos ; git -C $nixos_dir diff --quiet "*.nix" && notify-send -e -t 5000 "No changes detected, exiting" && exit ; alejandra --experimental-config /home/soma/dx/nixos/misc/alejandra.toml --quiet $nixos_dir ; notify-send -e -t 5000 "NixOS Rebuilding..." ; doas nice -n 19 nixos-rebuild switch &> $nixos_dir/misc/nixos-switch.log && generation=$(git -C $nixos_dir diff -U20 HEAD | aichat summarizewhat changed in my nixos config in one short sentence | sed 's/.$//' ) && git -C $nixos_dir commit -q -am "$generation" && git -C $nixos_dir push -q -u origin main && notify-send -e -t 5000 "Rebuild successful" || notify-send -e -t 5000 "Rebuild Failed" && exit '  '';
