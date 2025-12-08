@@ -715,7 +715,7 @@
                 fontname = ''/run/current-system/sw/bin/ls /nix/var/nix/profiles/system/sw/share/X11/fonts | fzf | xargs -I {} fc-query /nix/var/nix/profiles/system/sw/share/X11/fonts/{} | grep '^\s\+family:' | cut -d'"' -f2'';
                 trashinfo = "gtrash summary";
                 newsboat = "newsboat -q -u /home/soma/dx/nixos/misc/newsboat";
-                grep = "grep --color";
+                grep = "grep -i --color";
                 mkdir = "mkdir -pv";
                 mw = "mpv $(wl-paste)";
                 head = "head -v";
