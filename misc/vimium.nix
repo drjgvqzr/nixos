@@ -102,7 +102,7 @@
             gh: https://github.com/search?q=%s&type=repositories&s=stars&ref=opensearch Github
             ghg: https://gist.github.com/search?q=%s&ref=opensearch Github Gist
             ud: https://rd.vern.cc/define.php?term=%s Urban Dictionary
-            pb: https://torrents-csv.com/search?q=%s Torrents
+            pb: https://thepiratebay.party/search/%s Torrents
             we: https://en.wiktionary.org/wiki/%s#English Wiktionary
             r: https://www.reddit.com/search?q=%s Reddit
             sr: https://www.reddit.com/r/%s/top?t=all Subreddit
