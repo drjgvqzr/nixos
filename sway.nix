@@ -83,7 +83,7 @@
                 "mod1+p" = "exec mpv --force-window=immediate $(wl-paste | sed 's|inv.nadeko.net|youtube.com|')";
                 "mod1+o" = "exec onlyoffice-desktopeditors";
                 "mod1+y" = "exec freetube";
-                "mod1+l" = "exec swaymsg '[app_id=\"logseq\"] focus' || exec logseq";
+                "mod1+l" = "exec swaymsg '[app_id=\"Logseq\"] focus' || exec logseq";
                 "mod1+s" = "exec fluffychat";
                 "mod1+f" = "fullscreen";
                 "mod1+BackSpace" = "exec makoctl dismiss";
