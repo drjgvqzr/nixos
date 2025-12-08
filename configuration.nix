@@ -345,7 +345,7 @@
                 networkConfig.DHCP = "ipv4";
             };
         };
-        sleep.extraConfig = "HibernateDelaySec=30m";
+        sleep.extraConfig = "HibernateDelaySec=1h";
     };
     services = {
         auto-cpufreq = {
