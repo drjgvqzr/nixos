@@ -66,7 +66,6 @@
         links2
         mailsy
         mapscii
-        mw
         ncdu
         nixos-anywhere
         nix-search-tv
