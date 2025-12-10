@@ -1099,13 +1099,16 @@
             };
         };
         services = {
+            batsignal = {
+                enable = true;
+                extraArgs = ["-w" "-c" "-d"];
+            };
             mako = {
                 enable = true;
                 settings = {
                     default-timeout = 5000;
                 };
             };
-            safeeyes.enable = true;
             tldr-update.enable = true;
             wl-clip-persist.enable = true;
             wlsunset = {
