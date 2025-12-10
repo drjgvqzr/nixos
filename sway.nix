@@ -22,9 +22,12 @@
             bindgesture swipe:4:up input type:keyboard events toggle'';
         wrapperFeatures.gtk = true;
         config = {
+            assigns = {
+                "7" = [{app_id = "Librewolf";}];
+                #"8" = [{ class = "^Firefox$"; window_role = "About"; }];
+            };
             output = {
                 DSI-1 = {
-                    #transform = "90";
                     scale = "1.5";
                 };
             };
