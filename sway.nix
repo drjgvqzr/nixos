@@ -111,8 +111,8 @@
                 #"mod1+Shift+e" = "move up";
                 #"mod1+Shift+i" = "move right";
                 "mod1+Shift+m" = "exec papersway-msg move left";
-                "mod1+Shift+n" = "move down";
-                "mod1+Shift+e" = "move up";
+                "mod1+Shift+n" = "papersway-msg absorb-expel left";
+                "mod1+Shift+e" = "papersway-msg absorb-expel right";
                 "mod1+Shift+i" = "exec papersway-msg move right";
 
                 "mod1+Ctrl+m" = "resize shrink width";
