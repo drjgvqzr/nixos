@@ -1100,7 +1100,7 @@
                 enable = true;
                 settings = {
                     default-timeout = 5000;
-                    background-color = "#000000BF";
+                    background-color = "#0000007F";
                     border-color = "#AAAAAABF";
                 };
             };
