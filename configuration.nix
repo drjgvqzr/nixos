@@ -1101,7 +1101,7 @@
         services = {
             batsignal = {
                 enable = true;
-                extraArgs = ["-b"];
+                #extraArgs = ["-b"];
             };
             mako = {
                 enable = true;
