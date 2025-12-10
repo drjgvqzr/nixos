@@ -86,7 +86,7 @@
                 "mod1+t" = "exec notify-send -e \"$(date \"+%H:%M\")\"";
                 "mod1+p" = "exec mpv --force-window=immediate $(wl-paste | sed 's|inv.nadeko.net|youtube.com|')";
                 "mod1+w" = "exec swaymsg '[app_id=\"librewolf\"] focus' || exec librewolf ; exec swaymsg 'workspace number 7'";
-                "mod1+l" = "exec swaymsg '[app_id=\"Logseq\"] focus' || exec logseq ; exec swaymsg 'workspace number 8'";
+                #"mod1+l" = "exec swaymsg '[app_id=\"Logseq\"] focus' || exec logseq ; exec swaymsg 'workspace number 8'";
                 "mod1+s" = "exec swaymsg '[app_id=\"fluffychat\"] focus' || exec fluffychat ; exec swaymsg 'workspace number 9'";
                 "mod1+k" = "exec swaymsg '[app_id=\"org.keepassxc.KeePassXC\"] focus' || exec keepassxc /home/soma/dx/Backups/Keepass/keepass.kdbx ; exec swaymsg 'workspace number 10'";
                 "mod1+o" = "exec swaymsg '[class=\"ONLYOFFICE\"] focus' || exec onlyoffice-desktopeditors ; exec swaymsg 'workspace number 11'";
@@ -105,6 +105,8 @@
                 "mod1+n" = "focus down";
                 "mod1+e" = "focus up";
                 "mod1+i" = "exec papersway-msg focus right";
+                "mod1+Shift+l" = "exec papersway-msg move-to-workspace prev";
+                "mod1+Shift+u" = "exec papersway-msg move-to-workspace next";
 
                 #"mod1+Shift+m" = "move left";
                 #"mod1+Shift+n" = "move down";
