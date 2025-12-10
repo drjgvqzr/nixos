@@ -362,12 +362,6 @@
                 };
             };
         };
-        cron = {
-            enable = false;
-            systemCronJobs = [
-                "*/1 * * * * root [ $(cat /sys/class/power_supply/BAT0/capacity) -le 5 ] && [ $(cat /sys/class/power_supply/BAT0/status) = Discharging ] && systemctl suspend-then-hibernate"
-            ];
-        };
         getty = {
             autologinUser = "soma";
             autologinOnce = true;
@@ -1100,7 +1094,7 @@
         services = {
             batsignal = {
                 enable = true;
-                extraArgs = ["-D systemctl suspend-then-hibernate" "-e" "-p"];
+                extraArgs = ["-D systemctl suspend-then-hibernate" "-e" "-f 100" "-p"];
             };
             mako = {
                 enable = true;
