@@ -1105,6 +1105,8 @@
                     default-timeout = 5000;
                 };
             };
+            safeeyes.enable = true;
+            tldr-update.enable = true;
             wl-clip-persist.enable = true;
             wlsunset = {
                 enable = true;
