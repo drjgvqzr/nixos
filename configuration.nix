@@ -1100,7 +1100,7 @@
         services = {
             batsignal = {
                 enable = true;
-                #extraArgs = ["-b"];
+                extraArgs = ["-D systemctl suspend-then-hibernate"];
             };
             mako = {
                 enable = true;
