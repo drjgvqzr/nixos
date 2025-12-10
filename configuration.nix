@@ -365,7 +365,7 @@
         cron = {
             enable = true;
             systemCronJobs = [
-                "*/1 * * * * root [ $(cat /sys/class/power_supply/BAT0/capacity) -le 5 ] && [ $(cat /sys/class/power_supply/BAT0/status) = Discharging ] && systemctl hibernate"
+                "*/1 * * * * root [ $(cat /sys/class/power_supply/BAT0/capacity) -le 5 ] && [ $(cat /sys/class/power_supply/BAT0/status) = Discharging ] && systemctl suspend-then-hibernate"
             ];
         };
         getty = {
