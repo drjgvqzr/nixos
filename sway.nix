@@ -84,7 +84,7 @@
                 "mod1+b" = "exec notify-send -e \"$(cat /sys/class/power_supply/BAT0/capacity)%\"";
                 "mod1+t" = "exec notify-send -e \"$(date \"+%H:%M\")\"";
                 "mod1+p" = "exec mpv --force-window=immediate $(wl-paste | sed 's|inv.nadeko.net|youtube.com|')";
-                "mod1+w" = "exec swaymsg '[app_id=\"librewolf\"] focus' || exec librewolf ; workspace number 7'";
+                "mod1+w" = "exec swaymsg '[app_id=\"librewolf\"] focus' || exec librewolf ; exec swaymsg 'workspace number 7'";
                 "mod1+k" = "exec swaymsg '[app_id=\"org.keepassxc.KeePassXC\"] focus' || exec keepassxc /home/soma/dx/Backups/Keepass/keepass.kdbx";
                 "mod1+o" = "exec swaymsg '[class=\"ONLYOFFICE\"] focus' || exec onlyoffice-desktopeditors";
                 "mod1+l" = "exec swaymsg '[app_id=\"Logseq\"] focus' || exec logseq";
