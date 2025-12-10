@@ -7,7 +7,7 @@
     home-manager.users.soma.wayland.windowManager.sway = {
         enable = true;
         extraConfig = ''
-            exec autotiling-rs
+            #exec autotiling-rs
             exec mako
             exec papersway
             exec swaybg -m fill -i /home/soma/dx/nixos/misc/wallpaper.jpg
