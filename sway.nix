@@ -23,7 +23,7 @@
         wrapperFeatures.gtk = true;
         config = {
             assigns = {
-                "7" = [{app_id = "Librewolf";}];
+                "7" = [{app_id = "librewolf";}];
                 #"8" = [{ class = "^Firefox$"; window_role = "About"; }];
             };
             output = {
