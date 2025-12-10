@@ -105,8 +105,6 @@
                 "mod1+n" = "focus down";
                 "mod1+e" = "focus up";
                 "mod1+i" = "exec papersway-msg focus right";
-                "mod1+Shift+l" = "exec papersway-msg move-to-workspace prev";
-                "mod1+Shift+u" = "exec papersway-msg move-to-workspace next";
 
                 #"mod1+Shift+m" = "move left";
                 #"mod1+Shift+n" = "move down";
@@ -135,7 +133,7 @@
                 "mod1+Shift+space" = "floating toggle";
                 "mod1+space" = "focus mode_toggle";
 
-                "mod1+Shift+1" = "move container to workspace number 1";
+                #"mod1+Shift+1" = "move container to workspace number 1";
                 #"mod1+Shift+2" = "move container to workspace number 2";
                 #"mod1+Shift+3" = "move container to workspace number 3";
                 #"mod1+Shift+4" = "move container to workspace number 4";

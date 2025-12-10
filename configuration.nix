@@ -1100,6 +1100,8 @@
                 enable = true;
                 settings = {
                     default-timeout = 5000;
+                    background-color = "#222222BF";
+                    border-color = "#AAAAAABF";
                 };
             };
             tldr-update.enable = true;
