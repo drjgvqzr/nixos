@@ -24,7 +24,10 @@
         config = {
             assigns = {
                 "7" = [{app_id = "librewolf";}];
-                #"8" = [{ class = "^Firefox$"; window_role = "About"; }];
+                "8" = [{app_id = "Logseq";}];
+                "9" = [{app_id = "fluffychat";}];
+                "10" = [{app_id = "org.keepassxc.KeePassXC";}];
+                "11" = [{class = "ONLYOFFICE";}];
             };
             output = {
                 DSI-1 = {
