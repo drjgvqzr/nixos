@@ -121,24 +121,24 @@
                 "mod1+Ctrl+i" = "resize grow width";
 
                 "mod1+1" = "workspace number 1";
-                "mod1+2" = "workspace number 2";
-                "mod1+3" = "workspace number 3";
-                "mod1+4" = "workspace number 4";
-                "mod1+5" = "workspace number 5";
-                "mod1+6" = "workspace number 6";
-                "mod1+Left" = "workspace prev";
-                "mod1+Right" = "workspace next";
+                #"mod1+2" = "workspace number 2";
+                #"mod1+3" = "workspace number 3";
+                #"mod1+4" = "workspace number 4";
+                #"mod1+5" = "workspace number 5";
+                #"mod1+6" = "workspace number 6";
+                #"mod1+Left" = "workspace prev";
+                #"mod1+Right" = "workspace next";
                 "mod1+Tab" = "workspace back_and_forth";
 
                 "mod1+Shift+space" = "floating toggle";
                 "mod1+space" = "focus mode_toggle";
 
                 "mod1+Shift+1" = "move container to workspace number 1";
-                "mod1+Shift+2" = "move container to workspace number 2";
-                "mod1+Shift+3" = "move container to workspace number 3";
-                "mod1+Shift+4" = "move container to workspace number 4";
-                "mod1+Shift+5" = "move container to workspace number 5";
-                "mod1+Shift+6" = "move container to workspace number 6";
+                #"mod1+Shift+2" = "move container to workspace number 2";
+                #"mod1+Shift+3" = "move container to workspace number 3";
+                #"mod1+Shift+4" = "move container to workspace number 4";
+                #"mod1+Shift+5" = "move container to workspace number 5";
+                #"mod1+Shift+6" = "move container to workspace number 6";
                 #"mod1+Shift+q" = "exit";
 
                 "mod1+f1" = "exec doas ${pkgs.kbd}/bin/chvt 1";
