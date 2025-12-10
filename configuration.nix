@@ -900,11 +900,6 @@
         };
         programs.taskwarrior = {
             enable = true;
-            package = pkgs.taskwarrior3;
-            config = {
-                data.location = "/home/soma/dx/Backups/task";
-                verbose = "blank,header,footnote,label,new-id,affected,edit,special,project,sync,override,recur";
-            };
         };
         programs.mpv = {
             enable = true;
