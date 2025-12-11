@@ -140,12 +140,12 @@
         firefox
         fluffychat
         gimp
-        googleearth-pro
+        #googleearth-pro
         kdePackages.kdenlive
         kdePackages.kolourpaint
         kdiskmark
         logseq
-        lutris
+        #lutris
         mullvad-browser
         obs-studio
         onlyoffice-desktopeditors
@@ -270,20 +270,19 @@
             automatic = true;
             dates = ["monthly"];
         };
-        settings.experimental-features = ["nix-command" "flakes"];
     };
     nixpkgs.config = {
         allowUnfree = false;
         permittedInsecurePackages = [
-            "electron-36.9.5"
-            "googleearth-pro-7.3.6.10201"
+            #"electron-36.9.5"
+            #"googleearth-pro-7.3.6.10201"
         ];
         allowUnfreePredicate = pkg:
             builtins.elem (lib.getName pkg) [
-                "googleearth-pro"
-                "steam"
-                "steam-unwrapped"
-                "unigine-heaven"
+                #"googleearth-pro"
+                #"steam"
+                #"steam-unwrapped"
+                #"unigine-heaven"
             ];
     };
     programs = {
@@ -305,7 +304,7 @@
         };
         kdeconnect.enable = true;
         nano.enable = false;
-        steam.enable = true;
+        steam.enable = false;
     };
     security = {
         doas = {
