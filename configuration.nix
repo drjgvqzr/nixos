@@ -153,7 +153,6 @@
         qdirstat
         shotwell
         #starsector # TEITW-HP9ON-A7HMK-WA6YA
-        #timeline
         tor-browser
         ungoogled-chromium
         #unigine-heaven
@@ -273,7 +272,6 @@
     };
     nixpkgs.config = {
         permittedInsecurePackages = [
-            #"electron-36.9.5"
             #"googleearth-pro-7.3.6.10201"
         ];
         allowUnfreePredicate = pkg:
