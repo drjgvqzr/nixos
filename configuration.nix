@@ -277,8 +277,6 @@
         permittedInsecurePackages = [
             "electron-36.9.5"
             "googleearth-pro-7.3.6.10201"
-            #"jitsi-meet-1.0.8792"
-            #"olm-3.2.16"
         ];
         allowUnfreePredicate = pkg:
             builtins.elem (lib.getName pkg) [
