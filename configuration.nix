@@ -272,7 +272,6 @@
         };
     };
     nixpkgs.config = {
-        allowUnfree = false;
         permittedInsecurePackages = [
             #"electron-36.9.5"
             #"googleearth-pro-7.3.6.10201"
