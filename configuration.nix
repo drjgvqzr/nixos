@@ -525,6 +525,35 @@
         programs.aichat = {
             enable = true;
             settings = {
+                clients = [
+                    {
+                        type = "openai-compatible";
+                        name = "openrouter";
+                        api_base = "https://openrouter.ai/api/v1";
+                        api_key = lib.strings.trim (builtins.readFile /home/soma/dx/nixos/misc/secrets/openrouter);
+                        models = [
+                            {
+                                name = "deepseek/deepseek-v3.2";
+                                system_prompt_prefix = lib.strings.trim (builtins.readFile /home/soma/dx/nixos/misc/ai_sysprompt);
+                            }
+                            {
+                                name = "qwen/qwen3-embedding-8b";
+                                type = "embedding";
+                            }
+                        ];
+                    }
+                    {
+                        type = "openai-compatible";
+                        name = "ollama";
+                        api_base = "http://localhost:11434/v1";
+                        models = [
+                            {
+                                name = "deepseek-r1:1.5b";
+                                system_prompt_prefix = lib.strings.trim (builtins.readFile /home/soma/dx/nixos/misc/ai_sysprompt);
+                            }
+                        ];
+                    }
+                ];
                 save = true;
                 save_session = false;
                 wrap = "auto";
