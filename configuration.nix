@@ -1549,7 +1549,7 @@
                     text = "cookie-file = ~/.config/pulse/cookie";
                 };
                 violentmonkey = {
-                    enable = true;
+                    enable = false;
                     force = true;
                     target = ".librewolf/default/browser-extension-data/{aecec67f-0d10-4fa7-b7c7-609a2db280cf}/storage.js";
                     source = "/home/soma/dx/nixos/misc/violentmonkey";

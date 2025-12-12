@@ -28,10 +28,10 @@
                 install_url = "https://addons.mozilla.org/firefox/downloads/latest/smartreader/latest.xpi";
                 installation_mode = "force_installed";
             };
-            "{aecec67f-0d10-4fa7-b7c7-609a2db280cf}" = {
-                install_url = "https://addons.mozilla.org/firefox/downloads/latest/violentmonkey/latest.xpi";
-                installation_mode = "force_installed";
-            };
+            #"{aecec67f-0d10-4fa7-b7c7-609a2db280cf}" = {
+            #    install_url = "https://addons.mozilla.org/firefox/downloads/latest/violentmonkey/latest.xpi";
+            #    installation_mode = "force_installed";
+            #};
             "sponsorBlocker@ajay.app" = {
                 install_url = "https://addons.mozilla.org/firefox/downloads/latest/sponsorblock/latest.xpi";
                 installation_mode = "force_installed";
