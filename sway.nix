@@ -27,8 +27,9 @@
                 "7" = [{app_id = "librewolf";}];
                 "8" = [{app_id = "Logseq";}];
                 "9" = [{app_id = "fluffychat";}];
-                "10" = [{app_id = "org.keepassxc.KeePassXC";}];
-                "11" = [{class = "ONLYOFFICE";}];
+                "10" = [{app_id = "thunderbird";}];
+                "11" = [{app_id = "org.keepassxc.KeePassXC";}];
+                "12" = [{class = "ONLYOFFICE";}];
             };
             output = {
                 DSI-1 = {
