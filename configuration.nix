@@ -341,7 +341,6 @@
         sleep.extraConfig = "HibernateDelaySec=1h";
     };
     services = {
-        mullvad-vpn.enable = true;
         auto-cpufreq = {
             enable = true;
             settings = {
