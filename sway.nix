@@ -8,6 +8,9 @@
         enable = true;
         extraConfig = ''
             #exec autotiling-rs
+            exec librewolf
+            exec thunderbird
+            exec fluffychat
             exec mako
             exec papersway
             exec swaybg -m fill -i /home/soma/dx/nixos/misc/wallpaper.jpg
