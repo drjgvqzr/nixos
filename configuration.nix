@@ -245,7 +245,8 @@
         networkmanager.enable = false;
         nftables.enable = true;
         useDHCP = false;
-        wg-quick.interfaces.wg0.configFile = "/home/soma/dx/nixos/misc/secrets/${config.networking.hostName}_wg.conf";
+        #wg-quick.interfaces.wg0.configFile = "/home/soma/dx/nixos/misc/secrets/${config.networking.hostName}_wg.conf";
+        wg-quick.interfaces.wg0.configFile = "/home/soma/dn/wg0.conf";
         wireless.iwd = {
             enable = true;
             settings = {
