@@ -299,7 +299,7 @@
                 }
             ];
         };
-        kdeconnect.enable = true;
+        localsend.enable = true;
         nano.enable = false;
         steam.enable = false;
     };
