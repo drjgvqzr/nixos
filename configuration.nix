@@ -391,6 +391,111 @@
             fallbackDns = ["1.1.1.1#one.one.one.one" "1.0.0.1#one.one.one.one"];
             dnsovertls = "true";
         };
+        syncthing = {
+            enable = true;
+            dataDir = "/home/soma";
+            group = "users";
+            openDefaultPorts = true;
+            user = "soma";
+            cert = "/home/soma/dx/nixos/misc/secrets/${config.networking.hostName}_cert.pem";
+            key = "/home/soma/dx/nixos/misc/secrets/${config.networking.hostName}_key.pem";
+            settings = {
+                devices = {
+                    "W520".id = lib.strings.trim (builtins.readFile /home/soma/dx/nixos/misc/secrets/W520_st-id);
+                    "Mini".id = lib.strings.trim (builtins.readFile /home/soma/dx/nixos/misc/secrets/Mini_st-id);
+                    "I3113".id = lib.strings.trim (builtins.readFile /home/soma/dx/nixos/misc/secrets/I3113_st-id);
+                };
+                folders = {
+                    "ar" = {
+                        path = "~/ar";
+                        id = "ciwug-fwawa";
+                        devices = [
+                            "Mini"
+                            "W520"
+                        ];
+                        versioning = {
+                            type = "trashcan";
+                            params.cleanoutDays = "30";
+                        };
+                    };
+                    "dn" = {
+                        path = "~/dn";
+                        id = "eztfs-xg2pf";
+                        devices = [
+                            "Mini"
+                            "W520"
+                        ];
+                        versioning = {
+                            type = "trashcan";
+                            params.cleanoutDays = "30";
+                        };
+                    };
+                    "dx" = {
+                        path = "~/dx";
+                        id = "oh2oz-9t565";
+                        devices = [
+                            "Mini"
+                            "W520"
+                            "I3113"
+                        ];
+                        versioning = {
+                            type = "trashcan";
+                            params.cleanoutDays = "30";
+                        };
+                    };
+                    "mu" = {
+                        path = "~/mu";
+                        id = "sytcm-5kzcc";
+                        devices = [
+                            "Mini"
+                            "W520"
+                            "I3113"
+                        ];
+                        versioning = {
+                            type = "trashcan";
+                            params.cleanoutDays = "30";
+                        };
+                    };
+                    "ph" = {
+                        path = "~/ph";
+                        id = "domno-sd3ps";
+                        devices = [
+                            "Mini"
+                            "W520"
+                            "I3113"
+                        ];
+                        versioning = {
+                            type = "trashcan";
+                            params.cleanoutDays = "30";
+                        };
+                    };
+                    "px" = {
+                        path = "~/px";
+                        id = "d0ind-uzt2e";
+                        devices = [
+                            "Mini"
+                            "W520"
+                        ];
+                        versioning = {
+                            type = "trashcan";
+                            params.cleanoutDays = "30";
+                        };
+                    };
+                    "vs" = {
+                        path = "~/vs";
+                        id = "7sr22-b5ui1";
+                        devices = [
+                            "Mini"
+                            "W520"
+                        ];
+                        versioning = {
+                            type = "trashcan";
+                            params.cleanoutDays = "30";
+                        };
+                    };
+                };
+            };
+        };
         thermald.enable = true;
         vnstat.enable = true;
         xserver = {
