@@ -4,6 +4,50 @@
     lib,
     ...
 }: {
+    programs.freetube = {
+        enable = false;
+        settings = {
+            autoplayVideos = true;
+            baseTheme = "black";
+            checkForBlogPosts = false;
+            checkForUpdates = false;
+            downloadAskPath = false;
+            downloadBehavior = "download";
+            downloadFolderPath = "/home/soma/vs";
+            externalPlayerCustomArgs = "[\"--force-window=immediate\"]";
+            externalPlayer = "mpv";
+            generalAutoLoadMorePaginatedItemsEnabled = true;
+            hideActiveSubscriptions = true;
+            hideChannelCommunity = true;
+            hideChannelPodcasts = true;
+            hideChannelReleases = true;
+            hideChannelShorts = true;
+            hideFeaturedChannels = true;
+            hideHeaderLogo = true;
+            hideLabelsSideBar = true;
+            hideLiveChat = true;
+            hideLiveStreams = true;
+            hidePlaylists = true;
+            hidePopularVideos = true;
+            hideSharingActions = true;
+            hideTrendingVideos = true;
+            hideUpcomingPremieres = true;
+            landingPage = "subscribedchannels";
+            maxVideoPlaybackRate = 2;
+            showDistractionFreeTitles = true;
+            sponsorBlockFiller = "{\"color\":\"Purple\",\"skip\":\"autoSkip\"}";
+            sponsorBlockInteraction = "{\"color\":\"Pink\",\"skip\":\"autoSkip\"}";
+            sponsorBlockIntro = "{\"color\":\"Cyan\",\"skip\":\"autoSkip\"}";
+            sponsorBlockMusicOffTopic = "{\"color\":\"Orange\",\"skip\":\"autoSkip\"}";
+            sponsorBlockOutro = "{\"color\":\"Blue\",\"skip\":\"autoSkip\"}";
+            sponsorBlockRecap = "{\"color\":\"Indigo\",\"skip\":\"autoSkip\"}";
+            sponsorBlockSelfPromo = "{\"color\":\"Yellow\",\"skip\":\"autoSkip\"}";
+            useDeArrowTitles = true;
+            useSponsorBlock = true;
+            videoPlaybackRateMouseScroll = true;
+            videoVolumeMouseScroll = true;
+        };
+    };
     programs.alacritty = {
         enable = false;
         settings = {
