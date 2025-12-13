@@ -140,7 +140,7 @@
         firefox
         fluffychat
         gimp
-        #googleearth-pro
+        googleearth-pro
         kdePackages.kdenlive
         kdePackages.kolourpaint
         kdiskmark
@@ -271,11 +271,11 @@
     };
     nixpkgs.config = {
         permittedInsecurePackages = [
-            #"googleearth-pro-7.3.6.10201"
+            "googleearth-pro-7.3.6.10201"
         ];
         allowUnfreePredicate = pkg:
             builtins.elem (lib.getName pkg) [
-                #"googleearth-pro"
+                "googleearth-pro"
                 #"steam"
                 #"steam-unwrapped"
                 #"unigine-heaven"
