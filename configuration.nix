@@ -253,9 +253,8 @@
                     EnableNetworkConfiguration = true;
                     AddressRandomization = "network";
                 };
-                Network = {
-                    EnableIPv6 = false;
-                };
+                Network.EnableIPv6 = false;
+                Scan.DisablePeriodicScan = true;
             };
         };
     };
