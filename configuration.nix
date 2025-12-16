@@ -254,7 +254,6 @@
                     AddressRandomization = "network";
                 };
                 Network.EnableIPv6 = false;
-                Scan.DisablePeriodicScan = true;
             };
         };
     };
@@ -287,6 +286,16 @@
         command-not-found.enable = true;
         dconf.enable = true;
         fish.enable = true;
+        firejail = {
+            enable = true;
+            wrappedBinaries = {
+                # Sandbox a web browser
+                librewolf = {
+                    executable = "${lib.getBin pkgs.librewolf}/bin/librewolf";
+                    profile = "${pkgs.firejail}/etc/firejail/librewolf.profile";
+                };
+            };
+        };
         git = {
             enable = true;
             config = [
