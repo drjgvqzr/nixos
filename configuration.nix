@@ -275,8 +275,8 @@
         allowUnfreePredicate = pkg:
             builtins.elem (lib.getName pkg) [
                 "googleearth-pro"
-                #"steam"
-                #"steam-unwrapped"
+                "steam"
+                "steam-unwrapped"
                 #"unigine-heaven"
             ];
     };
@@ -309,7 +309,7 @@
         };
         localsend.enable = true;
         nano.enable = false;
-        steam.enable = false;
+        steam.enable = true;
     };
     security = {
         doas = {
