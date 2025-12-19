@@ -71,6 +71,10 @@
             no-remote-fonts: www.duolingo.com false
             www.duolingo.com * 3p-frame noop
             www.duolingo.com * 3p-script noop
+            login.microsoftonline.com * 3p-frame noop
+            login.microsoftonline.com * 3p-script noop
+            outlook.office.com * 3p-frame noop
+            outlook.office.com * 3p-script noop
             elte.dkodaj.net * * noop
             elte.dkodaj.net * 3p-frame noop
             elte.dkodaj.net * 3p-script noop
