@@ -121,7 +121,8 @@
             4pol: https://archive.4plebs.org/pol/search/type/op/text/%s
             4g: https://desuarchive.org/g/search/type/op/text/%s/
             r34: https://rule34.xxx/index.php?page=post&s=list&tags=%s
-            gs: https://scholar.google.com/scholar?q=%s&hl=en'';
+            gs: https://scholar.google.com/scholar?q=%s&hl=en
+            et: https://www.etsy.com/search?q=%s'';
         linkHintCharacters = "arstf";
         preferBrowserSearch = true;
         newTabUrl_f = "about:newtab";
@@ -298,6 +299,11 @@
                 name = "Google Scholar";
                 urls = [{template = "https://scholar.google.com/scholar?q={searchTerms}&hl=en";}];
                 definedAliases = ["gs"];
+            };
+            etsy = {
+                name = "Etsy";
+                urls = [{template = "https://www.etsy.com/search?q={searchTerms}";}];
+                definedAliases = ["et"];
             };
             bing.metaData.hidden = true;
             google.metaData.hidden = true;

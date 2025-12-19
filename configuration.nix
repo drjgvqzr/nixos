@@ -145,7 +145,7 @@
         kdePackages.kolourpaint
         kdiskmark
         logseq
-        #lutris
+        lutris
         mullvad-browser
         obs-studio
         onlyoffice-desktopeditors
