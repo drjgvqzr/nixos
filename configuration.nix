@@ -34,6 +34,7 @@
         dash
         doxx
         exfatprogs
+        f3
         fastfetch
         fbcat
         fd
