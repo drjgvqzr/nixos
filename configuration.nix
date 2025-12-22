@@ -1340,8 +1340,8 @@
                 "r" = "scroll down";
                 "s" = "scroll right";
                 "m" = "scroll left";
-                "n" = "feedkeys <C-down>";
-                "e" = "feedkeys <C-up>";
+                "n" = "scroll down";
+                "e" = "scroll up";
                 "i" = "scroll right";
                 "t" = "zoom in";
                 "d" = "zoom out";
