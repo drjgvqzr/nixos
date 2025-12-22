@@ -122,7 +122,8 @@
             4g: https://desuarchive.org/g/search/type/op/text/%s/
             r34: https://rule34.xxx/index.php?page=post&s=list&tags=%s
             gs: https://scholar.google.com/scholar?q=%s&hl=en
-            et: https://www.etsy.com/search?q=%s'';
+            et: https://www.etsy.com/search?q=%s
+            ya: https://yandex.com/search?text=%s&lr=10466'';
         linkHintCharacters = "arstf";
         preferBrowserSearch = true;
         newTabUrl_f = "about:newtab";
@@ -304,6 +305,11 @@
                 name = "Etsy";
                 urls = [{template = "https://www.etsy.com/search?q={searchTerms}";}];
                 definedAliases = ["et"];
+            };
+            yandex = {
+                name = "Yandex";
+                urls = [{template = "https://yandex.com/search?text={searchTerms}&lr=10466";}];
+                definedAliases = ["ya"];
             };
             bing.metaData.hidden = true;
             google.metaData.hidden = true;
