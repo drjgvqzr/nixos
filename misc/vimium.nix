@@ -123,7 +123,8 @@
             r34: https://rule34.xxx/index.php?page=post&s=list&tags=%s
             gs: https://scholar.google.com/scholar?q=%s&hl=en
             et: https://www.etsy.com/search?q=%s
-            ya: https://yandex.com/search?text=%s&lr=10466'';
+            ya: https://yandex.com/search?text=%s&lr=10466
+            ali: https://www.aliexpress.com/w/wholesale-%s.html'';
         linkHintCharacters = "arstf";
         preferBrowserSearch = true;
         newTabUrl_f = "about:newtab";
@@ -310,6 +311,11 @@
                 name = "Yandex";
                 urls = [{template = "https://yandex.com/search?text={searchTerms}&lr=10466";}];
                 definedAliases = ["ya"];
+            };
+            aliexpress = {
+                name = "AliExpress";
+                urls = [{template = "https://www.aliexpress.com/w/wholesale-{searchTerms}.html";}];
+                definedAliases = ["ali"];
             };
             bing.metaData.hidden = true;
             google.metaData.hidden = true;
