@@ -544,6 +544,9 @@
                             {
                                 name = "deepseek/deepseek-v3.2";
                                 system_prompt_prefix = lib.strings.trim (builtins.readFile /home/soma/dx/nixos/misc/ai_sysprompt);
+                                reasoning = {
+                                    exclude = true;
+                                };
                             }
                             {
                                 name = "qwen/qwen3-embedding-8b";
