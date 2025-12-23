@@ -303,6 +303,7 @@
             ];
         };
         gnupg.agent.enable = true;
+        gnupg.agent.pinentryPackage = pkgs.wayprompt;
         localsend.enable = true;
         nano.enable = false;
         steam.enable = true;
@@ -843,7 +844,7 @@
                 rm = "gtrash put";
                 cat = "bat --pager less";
                 trash = "gtrash restore";
-                gpg = "/run/current-system/sw/bin/gpg --pinentry-mode loopback";
+                #gpg = "/run/current-system/sw/bin/gpg --pinentry-mode loopback";
                 fontname = ''/run/current-system/sw/bin/ls /nix/var/nix/profiles/system/sw/share/X11/fonts | fzf | xargs -I {} fc-query /nix/var/nix/profiles/system/sw/share/X11/fonts/{} | grep '^\s\+family:' | cut -d'"' -f2'';
                 trashinfo = "gtrash summary";
                 newsboat = "newsboat -q -u /home/soma/dx/nixos/misc/newsboat";
