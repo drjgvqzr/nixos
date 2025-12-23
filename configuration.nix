@@ -304,7 +304,7 @@
             ];
         };
         gnupg.agent.enable = true;
-        gnupg.agent.pinentryPackage = pkgs.pinentry-gtk2;
+        gnupg.agent.pinentryPackage = pkgs.pinentry-gnome3;
         localsend.enable = true;
         nano.enable = false;
         steam.enable = true;
