@@ -780,6 +780,7 @@
                 yda = "yt-dlp -x";
                 ydap = "yt-dlp -x -o \"%(playlist_index)s - %(title)s.%(ext)s\"";
                 mkexec = "chmod +x";
+                ta = "task add";
                 nrs = "rebuild";
                 nrst = "tail -c +0 -f ~/dx/nixos/misc/nixos-switch.log";
                 nrsv = "vi ~/dx/nixos/misc/nixos-switch.log";
