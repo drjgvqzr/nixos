@@ -95,7 +95,6 @@
         stc-cli
         stress
         sunwait
-        surfraw
         ticker
         tickrs
         timer
