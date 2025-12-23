@@ -187,7 +187,7 @@
             BROWSER = "xdg-open";
             EDITOR = "nvim";
             GIT_PAGER = "less -R";
-            #GNUPGHOME = "$XDG_DATA_HOME/gnupg";
+            GNUPGHOME = "$XDG_DATA_HOME/gnupg";
             LEDGER_FILE = "$HOME/dx/Backups/finance/2025.journal";
             MANPAGER = "nvim +Man!";
             PAGER = "nvim -R +AnsiEsc";
@@ -304,7 +304,6 @@
             ];
         };
         gnupg.agent.enable = true;
-        gnupg.agent.pinentryPackage = pkgs.pinentry-gnome3;
         localsend.enable = true;
         nano.enable = false;
         steam.enable = true;
@@ -845,7 +844,7 @@
                 rm = "gtrash put";
                 cat = "bat --pager less";
                 trash = "gtrash restore";
-                #gpg = "/run/current-system/sw/bin/gpg --homedir $XDG_DATA_HOME/gnupg";
+                gpg = "/run/current-system/sw/bin/gpg --homedir $XDG_DATA_HOME/gnupg --pinentry-mode loopback";
                 fontname = ''/run/current-system/sw/bin/ls /nix/var/nix/profiles/system/sw/share/X11/fonts | fzf | xargs -I {} fc-query /nix/var/nix/profiles/system/sw/share/X11/fonts/{} | grep '^\s\+family:' | cut -d'"' -f2'';
                 trashinfo = "gtrash summary";
                 newsboat = "newsboat -q -u /home/soma/dx/nixos/misc/newsboat";
