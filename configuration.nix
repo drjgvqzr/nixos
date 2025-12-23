@@ -843,6 +843,7 @@
                 mv = "mv -vu";
                 rm = "gtrash put";
                 cat = "bat --pager less";
+                gpg = "/run/current-system/sw/bin/gpg --pinentry-mode loopback";
                 trash = "gtrash restore";
                 fontname = ''/run/current-system/sw/bin/ls /nix/var/nix/profiles/system/sw/share/X11/fonts | fzf | xargs -I {} fc-query /nix/var/nix/profiles/system/sw/share/X11/fonts/{} | grep '^\s\+family:' | cut -d'"' -f2'';
                 trashinfo = "gtrash summary";
