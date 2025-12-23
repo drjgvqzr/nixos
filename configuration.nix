@@ -63,7 +63,6 @@
         jq
         libnotify
         libqalculate
-        lineselect
         links2
         mailsy
         mapscii
@@ -78,13 +77,11 @@
         pastel
         pciutils
         pdftk
-        percollate
         pipe-rename
         piper-tts
         pipe-viewer
         poppler-utils
         presenterm
-        pulseaudio
         pulsemixer
         qrrs
         rclone
@@ -108,16 +105,13 @@
         transmission_4-gtk
         tree
         unoconv
-        urban-cli
         wget
         when
         woeusb
         xdg-utils
-        yq
         zbar
 
         #Wayland
-        autotiling-rs
         brightnessctl
         grim
         hunspell
@@ -775,6 +769,7 @@
                 cdcook = "cd ~/dx/Backups/cook";
                 nr = "doas systemctl restart iwd.service wg-quick-wg0.service";
                 y = "pipe-viewer";
+                color = "pastel color";
                 tempmail = "mailsy";
                 yd = "yt-dlp";
                 yda = "yt-dlp -x";
