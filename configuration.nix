@@ -49,7 +49,6 @@
         ghc
         glow
         gnumake
-        gnupg
         grc
         groff
         gtrash
@@ -304,6 +303,7 @@
                 }
             ];
         };
+        gnupg.agent.enable = true;
         localsend.enable = true;
         nano.enable = false;
         steam.enable = true;
