@@ -769,7 +769,7 @@
                 nsp = "nix-shell -p";
                 nt = "ping google.com";
                 cdcook = "cd ~/dx/Backups/cook";
-                pomo = "doas systemctl stop iwd.service ; timer 30m ; notify-send \"Pomodoro over\" ; doas systemctl start iwd.service ; timer 5m";
+                pomo = "doas systemctl stop iwd.service ; timer -f 30m ; notify-send \"Pomodoro over\" ; doas systemctl start iwd.service ; timer -f 5m";
                 nr = "doas systemctl restart iwd.service wg-quick-wg0.service";
                 y = "pipe-viewer";
                 color = "pastel color";
