@@ -281,16 +281,6 @@
         command-not-found.enable = true;
         dconf.enable = true;
         fish.enable = true;
-        firejail = {
-            enable = true;
-            wrappedBinaries = {
-                # Sandbox a web browser
-                librewolf = {
-                    executable = "${pkgs.librewolf-bin}/bin/librewolf";
-                    profile = "${pkgs.firejail}/etc/firejail/librewolf.profile";
-                };
-            };
-        };
         git = {
             enable = true;
             config = [
@@ -302,8 +292,10 @@
                 }
             ];
         };
-        gnupg.agent.enable = true;
-        gnupg.agent.pinentryPackage = pkgs.wayprompt;
+        gnupg.agent = {
+            enable = true;
+            pinentryPackage = pkgs.wayprompt;
+        };
         localsend.enable = true;
         nano.enable = false;
         steam.enable = true;
