@@ -286,7 +286,7 @@
             wrappedBinaries = {
                 # Sandbox a web browser
                 librewolf = {
-                    executable = "${lib.getBin pkgs.librewolf-bin}/bin/librewolf";
+                    executable = "${pkgs.librewolf-bin}/bin/librewolf";
                     profile = "${pkgs.firejail}/etc/firejail/librewolf.profile";
                 };
             };
