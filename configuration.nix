@@ -117,7 +117,7 @@
         hunspellDicts.en_US-large
         hunspellDicts.hu_HU
         hyprpicker
-        i3-swallow
+        #i3-swallow
         perl540Packages.Apppapersway
         slurp
         swaybg
