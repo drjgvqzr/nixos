@@ -625,7 +625,7 @@
                 cn = ''
                     watch -c -n 1 "iwctl station wlan0 scan ; iwctl station wlan0 get-networks"
                     set ssid $(iwctl station wlan0 get-networks | fzf --ansi |sed -e 's/ \{10,\}.*//' -e 's/^[[:space:]]*//')
-                    read -r "?Password: " password
+                    read -P "Password: " password
                     iwctl --passphrase="$password" station wlan0 connect "$ssid"'';
                 cnf = ''
                     set ssid $(iwctl known-networks list | fzf --ansi |sed -e 's/ \{10,\}.*//' -e 's/^[[:space:]]*//')
