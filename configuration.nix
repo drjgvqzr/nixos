@@ -17,7 +17,6 @@
         ./misc/secrets.nix
         ./misc/thunderbird.nix
         ./misc/vimium.nix
-        ./zsh.nix
         ./misc/uBlock.nix
         ./misc/redirector.nix
         #./misc/printing.nix
