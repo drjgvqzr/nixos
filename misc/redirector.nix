@@ -40,7 +40,7 @@
             #}
             {
                 includePattern = "https://en.wikipedia.org/wiki/*";
-                excludePattern = "*?useskin=minerva#bodyContent|*#*";
+                excludePattern = "*?useskin=minerva|*#*";
                 redirectUrl = "https://en.wikipedia.org/wiki/$1?useskin=minerva#bodyContent";
                 appliesTo = ["main_frame"];
             }
