@@ -60,6 +60,7 @@
                 ];
             };
             focus.followMouse = "always";
+            focus.mouseWarping = "container";
             colors = {
                 focused = {
                     background = "#aaaaaa";
