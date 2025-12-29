@@ -148,7 +148,6 @@
         #starsector # TEITW-HP9ON-A7HMK-WA6YA
         tor-browser
         ungoogled-chromium
-        #unigine-heaven
         webcord
         xfce.thunar
         zotero
@@ -271,7 +270,6 @@
                 "googleearth-pro"
                 "steam"
                 "steam-unwrapped"
-                #"unigine-heaven"
             ];
     };
     programs = {
