@@ -124,7 +124,8 @@
             gs: https://scholar.google.com/scholar?q=%s&hl=en
             et: https://www.etsy.com/search?q=%s
             ya: https://yandex.com/search?text=%s&lr=10466
-            ali: https://www.aliexpress.com/w/wholesale-%s.html'';
+            ali: https://www.aliexpress.com/w/wholesale-%s.html
+            phil: https://plato.stanford.edu/search/searcher.py?query=%s'';
         linkHintCharacters = "arstf";
         preferBrowserSearch = true;
         newTabUrl_f = "about:newtab";
@@ -315,6 +316,11 @@
             aliexpress = {
                 name = "AliExpress";
                 urls = [{template = "https://www.aliexpress.com/w/wholesale-{searchTerms}.html";}];
+                definedAliases = ["ali"];
+            };
+            stanford = {
+                name = "Stanford Encyclopedia of Philosophy";
+                urls = [{template = "https://plato.stanford.edu/search/searcher.py?query={searchTerms}";}];
                 definedAliases = ["ali"];
             };
             bing.metaData.hidden = true;
