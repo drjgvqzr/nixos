@@ -147,7 +147,7 @@
                 #"mod1+Shift+5" = "move container to workspace number 5";
                 #"mod1+Shift+6" = "move container to workspace number 6";
                 #"mod1+Shift+q" = "exit";
-                "Ctrl+Shift+c" = "exec sh -c \"wl-paste | tr -d \"\\n\" | wl-copy\"";
+                "Ctrl+Shift+c" = "exec sh -c \"wl-paste | tr -d \'\\n\' | wl-copy\"";
 
                 "mod1+f1" = "exec doas ${pkgs.kbd}/bin/chvt 1";
                 "mod1+f2" = "exec doas ${pkgs.kbd}/bin/chvt 2";
