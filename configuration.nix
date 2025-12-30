@@ -228,7 +228,7 @@
     networking = {
         enableIPv6 = false;
         extraHosts = "0.0.0.0 boards.4chan.org
-        0.0.0.0 inv.nadeko.net";
+        #0.0.0.0 inv.nadeko.net";
         dhcpcd.enable = false;
         hostName =
             if builtins.pathExists /sys/kernel/btf/thinkpad_acpi
