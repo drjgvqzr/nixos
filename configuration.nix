@@ -149,7 +149,6 @@
         tor-browser
         ungoogled-chromium
         webcord
-        xfce.thunar
         zotero
     ];
     boot = {
