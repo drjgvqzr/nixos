@@ -321,7 +321,7 @@
             stanford = {
                 name = "Stanford Encyclopedia of Philosophy";
                 urls = [{template = "https://plato.stanford.edu/search/searcher.py?query={searchTerms}";}];
-                definedAliases = ["ali"];
+                definedAliases = ["phil"];
             };
             bing.metaData.hidden = true;
             google.metaData.hidden = true;
