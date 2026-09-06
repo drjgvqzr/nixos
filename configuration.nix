@@ -69,7 +69,7 @@ in {
             gnumake
             gomuks
             grc
-            #groff
+            groff
             gtrash
             handlr-regex
             heimdall
@@ -82,7 +82,6 @@ in {
             iwqr
             jaq
             keepass-diff
-            #ladybird
             libnotify
             libqalculate
             libreoffice
@@ -340,8 +339,6 @@ in {
             HandleLidSwitchExternalPower = "suspend-then-hibernate";
             HandlePowerKey = "suspend-then-hibernate";
             HandlePowerKeyLongPress = "suspend-then-hibernate";
-            IdleAction = "suspend-then-hibernate";
-            IdleActionSec = "30min";
         };
         ollama = {
             enable = true;
