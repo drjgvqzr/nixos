@@ -256,6 +256,7 @@
                             no-remote-fonts: inv.nadeko.net false
                             no-remote-fonts: justetf.com false
                             no-remote-fonts: disroot.org false
+                            no-remote-fonts: elte.hu false
                         '';
                         popupPanelSections = 31;
                         selectedFilterLists = [

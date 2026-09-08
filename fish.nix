@@ -211,7 +211,7 @@ in {
             cp = "cp -rvp";
             mkdir = "mkdir -pv";
             head = "head -v";
-            wget = "wget -c --hsts-file=~/.cache/wget-hsts";
+            wget = "wget2 -c --hsts-file=~/.cache/wget-hsts";
             ln = "ln -ivP";
             chown = "chown -Rv";
             chmod = "chmod -Rv";
