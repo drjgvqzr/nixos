@@ -930,7 +930,7 @@ in {
             services = {
                 batsignal = {
                     enable = true;
-                    extraArgs = ["-D systemctl suspend-then-hibernate" "-p"];
+                    extraArgs = ["-D systemctl suspend-then-hibernate"];
                 };
                 mako = {
                     enable = true;
