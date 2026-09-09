@@ -23,7 +23,6 @@ https://www.youtube.com/feeds/videos.xml?channel_id=UCAEkL4yohbPpCm-HnAQ2PDQ #Vi
 " "
 https://fetchrss.com/feed/ZyzYC7AVeWrSZyza_aCjePuD.rss #ELTE Bölcsészettudományi Kar on Facebook
 https://fetchrss.com/feed/ZyzYC7AVeWrSZyzYOGdfpbU0.rss #ELTE BTK HÖK on Facebook
-https://fetchrss.com/feed/ZyzYC7AVeWrSZyzc0MQSs7FC.rss #Budapesti Corvinus Egyetem on Facebook
 https://fetchrss.com/feed/ZyzYC7AVeWrSZyzbWVQHYEK0.rss #SZMI Intézetek Képviselete on Facebook
 https://fetchrss.com/feed/ZyzYC7AVeWrSZyzaFaCjePuC.rss #ELTE BTK Filozófia Intézet on Facebook
 " "
@@ -68,6 +67,15 @@ https://dominiccummings.substack.com/feed
 https://shen.hong.io/feed
 https://gwern.substack.com/feed
 https://emma.best/feed/
+" "
+"--- Free Games ---"
+" "
+https://feed.eikowagenknecht.com/lootscraper_epic_game.xml
+https://feed.eikowagenknecht.com/lootscraper_gog_game.xml
+https://feed.eikowagenknecht.com/lootscraper_humble_game.xml
+https://feed.eikowagenknecht.com/lootscraper_steam_game.xml
+https://feed.eikowagenknecht.com/lootscraper_steam_loot.xml
+https://feed.eikowagenknecht.com/lootscraper_steam_points.xml
 " "
 "--- X ---"
 " "

@@ -16,57 +16,70 @@ in {
             # === Disk / USB ===
             isomount = ''doas mount $argv /mnt ; cd /mnt'';
             nformat = ''
-                [ "$(pwd)" = "/mnt" ] && cd ~
-                    ls /mnt 2>/dev/null || doas mkdir -p /mnt
-                    doas umount /mnt 2>/dev/null;
-                    doas cryptsetup close sd"$argv[1]"1 2>/dev/null;
-                    doas parted -s /dev/sd"$argv[1]" mklabel msdos;
-                    doas parted -s /dev/sd"$argv[1]" mkpart primary 0% 100%;
-                    doas cryptsetup luksFormat -q /dev/sd"$argv[1]"1;
-                    doas cryptsetup open /dev/sd"$argv[1]"1 sd"$argv[1]"1;
-                    doas mkfs.ext4 -q /dev/mapper/sd"$argv[1]"1;
-                    doas mount /dev/mapper/sd"$argv[1]"1 /mnt/;
-                    doas rm -r /mnt/lost+found
-                    doas chown -R "$USER":users /mnt/;
-                    cd /mnt;'';
+                set dev (ls /dev | grep sd | fzf --select-1 --query=$argv)
+                or return 1
+                [ (pwd) = /mnt ] && cd ~
+                ls /mnt 2>/dev/null || doas mkdir -p /mnt
+                doas umount /mnt 2>/dev/null;
+                doas cryptsetup close sd"$dev"1 2>/dev/null;
+                doas parted -s /dev/sd"$dev" mklabel msdos;
+                doas parted -s /dev/sd"$dev" mkpart primary 0% 100%;
+                doas cryptsetup luksFormat -q /dev/sd"$dev"1;
+                doas cryptsetup open /dev/sd"$dev"1 sd"$argv[1]"1;
+                doas mkfs.ext4 -q /dev/mapper/sd"$dev"1;
+                doas mount /dev/mapper/sd"$dev"1 /mnt/;
+                doas rm -r /mnt/lost+found
+                doas chown -R "$USER":users /mnt/;
+                cd /mnt;
+            '';
             format = ''
-                [ "$(pwd)" = "/mnt" ] && cd ~
-                    ls /mnt 2>/dev/null || doas mkdir -p /mnt
-                    doas umount /mnt 2>/dev/null;
-                    doas cryptsetup close sd"$argv[1]"1 2>/dev/null;
-                    doas parted -s /dev/sd"$argv[1]" mklabel msdos;
-                    doas parted -s /dev/sd"$argv[1]" mkpart primary 0% 100%;
-                    doas mkfs.ext4 -q /dev/sd"$argv[1]"1 &>/dev/null;
-                    doas mount /dev/sd"$argv[1]"1 /mnt/;
-                    doas rm -r /mnt/lost+found
-                    doas chown -R "$USER":users /mnt/;
-                    cd /mnt;'';
+                set dev (ls /dev | grep sd | fzf --select-1 --query=$argv)
+                or return 1
+                [ (pwd) = /mnt ] && cd ~
+                ls /mnt 2>/dev/null || doas mkdir -p /mnt
+                doas umount /mnt 2>/dev/null;
+                doas cryptsetup close sd"$dev"1 2>/dev/null;
+                doas parted -s /dev/sd"$dev" mklabel msdos;
+                doas parted -s /dev/sd"$dev" mkpart primary 0% 100%;
+                doas mkfs.ext4 -q /dev/sd"$dev"1 &>/dev/null;
+                doas mount /dev/sd"$dev"1 /mnt/;
+                doas rm -r /mnt/lost+found
+                doas chown -R "$USER":users /mnt/;
+                cd /mnt;
+            '';
             formatcomp = ''
-                [ "$(pwd)" = "/mnt" ] && cd ~
-                    ls /mnt 2>/dev/null || doas mkdir -p /mnt
-                    doas umount /mnt 2>/dev/null;
-                    doas cryptsetup close sd"$argv"1 2>/dev/null;
-                    doas parted -s /dev/sd"$argv" mklabel msdos;
-                    doas parted -s /dev/sd"$argv" mkpart primary 0% 100%;
-                    doas parted /dev/sd"$argv" type 1 07;
-                    doas mkfs.exfat -q /dev/sd"$argv"1 &>/dev/null;
-                    doas mount /dev/sd"$argv"1 /mnt/;
-                    doas rm -r /mnt/lost+found
-                    cd /mnt;'';
+                set dev (ls /dev | grep sd | fzf --select-1 --query=$argv)
+                or return 1
+                [ (pwd) = /mnt ] && cd ~
+                ls /mnt 2>/dev/null || doas mkdir -p /mnt
+                doas umount /mnt 2>/dev/null;
+                doas cryptsetup close sd"$argv"1 2>/dev/null;
+                doas parted -s /dev/sd"$argv" mklabel msdos;
+                doas parted -s /dev/sd"$argv" mkpart primary 0% 100%;
+                doas parted /dev/sd"$argv" type 1 07;
+                doas mkfs.exfat -q /dev/sd"$argv"1 &>/dev/null;
+                doas mount /dev/sd"$argv"1 /mnt/;
+                doas rm -r /mnt/lost+found
+                cd /mnt;
+            '';
             mnt = ''
-                [ "$(pwd)" = "/mnt" ] && cd ~
-                    ls /mnt 2>/dev/null || doas mkdir -p /mnt
-                    doas umount /mnt 2>/dev/null;
-                    doas cryptsetup close sd"$argv[1]"1 2>/dev/null;
-                    doas cryptsetup open /dev/sd"$argv[1]"1 sd"$argv[1]"1 2>/dev/null;
-                    doas mount /dev/mapper/sd"$argv[1]"1 /mnt/ 2>/dev/null || doas mount /dev/sd"$argv[1]"1 /mnt/;
-                    doas chown -R "$USER":users /mnt/;
-                    cd /mnt;'';
+                set dev (ls /dev | grep sd | fzf --select-1 --query=$argv)
+                or return 1
+                [ (pwd) = /mnt ] && cd ~
+                ls /mnt 2>/dev/null || doas mkdir -p /mnt
+                doas umount /mnt 2>/dev/null;
+                doas cryptsetup close sd"$dev"1 2>/dev/null;
+                doas cryptsetup open /dev/sd"$dev"1 sd"$argv[1]"1 2>/dev/null;
+                doas mount /dev/mapper/sd"$dev"1 /mnt/ 2>/dev/null || doas mount /dev/sd"$argv[1]"1 /mnt/;
+                doas chown -R "$USER":users /mnt/;
+                cd /mnt;
+            '';
             umnt = ''
                 [ (pwd) = /mnt ] && cd ~
-                    ls /mnt 2>/dev/null || doas mkdir -p /mnt
-                    doas umount /mnt/;
-                    doas cryptsetup close sd"$argv[1]"1 2>/dev/null;'';
+                ls /mnt 2>/dev/null || doas mkdir -p /mnt
+                doas umount /mnt/;
+                doas cryptsetup close sd"$dev"1 2>/dev/null;
+            '';
 
             # === Media / Misc ===
             ay = ''
@@ -256,7 +269,6 @@ in {
             echo -e "\033[31m$(date '+%m/%d %R %A') \033[91m$(echo "scale=5; ($(date +%s)-$(date -d"$(cat ${nixos}/misc/secrets/birthdate)" +%s))/(80*365.2425*86400)*100"|bc|sed 's/0*$//')%\033[0m \033[92m$(cat /tmp/webn)\033[0m"
             remind ~/dx/Backups/remind/chores.rem | tail -n +2 | grep -v '^$'
 
-            set fish_color_normal white
             set fish_greeting
 
             [ (tty) = /dev/tty1 ] && exec sway
