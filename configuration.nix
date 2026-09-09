@@ -640,7 +640,10 @@ in {
                             regular6 = "00aaaa";
                             regular7 = "aaaaaa";
                         };
-                        cursor.underline-thickness = "2px";
+                        cursor = {
+                            underline-thickness = "2px";
+                            style = "underline";
+                        };
                         key-bindings = {
                             clipboard-paste = "Control+v";
                             scrollback-up-page = "Control+Page_Up";
