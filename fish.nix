@@ -281,6 +281,7 @@ in {
             remind ~/dx/Backups/remind/chores.rem | tail -n +2 | grep -v '^$'
 
             set fish_greeting
+            fish_default_key_bindings
 
             [ (tty) = /dev/tty1 ] && exec sway
 
