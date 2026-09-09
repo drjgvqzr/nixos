@@ -94,9 +94,9 @@ in {
                 aichat Summarize the YouTube video. Do not mention any promotions or sponsors.'';
             catbox = ''
                 curl -i -F files[]=@$argv https://uguu.se/upload?output=text |
-                tail -n 1 &&
+                tail -n 1 |
+                wl-copy &&
                 notify-send "File uploaded" ;
-                wl-copy ;
                 qrrs $(wl-paste) ;
                 echo $(wl-paste)
             '';
@@ -104,7 +104,7 @@ in {
                 pdftk $argv[1] cat 1-end"$argv[2]" output "$argv[1]_$argv[2]".pdf
             '';
             sn = ''
-                iwctl station wlan0 scan;iwctl station wlan0 get-networks
+                iwctl station wlan0 scan ; iwctl station wlan0 get-networks
             '';
 
             # === NixOS ===
