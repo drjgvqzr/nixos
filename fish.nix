@@ -96,8 +96,8 @@ in {
                 curl -i -F files[]=@$argv https://uguu.se/upload?output=text |
                 tail -n 1 &&
                 notify-send "File uploaded"
-                wl-copy
-                qrrs $(wl-paste)
+                wl-copy ;
+                qrrs $(wl-paste) ;
                 echo $(wl-paste)
             '';
             pdfr = ''
