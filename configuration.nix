@@ -441,9 +441,9 @@ in {
     };
     systemd.sleep.settings.Sleep.HibernateDelaySec = "3h";
     time.timeZone = "Europe/Budapest";
-    users = {
-        defaultUserShell = pkgs.fish;
-        users.soma.isNormalUser = true;
+    users.users.soma = {
+        shell = pkgs.fish;
+        isNormalUser = true;
     };
     home-manager = {
         backupFileExtension = "backup";
