@@ -281,7 +281,7 @@ in {
             remind ~/dx/Backups/remind/chores.rem | tail -n +2 | grep -v '^$'
 
             set fish_greeting
-            fish_default_key_bindings
+            #fish_default_key_bindings
             set fish_cursor_default underline blink
 
             [ (tty) = /dev/tty1 ] && exec sway
