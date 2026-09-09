@@ -755,7 +755,7 @@ in {
                     };
                     scriptOpts = {
                         sponsorblock_minimal.categories = "sponsor;selfpromo;interaction;intro;outro;preview;hook;music_offtopic;filler";
-                        stats.key_page_0 = "2";
+                        #stats.key_page_0 = "2";
                         thumbfast.network = "yes";
                         webtorrent.path = "~/tr/";
                     };
