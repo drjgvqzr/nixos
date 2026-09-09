@@ -443,10 +443,7 @@ in {
     time.timeZone = "Europe/Budapest";
     users = {
         defaultUserShell = pkgs.fish;
-        users.soma = {
-            extraGroups = ["wheel" "adbusers"];
-            isNormalUser = true;
-        };
+        users.soma.isNormalUser = true;
     };
     home-manager = {
         backupFileExtension = "backup";
@@ -870,9 +867,6 @@ in {
                         # === Summary ===
                         macro a set browser "yt-dlp --write-auto-sub -q --no-warnings --skip-download -o /tmp/sub %u ; sed '1,4d; /^[0-9]\\{2\\}:/d; s/<[^>]*>//g; s/&gt;//g' /tmp/sub.en.vtt | awk 'NF' | uniq | tr '\n' ' ' | aichat Summarize the YouTube video. Do not mention filler. | less" ; open-in-browser ; set browser /etc/profiles/per-user/soma/bin/mpv
                     '';
-                };
-                sioyek = {
-                    enable = true;
                 };
                 yt-dlp = {
                     enable = true;
