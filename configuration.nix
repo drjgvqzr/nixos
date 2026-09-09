@@ -643,6 +643,7 @@ in {
                         cursor = {
                             underline-thickness = "2px";
                             style = "underline";
+                            blink = true;
                         };
                         key-bindings = {
                             clipboard-paste = "Control+v";
