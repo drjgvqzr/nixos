@@ -6,83 +6,89 @@ in {
         functions = {
             # === Fish ===
             fish_prompt = "string join '' -- (set_color red) '%' (set_color white)  (prompt_pwd --dir-length=0) (set_color green) '>' (set_color normal)";
-            fish_mode_prompt = "";
 
             # === Links ===
-            w = ''links "https://en.wikipedia.org/wiki/$argv?useskin=minerva#bodyContent"'';
-            we = ''links "https://en.wiktionary.org/wiki/$argv#English"'';
             pb = ''links "https://thepiratebay.party/search/$argv"'';
 
             # === Disk / USB ===
             isomount = ''doas mount $argv /mnt ; cd /mnt'';
             nformat = ''
-                set dev (ls /dev | grep sd | fzf --select-1 --query=$argv)
-                or return 1
-                [ (pwd) = /mnt ] && cd ~
-                ls /mnt 2>/dev/null || doas mkdir -p /mnt
-                doas umount /mnt 2>/dev/null;
-                doas cryptsetup close sd"$dev"1 2>/dev/null;
-                doas parted -s /dev/sd"$dev" mklabel msdos;
-                doas parted -s /dev/sd"$dev" mkpart primary 0% 100%;
-                doas cryptsetup luksFormat -q /dev/sd"$dev"1;
-                doas cryptsetup open /dev/sd"$dev"1 sd"$argv[1]"1;
-                doas mkfs.ext4 -q /dev/mapper/sd"$dev"1;
-                doas mount /dev/mapper/sd"$dev"1 /mnt/;
+                set dev (ls /dev | grep sd | fzf) ||
+                    return 1
+                [ (pwd) = /mnt ] &&
+                    cd ~
+                ls /mnt 2>/dev/null ||
+                    doas mkdir -p /mnt
+                doas umount /mnt 2>/dev/null
+                doas cryptsetup close sd"$dev"1 2>/dev/null
+                doas parted -s /dev/sd"$dev" mklabel msdos
+                doas parted -s /dev/sd"$dev" mkpart primary 0% 100%
+                doas cryptsetup luksFormat -q /dev/sd"$dev"1
+                doas cryptsetup open /dev/sd"$dev"1 sd"$dev"1
+                doas mkfs.ext4 -q /dev/mapper/sd"$dev"1
+                doas mount /dev/mapper/sd"$dev"1 /mnt/
                 doas rm -r /mnt/lost+found
-                doas chown -R "$USER":users /mnt/;
-                cd /mnt;
+                doas chown -R "$USER":users /mnt/
+                cd /mnt
             '';
             format = ''
-                set dev (ls /dev | grep sd | fzf --select-1 --query=$argv)
-                or return 1
-                [ (pwd) = /mnt ] && cd ~
-                ls /mnt 2>/dev/null || doas mkdir -p /mnt
-                doas umount /mnt 2>/dev/null;
-                doas cryptsetup close sd"$dev"1 2>/dev/null;
-                doas parted -s /dev/sd"$dev" mklabel msdos;
-                doas parted -s /dev/sd"$dev" mkpart primary 0% 100%;
-                doas mkfs.ext4 -q /dev/sd"$dev"1 &>/dev/null;
-                doas mount /dev/sd"$dev"1 /mnt/;
+                set dev (ls /dev | grep sd | fzf) ||
+                    return 1
+                [ (pwd) = /mnt ] &&
+                    cd ~
+                ls /mnt 2>/dev/null ||
+                    doas mkdir -p /mnt
+                doas umount /mnt 2>/dev/null
+                doas cryptsetup close sd"$dev"1 2>/dev/null
+                doas parted -s /dev/sd"$dev" mklabel msdos
+                doas parted -s /dev/sd"$dev" mkpart primary 0% 100%
+                doas mkfs.ext4 -q /dev/sd"$dev"1 &>/dev/null
+                doas mount /dev/sd"$dev"1 /mnt/
                 doas rm -r /mnt/lost+found
-                doas chown -R "$USER":users /mnt/;
-                cd /mnt;
+                doas chown -R "$USER":users /mnt/
+                cd /mnt
             '';
             formatcomp = ''
-                set dev (ls /dev | grep sd | fzf --select-1 --query=$argv)
-                or return 1
-                [ (pwd) = /mnt ] && cd ~
-                ls /mnt 2>/dev/null || doas mkdir -p /mnt
-                doas umount /mnt 2>/dev/null;
-                doas cryptsetup close sd"$argv"1 2>/dev/null;
-                doas parted -s /dev/sd"$argv" mklabel msdos;
-                doas parted -s /dev/sd"$argv" mkpart primary 0% 100%;
-                doas parted /dev/sd"$argv" type 1 07;
-                doas mkfs.exfat -q /dev/sd"$argv"1 &>/dev/null;
-                doas mount /dev/sd"$argv"1 /mnt/;
+                set dev (ls /dev | grep sd | fzf) ||
+                    return 1
+                [ (pwd) = /mnt ] &&
+                    cd ~
+                ls /mnt 2>/dev/null ||
+                    doas mkdir -p /mnt
+                doas umount /mnt 2>/dev/null
+                doas cryptsetup close sd"$dev"1 2>/dev/null
+                doas parted -s /dev/sd"$dev" mklabel msdos
+                doas parted -s /dev/sd"$dev" mkpart primary 0% 100%
+                doas parted /dev/sd"$dev" type 1 07
+                doas mkfs.exfat -q /dev/sd"$dev"1 &>/dev/null
+                doas mount /dev/sd"$dev"1 /mnt/
                 doas rm -r /mnt/lost+found
-                cd /mnt;
+                cd /mnt
             '';
             mnt = ''
-                set dev (ls /dev | grep sd | fzf --select-1 --query=$argv)
-                or return 1
-                [ (pwd) = /mnt ] && cd ~
-                ls /mnt 2>/dev/null || doas mkdir -p /mnt
-                doas umount /mnt 2>/dev/null;
-                doas cryptsetup close sd"$dev"1 2>/dev/null;
-                doas cryptsetup open /dev/sd"$dev"1 sd"$argv[1]"1 2>/dev/null;
-                doas mount /dev/mapper/sd"$dev"1 /mnt/ 2>/dev/null || doas mount /dev/sd"$argv[1]"1 /mnt/;
-                doas chown -R "$USER":users /mnt/;
-                cd /mnt;
+                set dev (ls /dev | grep sd | fzf) ||
+                    return 1
+                [ (pwd) = /mnt ] &&
+                    cd ~
+                ls /mnt 2>/dev/null ||
+                    doas mkdir -p /mnt
+                doas umount /mnt 2>/dev/null
+                doas cryptsetup close sd"$dev"1 2>/dev/null
+                doas cryptsetup open /dev/sd"$dev"1 sd"$dev[1]"1 2>/dev/null
+                doas mount /dev/mapper/sd"$dev"1 /mnt/ 2>/dev/null ||
+                    doas mount /dev/sd"$dev[1]"1 /mnt/
+                doas chown -R "$USER":users /mnt/
+                cd /mnt
             '';
             umnt = ''
                 [ (pwd) = /mnt ] && cd ~
                 ls /mnt 2>/dev/null ||
-                doas mkdir -p /mnt
+                    doas mkdir -p /mnt
                 doas umount /mnt/
-                doas cryptsetup close sd"$dev"1 2>/dev/null;
+                doas cryptsetup close sd"$dev"1 2>/dev/null
             '';
 
-            # === Media / Misc ===
+            # === Misc ===
             ay = ''
                 yt-dlp --write-auto-sub -q --no-warnings --skip-download -o /tmp/sub $(wl-paste | sed 's|inv.nadeko.net|youtube.com|');
                 cat /tmp/sub.en.vtt |
@@ -91,11 +97,12 @@ in {
                 uniq -d |
                 sed 's/$/ /' |
                 tr -d '\n' |
-                aichat Summarize the YouTube video. Do not mention any promotions or sponsors.'';
+                aichat Summarize the YouTube video. Do not mention any promotions or sponsors.
+            '';
             catbox = ''
                 curl -# -F files[]=@$argv https://uguu.se/upload?output=text |
-                wl-copy &&
-                notify-send "File uploaded"
+                    wl-copy &&
+                        notify-send "File uploaded"
                 qrrs $(wl-paste)
                 echo $(wl-paste)
             '';
@@ -103,7 +110,8 @@ in {
                 pdftk $argv[1] cat 1-end"$argv[2]" output "$argv[1]_$argv[2]".pdf
             '';
             sn = ''
-                iwctl station wlan0 scan ; iwctl station wlan0 get-networks
+                iwctl station wlan0 scan
+                iwctl station wlan0 get-networks
             '';
 
             # === NixOS ===
@@ -117,17 +125,10 @@ in {
             "9" = "cd ..";
             "0" = "cd ~ ; clear";
             cdn = "cd ~/dn";
-            selfdestruct = "doas cryptsetup luksErase /dev/nvme0n1p2";
             cdx = "cd ~/dx";
-            cdc = ''
-                cd ${nixos}
-            '';
-            cdcm = ''
-                cd ${nixos}/misc
-            '';
-            cdcms = ''
-                cd ${nixos}/misc/secrets
-            '';
+            cdc = "cd ${nixos}";
+            cdcm = "cd ${nixos}/misc";
+            cdcms = "cd ${nixos}/misc/secrets";
             cdm = "cd /mnt";
 
             # === File Ops ===
@@ -135,6 +136,7 @@ in {
             downscale = "mogrify -resize 50%";
             mkexec = "chmod +x";
             mkd = "mkdir";
+            selfdestruct = "doas cryptsetup luksErase /dev/nvme0n1p2";
 
             # === Editors / Viewers ===
             o = "handlr open";
