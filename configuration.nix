@@ -218,7 +218,7 @@ in {
                 sha256 = "1qsx6l8z2v2rzr47chfqvmr9585lcrb2wihixbklmz63nhsba6sb";
             }
         }/nixos"
-        ./fish.nix
+        #./fish.nix
         ./librewolf.nix
         ./sway.nix
         /etc/nixos/hardware-configuration.nix
