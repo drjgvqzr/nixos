@@ -644,7 +644,6 @@ in {
                             underline-thickness = "2px";
                             style = "underline";
                             blink = true;
-                            blink-rate = 250;
                         };
                         key-bindings = {
                             clipboard-paste = "Control+v";
