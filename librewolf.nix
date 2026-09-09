@@ -99,7 +99,7 @@
                             }
                             {
                                 includePattern = "https://annas-archive.gd/md5/*";
-                                redirectUrl = "https://annas-archive.gd/slow_download/$1/0/4";
+                                redirectUrl = "https://annas-archive.gd/slow_download/$1/0/7";
                                 appliesTo = ["main_frame"];
                             }
                         ];

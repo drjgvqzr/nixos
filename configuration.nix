@@ -755,7 +755,6 @@ in {
                     };
                     scriptOpts = {
                         sponsorblock_minimal.categories = "sponsor;selfpromo;interaction;intro;outro;preview;hook;music_offtopic;filler";
-                        #stats.key_page_0 = "2";
                         thumbfast.network = "yes";
                         webtorrent.path = "~/tr/";
                     };
@@ -772,7 +771,6 @@ in {
                     enable = true;
                     defaultEditor = true;
                     viAlias = true;
-                    vimdiffAlias = true;
                     plugins = with pkgs.vimPlugins; [indentLine lightline-vim nvim-highlight-colors todo-txt-vim Improved-AnsiEsc];
                     initLua = ''
                         vim.o.shada = ""
