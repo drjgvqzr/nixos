@@ -282,6 +282,7 @@ in {
 
             set fish_greeting
             fish_default_key_bindings
+            set fish_cursor_default underline blink
 
             [ (tty) = /dev/tty1 ] && exec sway
 
