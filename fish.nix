@@ -76,30 +76,40 @@ in {
             '';
             umnt = ''
                 [ (pwd) = /mnt ] && cd ~
-                ls /mnt 2>/dev/null || doas mkdir -p /mnt
-                doas umount /mnt/;
+                ls /mnt 2>/dev/null ||
+                doas mkdir -p /mnt
+                doas umount /mnt/
                 doas cryptsetup close sd"$dev"1 2>/dev/null;
             '';
 
             # === Media / Misc ===
             ay = ''
                 yt-dlp --write-auto-sub -q --no-warnings --skip-download -o /tmp/sub $(wl-paste | sed 's|inv.nadeko.net|youtube.com|');
-                cat /tmp/sub.en.vtt|
-                sed -e '/^[0-9]\{2\}:[0-9]\{2\}:[0-9]\{2\}\.[0-9]\{3\} -->/d' -e '/^[0-9]\{2\}:[0-9]\{2\}:[0-9]\{2\}\.[0-9]\{3\}/d' -e 's/<[^>]*>//g'|
-                awk 'NF'|
-                uniq -d|
-                sed 's/$/ /'|
-                tr -d '\n'|
-                aichat "give a detailed summary of the previous text with the main points. Do not mention any promotions or sponsors."'';
-            catbox = ''curl -i -F files[]=@$argv https://uguu.se/upload?output=text | tail -n 1 | wl-copy ; qrrs $(wl-paste) ; echo $(wl-paste) && notify-send "File uploaded"'';
-            pdfr = ''pdftk $argv[1] cat 1-end"$argv[2]" output "$argv[1]_$argv[2]".pdf'';
+                cat /tmp/sub.en.vtt |
+                sed -e '/^[0-9]\{2\}:[0-9]\{2\}:[0-9]\{2\}\.[0-9]\{3\} -->/d' -e '/^[0-9]\{2\}:[0-9]\{2\}:[0-9]\{2\}\.[0-9]\{3\}/d' -e 's/<[^>]*>//g' |
+                awk 'NF' |
+                uniq -d |
+                sed 's/$/ /' |
+                tr -d '\n' |
+                aichat Summarize the YouTube video. Do not mention any promotions or sponsors.'';
+            catbox = ''
+                curl -i -F files[]=@$argv https://uguu.se/upload?output=text |
+                tail -n 1 &&
+                notify-send "File uploaded"
+                wl-copy
+                qrrs $(wl-paste)
+                echo $(wl-paste)
+            '';
+            pdfr = ''
+                pdftk $argv[1] cat 1-end"$argv[2]" output "$argv[1]_$argv[2]".pdf
+            '';
+            sn = ''
+                iwctl station wlan0 scan;iwctl station wlan0 get-networks
+            '';
 
             # === NixOS ===
             rebuild = ''
                 ${nixos}/misc/rebuild.sh
-            '';
-            rebuildu = ''
-                ${nixos}/misc/rebuild.sh --upgrade
             '';
         };
         shellAbbrs = {
