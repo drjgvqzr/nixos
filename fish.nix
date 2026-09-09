@@ -95,8 +95,8 @@ in {
             catbox = ''
                 curl -# -F files[]=@$argv https://uguu.se/upload?output=text |
                 wl-copy &&
-                notify-send "File uploaded" ;
-                qrrs $(wl-paste) ;
+                notify-send "File uploaded"
+                qrrs $(wl-paste)
                 echo $(wl-paste)
             '';
             pdfr = ''
