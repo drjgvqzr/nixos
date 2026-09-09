@@ -93,8 +93,7 @@ in {
                 tr -d '\n' |
                 aichat Summarize the YouTube video. Do not mention any promotions or sponsors.'';
             catbox = ''
-                curl -i -F files[]=@$argv https://uguu.se/upload?output=text |
-                tail -n 1 |
+                curl -# -F files[]=@$argv https://uguu.se/upload?output=text |
                 wl-copy &&
                 notify-send "File uploaded" ;
                 qrrs $(wl-paste) ;
