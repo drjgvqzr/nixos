@@ -174,6 +174,7 @@ in {
             # === AI ===
             a = "aichat";
             ai = "aichat --model internet:deepseek/deepseek-v4-flash-0731";
+            at = "aichat --model thinking:deepseek/deepseek-v4-flash-0731";
             as = "aichat -s";
             wa = "wl-paste | aichat";
             was = "wl-paste | aichat summarize";

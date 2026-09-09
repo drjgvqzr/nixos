@@ -502,6 +502,7 @@ in {
                                         zdr = true; #https://openrouter.ai/docs/api/api-reference/chat/
                                     };
                                     reasoning.effort = "xhigh"; #"xhigh", "high", "medium", "low", "minimal" or "none"
+                                    reasoning.exclude = true;
                                 };
                                 models = [
                                     {
